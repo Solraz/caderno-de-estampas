@@ -1,0 +1,76 @@
+[gd_scene load_steps=13 format=3 uid="uid://dg8feoj8hykra"]
+
+[ext_resource type="Script" path="res://Scripts/Player/Air.gd" id="1_7i2ip"]
+[ext_resource type="Resource" uid="uid://blcrcljlra16c" path="res://Scripts/Player/Player_Vars.tres" id="2_q7vuh"]
+[ext_resource type="Script" path="res://Scripts/Main/State_Machine.gd" id="3_3rsys"]
+[ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="3_a5reg"]
+[ext_resource type="Script" path="res://Scripts/Player/Crouched.gd" id="5_qx538"]
+[ext_resource type="Script" path="res://Scripts/Player/Crouching.gd" id="6_fenpx"]
+[ext_resource type="Script" path="res://Scripts/Player/Run.gd" id="7_dqbvo"]
+[ext_resource type="Script" path="res://Scripts/Player/Standing.gd" id="8_7hjxr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5tlmn"]
+size = Vector3(0.5, 1.8, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gcrr"]
+size = Vector3(0.5, 1.8, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02jld"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_jcay5"]
+
+[node name="Player" type="CharacterBody3D"]
+visible = false
+script = ExtResource("3_a5reg")
+stats = ExtResource("2_q7vuh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_5tlmn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_0gcrr")
+
+[node name="CoyoteTime" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="Headbonk" type="ShapeCast3D" parent="."]
+shape = SubResource("BoxShape3D_02jld")
+
+[node name="TwistPivot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="PitchPivot" type="SpringArm3D" parent="TwistPivot"]
+shape = SubResource("SeparationRayShape3D_jcay5")
+spring_length = 0.0
+margin = 0.0
+
+[node name="view" type="Camera3D" parent="TwistPivot/PitchPivot"]
+current = true
+fov = 90.0
+
+[node name="Activity_Machine" type="Node" parent="."]
+script = ExtResource("3_3rsys")
+initial_state = NodePath("Run")
+
+[node name="Run" type="Node" parent="Activity_Machine"]
+script = ExtResource("7_dqbvo")
+
+[node name="Air" type="Node" parent="Activity_Machine"]
+script = ExtResource("1_7i2ip")
+
+[node name="Standing_Machine" type="Node" parent="."]
+script = ExtResource("3_3rsys")
+initial_state = NodePath("Standing")
+
+[node name="Standing" type="Node" parent="Standing_Machine"]
+script = ExtResource("8_7hjxr")
+
+[node name="Crouched" type="Node" parent="Standing_Machine"]
+script = ExtResource("5_qx538")
+
+[node name="Crouching" type="Node" parent="Standing_Machine"]
+script = ExtResource("6_fenpx")
