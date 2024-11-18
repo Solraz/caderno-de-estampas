@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://6ds1jrxw40a8"
+path="res://.godot/imported/stairs_podium.obj-c51aa170b8290f8e0b5cd3d45d10871a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stairs_podium.obj-c51aa170b8290f8e0b5cd3d45d10871a.mesh"]
+
+source_file="res://Assets/Objects/stairs_podium.obj"
+dest_files=["res://.godot/imported/stairs_podium.obj-c51aa170b8290f8e0b5cd3d45d10871a.mesh", "res://.godot/imported/stairs_podium.obj-c51aa170b8290f8e0b5cd3d45d10871a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

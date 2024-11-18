@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ljfibfjrsnlf"]
+
+[ext_resource type="PackedScene" uid="uid://dg741p7j3ftuw" path="res://Assets/Objects/lilbro.glb" id="1_qcb5w"]
+
+[node name="lilbro" instance=ExtResource("1_qcb5w")]

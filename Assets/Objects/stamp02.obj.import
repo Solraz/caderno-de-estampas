@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://exdim07wlk2s"
+path="res://.godot/imported/stamp02.obj-91a3733994f4f38143a3a580102e37e0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stamp02.obj-91a3733994f4f38143a3a580102e37e0.mesh"]
+
+source_file="res://Assets/Objects/stamp02.obj"
+dest_files=["res://.godot/imported/stamp02.obj-91a3733994f4f38143a3a580102e37e0.mesh", "res://.godot/imported/stamp02.obj-91a3733994f4f38143a3a580102e37e0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

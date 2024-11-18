@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctx6g4pjvoqrj"]
+
+[ext_resource type="PackedScene" uid="uid://lcjh5c3qbi06" path="res://Assets/Objects/polyball2.glb" id="1_rg2td"]
+
+[node name="polyball2" instance=ExtResource("1_rg2td")]

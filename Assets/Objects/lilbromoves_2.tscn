@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bubfk0jkkbbof"]
+
+[ext_resource type="PackedScene" uid="uid://bb3jw3hy5gr7m" path="res://Assets/Objects/lilbromoves2.glb" id="1_5ra62"]
+
+[node name="lilbromoves2" instance=ExtResource("1_5ra62")]
+
+[node name="SurfCylinder" parent="." index="1"]
+transform = Transform3D(-0.908652, 0.143454, 0.392138, 0.0709181, 0.978507, -0.193634, -0.411488, -0.148136, -0.899296, -0.531678, -1.13908, 0.261605)
+
+[node name="Cube" parent="." index="4"]
+transform = Transform3D(0.0763355, 0.226349, -0.971051, -0.46018, 0.871963, 0.167077, 0.884538, 0.434104, 0.170723, 0.469504, 2.30658, 0.721548)
+
+[node name="Cone" parent="." index="6"]
+transform = Transform3D(-0.462178, 0.0364797, 0.892487, 0.0505017, -1.00221, 0.067117, 0.891804, 0.0756594, 0.458732, -0.303024, 0.52938, 0.156272)

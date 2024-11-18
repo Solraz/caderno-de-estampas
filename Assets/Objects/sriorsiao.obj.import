@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://beof86m4iqw42"
+path="res://.godot/imported/sriorsiao.obj-5c1f301dbb36e0a807f48f654a9fd977.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sriorsiao.obj-5c1f301dbb36e0a807f48f654a9fd977.mesh"]
+
+source_file="res://Assets/Objects/sriorsiao.obj"
+dest_files=["res://.godot/imported/sriorsiao.obj-5c1f301dbb36e0a807f48f654a9fd977.mesh", "res://.godot/imported/sriorsiao.obj-5c1f301dbb36e0a807f48f654a9fd977.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

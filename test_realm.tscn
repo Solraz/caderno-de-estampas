@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c430kfqca67x1"]
+
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_oh51g"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l11yd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0380"]
+size = Vector3(60, 1, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_58n71"]
+size = Vector3(60, 1, 60)
+
+[node name="test_realm" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+physics_material_override = SubResource("PhysicsMaterial_l11yd")
+
+[node name="Floor_Collision" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_x0380")
+
+[node name="Mesh" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_58n71")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.610775, -0.783508, 0.114318, 0.053871, 0.185161, 0.981231, -0.789969, -0.593153, 0.1553, -0.606507, 37.7229, 3.30732)
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_fade_start = 0.41
+directional_shadow_max_distance = 521.8
+
+[node name="Player" parent="." instance=ExtResource("1_oh51g")]
