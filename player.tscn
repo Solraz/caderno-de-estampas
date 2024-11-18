@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dg8feoj8hykra"]
+[gd_scene load_steps=16 format=3 uid="uid://dg8feoj8hykra"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Air.gd" id="1_7i2ip"]
 [ext_resource type="Resource" uid="uid://blcrcljlra16c" path="res://Scripts/Player/Player_Vars.tres" id="2_q7vuh"]
+[ext_resource type="Shader" path="res://Assets/Shaders/fog_camera.gdshader" id="3_2wpro"]
 [ext_resource type="Script" path="res://Scripts/Main/State_Machine.gd" id="3_3rsys"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="3_a5reg"]
 [ext_resource type="Script" path="res://Scripts/Player/Crouched.gd" id="5_qx538"]
@@ -18,15 +19,34 @@ size = Vector3(0.5, 1.8, 0.2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_02jld"]
 size = Vector3(0.2, 0.2, 0.2)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dag0f"]
+render_priority = 0
+shader = ExtResource("3_2wpro")
+shader_parameter/enable_fog = true
+shader_parameter/fog_color = Color(0.351563, 0.351563, 0.351563, 1)
+shader_parameter/noise_color = Color(0, 0, 0, 1)
+shader_parameter/fog_distance = 100.0
+shader_parameter/fog_fade_range = 50.0
+shader_parameter/enable_noise = true
+shader_parameter/noise_time_fac = 4.0
+shader_parameter/enable_color_limitation = true
+shader_parameter/color_levels = 32
+shader_parameter/enable_dithering = true
+shader_parameter/dither_strength = 0.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_3r5pf"]
+material = SubResource("ShaderMaterial_dag0f")
+size = Vector2(2, 2)
+
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_jcay5"]
 
 [node name="Player" type="CharacterBody3D"]
-visible = false
 script = ExtResource("3_a5reg")
 stats = ExtResource("2_q7vuh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
 mesh = SubResource("BoxMesh_5tlmn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -39,6 +59,12 @@ one_shot = true
 
 [node name="Headbonk" type="ShapeCast3D" parent="."]
 shape = SubResource("BoxShape3D_02jld")
+
+[node name="Fog" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -0.2)
+visible = false
+mesh = SubResource("QuadMesh_3r5pf")
+skeleton = NodePath("../TwistPivot/PitchPivot/view")
 
 [node name="TwistPivot" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
