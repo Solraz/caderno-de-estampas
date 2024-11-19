@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dg8feoj8hykra"]
+[gd_scene load_steps=17 format=3 uid="uid://dg8feoj8hykra"]
 
 [ext_resource type="Script" path="res://Scripts/Player/Air.gd" id="1_7i2ip"]
 [ext_resource type="Resource" uid="uid://blcrcljlra16c" path="res://Scripts/Player/Player_Vars.tres" id="2_q7vuh"]
 [ext_resource type="Shader" path="res://Assets/Shaders/fog_camera.gdshader" id="3_2wpro"]
 [ext_resource type="Script" path="res://Scripts/Main/State_Machine.gd" id="3_3rsys"]
 [ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="3_a5reg"]
+[ext_resource type="Script" path="res://Scripts/Map04/raycast_stethoscope.gd" id="4_qvxe2"]
 [ext_resource type="Script" path="res://Scripts/Player/Crouched.gd" id="5_qx538"]
 [ext_resource type="Script" path="res://Scripts/Player/Crouching.gd" id="6_fenpx"]
 [ext_resource type="Script" path="res://Scripts/Player/Run.gd" id="7_dqbvo"]
@@ -58,6 +59,7 @@ wait_time = 0.3
 one_shot = true
 
 [node name="Headbonk" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 shape = SubResource("BoxShape3D_02jld")
 
 [node name="Fog" type="MeshInstance3D" parent="."]
@@ -67,7 +69,7 @@ mesh = SubResource("QuadMesh_3r5pf")
 skeleton = NodePath("../TwistPivot/PitchPivot/view")
 
 [node name="TwistPivot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.1)
 
 [node name="PitchPivot" type="SpringArm3D" parent="TwistPivot"]
 shape = SubResource("SeparationRayShape3D_jcay5")
@@ -77,6 +79,16 @@ margin = 0.0
 [node name="view" type="Camera3D" parent="TwistPivot/PitchPivot"]
 current = true
 fov = 90.0
+
+[node name="RayCast3D" type="RayCast3D" parent="TwistPivot/PitchPivot/view" node_paths=PackedStringArray("camera")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.2)
+target_position = Vector3(0, 0, 1000)
+collision_mask = 2
+script = ExtResource("4_qvxe2")
+camera = NodePath("..")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="TwistPivot"]
+current = true
 
 [node name="Activity_Machine" type="Node" parent="."]
 script = ExtResource("3_3rsys")

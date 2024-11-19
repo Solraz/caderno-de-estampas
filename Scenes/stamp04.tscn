@@ -1,0 +1,138 @@
+[gd_scene load_steps=12 format=3 uid="uid://wdwbkdgc133m"]
+
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
+[ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
+[ext_resource type="AudioStream" uid="uid://csfjdqdhwu2br" path="res://Assets/Sounds/test.wav" id="3_vooxm"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_avg8c"]
+flip_faces = true
+radius = 200.0
+height = 400.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4r6ks"]
+points = PackedVector3Array(-30.4188, -196.122, -24.2696, 36.9071, 195.541, 18.5249, 48.9757, 188.852, 42.8594, -175.962, 24.284, 91.3486, -60.7216, 24.3592, -188.691, 183.037, -42.6399, 67.2593, 6.32377, -36.6915, 196.068, 158.189, -12.1018, -121.248, -182.324, 36.4801, -72.7719, -42.1991, 169.707, -96.722, -108.507, 144.924, 84.7594, -157.533, -121.347, 18.3982, -48.2612, -121.177, -151.244, 103.664, -170.354, 12.3865, 126.83, 120.536, -96.1799, 108.727, 102.438, 132.796, -66.2873, -139.023, 127.169, 72.7155, -108.731, -150.778, 182.893, 79.1476, 12.3943, -48.3536, 103.189, 164.119, 90.8673, -102.699, 145.208, 54.9582, 60.8181, -182.228, -144.785, -84.567, -108.53, -114.827, -42.3779, 157.674, 175.876, -84.7536, -42.1503, -121.228, 157.875, -17.9577, 91.4395, 18.2086, 176.56, 18.4782, -182.405, 79.2765, -96.259, 114.521, -132.387, 54.7054, -169.512, -90.5792, 49.0058, -42.6592, -188.742, -195.494, -36.6689, -18.0888)
+
+[sub_resource type="QuadMesh" id="QuadMesh_dfsil"]
+size = Vector2(2, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ywsdp"]
+points = PackedVector3Array(-1.01587, -1.01587, -0.015873, 1.01587, 1.01587, 0.015873, 1.01587, 1.01587, -0.015873, -1.01587, 1.01587, 0.015873, 1.01587, -1.01587, 0.015873, 1.01587, -1.01587, -0.015873, -1.01587, 1.01587, -0.015873, -1.01587, -1.01587, 0.015873)
+
+[sub_resource type="QuadMesh" id="QuadMesh_rsm4g"]
+size = Vector2(2, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_85jpb"]
+points = PackedVector3Array(-1.01587, -1.01587, -0.015873, 1.01587, 1.01587, 0.015873, 1.01587, 1.01587, -0.015873, -1.01587, 1.01587, 0.015873, 1.01587, -1.01587, 0.015873, 1.01587, -1.01587, -0.015873, -1.01587, 1.01587, -0.015873, -1.01587, -1.01587, 0.015873)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1qun"]
+size = Vector3(5, 5, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_184gx"]
+points = PackedVector3Array(-2.5, -2.49951, -2.49951, 2.5, 2.49951, 2.49951, 2.5, -2.49951, 2.49951, 2.5, 2.49951, -2.49951, -2.5, 2.49951, 2.49951, 2.5, -2.49951, -2.49951, -2.5, -2.49951, 2.49951, -2.5, 2.49951, -2.49951)
+
+[node name="stamp04" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 57, 0)
+light_energy = 1.484
+light_indirect_energy = 10.697
+light_volumetric_fog_energy = 15.435
+light_size = 0.101
+light_specular = 0.662
+light_bake_mode = 1
+omni_range = 200000.0
+omni_attenuation = 0.5
+
+[node name="Player" parent="." instance=ExtResource("1_n1mok")]
+
+[node name="Structure" type="Node3D" parent="."]
+
+[node name="Dome" type="StaticBody3D" parent="Structure"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Dome"]
+mesh = SubResource("SphereMesh_avg8c")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Dome"]
+shape = SubResource("ConvexPolygonShape3D_4r6ks")
+disabled = true
+
+[node name="Room" type="Node3D" parent="Structure"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Floor" type="StaticBody3D" parent="Structure/Room"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_dfsil")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Room/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_ywsdp")
+
+[node name="West_Wall" type="StaticBody3D" parent="Structure/Room"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Room/West_Wall"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1, 1, 0)
+mesh = SubResource("QuadMesh_rsm4g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Room/West_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, 0)
+shape = SubResource("ConvexPolygonShape3D_85jpb")
+
+[node name="East_Wall" type="StaticBody3D" parent="Structure/Room"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Room/East_Wall"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1, 1, 0)
+mesh = SubResource("QuadMesh_rsm4g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Room/East_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, 0)
+shape = SubResource("ConvexPolygonShape3D_85jpb")
+
+[node name="North_Wall" type="StaticBody3D" parent="Structure/Room"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Room/North_Wall"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1, 1, 0)
+mesh = SubResource("QuadMesh_rsm4g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Room/North_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, 0)
+shape = SubResource("ConvexPolygonShape3D_85jpb")
+
+[node name="South_Wall" type="StaticBody3D" parent="Structure/Room"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Room/South_Wall"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1, 1, 0)
+mesh = SubResource("QuadMesh_rsm4g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structure/Room/South_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, 0)
+shape = SubResource("ConvexPolygonShape3D_85jpb")
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Test_Sound" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 1, -22)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Test_Sound"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74228e-08, 0, -2)
+mesh = SubResource("BoxMesh_d1qun")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Test_Sound"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74228e-08, 0, -2)
+shape = SubResource("ConvexPolygonShape3D_184gx")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Test_Sound"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2)
+stream = ExtResource("3_vooxm")
+
+[connection signal="play_sound" from="Objects/Test_Sound" to="Objects/Test_Sound" method="_on_play_sound"]
