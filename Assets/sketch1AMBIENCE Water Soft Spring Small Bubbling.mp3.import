@@ -2,13 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://5cun4dvpst0h"
-path="res://.godot/imported/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3-60946c3b432a71c1562c3a89958ff40d.mp3str"
+uid="uid://b34vogtocg6t7"
+valid=false
 
 [deps]
 
 source_file="res://Assets/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3"
-dest_files=["res://.godot/imported/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3-60946c3b432a71c1562c3a89958ff40d.mp3str"]
 
 [params]
 

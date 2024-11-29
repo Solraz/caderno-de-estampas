@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://5cun4dvpst0h"
+path="res://.godot/imported/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3-eeb50b7c3123314453f5d566e062c6a7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Textures/Map_05/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3"
+dest_files=["res://.godot/imported/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3-eeb50b7c3123314453f5d566e062c6a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

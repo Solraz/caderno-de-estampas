@@ -1,0 +1,60 @@
+[gd_resource type="AudioBusLayout" load_steps=6 format=3 uid="uid://cebrokuakbl78"]
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_cuv7t"]
+resource_name = "Chorus"
+voice_count = 4
+dry = 0.85
+wet = 1.0
+voice/1/delay_ms = 26.45
+voice/1/rate_hz = 1.8
+voice/1/depth_ms = 4.83
+voice/2/delay_ms = 9.25
+voice/2/rate_hz = 2.1
+voice/2/depth_ms = 11.95
+voice/3/delay_ms = 2.32
+voice/3/rate_hz = 0.6
+voice/3/depth_ms = 9.5
+voice/3/level_db = 0.0
+voice/3/cutoff_hz = 16000.0
+voice/3/pan = 0.0
+voice/4/delay_ms = 44.26
+voice/4/rate_hz = 3.2
+voice/4/depth_ms = 4.09
+voice/4/level_db = 0.0
+voice/4/cutoff_hz = 16000.0
+voice/4/pan = 0.0
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_7px4o"]
+resource_name = "Reverb"
+damping = 1.0
+spread = 0.86
+hipass = 0.62
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_2la8r"]
+resource_name = "Distortion"
+mode = 2
+
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_u5wsm"]
+resource_name = "Capture"
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_ai3v5"]
+resource_name = "Delay"
+
+[resource]
+bus/0/volume_db = 3.04252
+bus/1/name = &"microfone"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 6.02
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectChorus_cuv7t")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectReverb_7px4o")
+bus/1/effect/1/enabled = true
+bus/1/effect/2/effect = SubResource("AudioEffectDistortion_2la8r")
+bus/1/effect/2/enabled = true
+bus/1/effect/3/effect = SubResource("AudioEffectCapture_u5wsm")
+bus/1/effect/3/enabled = true
+bus/1/effect/4/effect = SubResource("AudioEffectDelay_ai3v5")
+bus/1/effect/4/enabled = true

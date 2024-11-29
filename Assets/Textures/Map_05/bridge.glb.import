@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
-valid=false
+uid="uid://byeewqdccm45a"
+path="res://.godot/imported/bridge.glb-d6051fd36fbfd0e55e782761f7e0d6f9.scn"
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/Textures/Map_05/bridge.glb"
+dest_files=["res://.godot/imported/bridge.glb-d6051fd36fbfd0e55e782761f7e0d6f9.scn"]
 
 [params]
 

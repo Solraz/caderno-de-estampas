@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
-valid=false
+uid="uid://bo6oa1v74tg7f"
+path="res://.godot/imported/skybox2.glb-fc219db3b8a7bacc5c3598aa734a76a6.scn"
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/Textures/Map_05/skybox2.glb"
+dest_files=["res://.godot/imported/skybox2.glb-fc219db3b8a7bacc5c3598aa734a76a6.scn"]
 
 [params]
 

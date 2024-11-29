@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
-valid=false
+uid="uid://cus4wmjcnkv7u"
+path="res://.godot/imported/starrysky.glb-29c6464c14ed63b8187df6652b229584.scn"
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/Textures/Map_04/starrysky.glb"
+dest_files=["res://.godot/imported/starrysky.glb-29c6464c14ed63b8187df6652b229584.scn"]
 
 [params]
 

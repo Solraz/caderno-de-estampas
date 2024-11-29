@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
-valid=false
+uid="uid://bk1eduqmq03re"
+path="res://.godot/imported/bluedestination.glb-17d4500fce4f040504a12aeb81d88b9b.scn"
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/Textures/Map_07/bluedestination.glb"
+dest_files=["res://.godot/imported/bluedestination.glb-17d4500fce4f040504a12aeb81d88b9b.scn"]
 
 [params]
 

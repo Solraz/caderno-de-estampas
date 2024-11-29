@@ -2,13 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://42wulk4uoc06"
-path="res://.godot/imported/sketch1outrosgrilos.mp3-be9ac61d9f0fc4729c6b97ca3094a8a8.mp3str"
+uid="uid://liks1asd74cx"
+valid=false
 
 [deps]
 
 source_file="res://Assets/sketch1outrosgrilos.mp3"
-dest_files=["res://.godot/imported/sketch1outrosgrilos.mp3-be9ac61d9f0fc4729c6b97ca3094a8a8.mp3str"]
 
 [params]
 

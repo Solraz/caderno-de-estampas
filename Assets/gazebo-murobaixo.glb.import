@@ -3,12 +3,12 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
+uid="uid://bdoerd7nyqcq3"
 valid=false
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/gazebo-murobaixo.glb"
 
 [params]
 

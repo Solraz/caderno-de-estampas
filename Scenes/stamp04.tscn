@@ -1,8 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=15 format=3 uid="uid://wdwbkdgc133m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
 [ext_resource type="AudioStream" uid="uid://csfjdqdhwu2br" path="res://Assets/Sounds/test.wav" id="3_vooxm"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_re6xu"]
+
+[sub_resource type="Sky" id="Sky_yaeql"]
+sky_material = SubResource("PanoramaSkyMaterial_re6xu")
+
+[sub_resource type="Environment" id="Environment_pbb7b"]
+background_mode = 2
+sky = SubResource("Sky_yaeql")
 
 [sub_resource type="SphereMesh" id="SphereMesh_avg8c"]
 flip_faces = true
@@ -31,6 +40,9 @@ size = Vector3(5, 5, 5)
 points = PackedVector3Array(-2.5, -2.49951, -2.49951, 2.5, 2.49951, 2.49951, 2.5, -2.49951, 2.49951, 2.5, 2.49951, -2.49951, -2.5, 2.49951, 2.49951, 2.5, -2.49951, -2.49951, -2.5, -2.49951, 2.49951, -2.5, 2.49951, -2.49951)
 
 [node name="stamp04" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pbb7b")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 57, 0)

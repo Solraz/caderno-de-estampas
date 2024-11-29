@@ -15,6 +15,10 @@ run/main_scene="res://test_realm.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+driver/enable_input=true
+
 [debug]
 
 settings/stdout/print_fps=true

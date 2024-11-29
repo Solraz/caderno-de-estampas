@@ -2,13 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://cm33uhapl0h5l"
-path="res://.godot/imported/sketch1vento generativo.mp3-b4a887dff4db40c0281958d22f518a66.mp3str"
+uid="uid://d2x4dn3chws8x"
+valid=false
 
 [deps]
 
 source_file="res://Assets/sketch1vento generativo.mp3"
-dest_files=["res://.godot/imported/sketch1vento generativo.mp3-b4a887dff4db40c0281958d22f518a66.mp3str"]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bngkgxrxafraf"
+uid="uid://ra4egjasvfv6"
 valid=false
 
 [deps]
 
-source_file="res://Assets/Textures/bridge_Cottage-Rectangle.jpg"
+source_file="res://Assets/skybox_ceu2.png"
 
 [params]
 

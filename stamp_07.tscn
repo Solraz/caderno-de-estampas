@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://daytcu8clac0m"]
+
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_k28y3"]
+[ext_resource type="PackedScene" uid="uid://bk1eduqmq03re" path="res://Assets/Textures/Map_07/bluedestination.glb" id="2_esf5o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bisp7"]
+size = Vector3(1, 1.93457, 1)
+
+[sub_resource type="Gradient" id="Gradient_cpga7"]
+offsets = PackedFloat32Array(0, 0.556604, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.443396, 0.443396, 0.443396, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_713qv"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_86xyf"]
+in_3d_space = true
+seamless = true
+color_ramp = SubResource("Gradient_cpga7")
+noise = SubResource("FastNoiseLite_713qv")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_40hfy"]
+sky_top_color = Color(0.115355, 0.104672, 0.194206, 1)
+sky_horizon_color = Color(0.743806, 0.625533, 0.586084, 1)
+sky_cover = SubResource("NoiseTexture2D_86xyf")
+energy_multiplier = 3.0
+
+[sub_resource type="Sky" id="Sky_ndtws"]
+sky_material = SubResource("ProceduralSkyMaterial_40hfy")
+
+[sub_resource type="Environment" id="Environment_gwvpp"]
+background_mode = 2
+sky = SubResource("Sky_ndtws")
+fog_mode = 1
+fog_light_color = Color(0.413989, 0.565629, 0.719825, 1)
+fog_density = 1.0
+fog_aerial_perspective = 0.52
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_si3fq"]
+
+[node name="stamp07" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_k28y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0042, 202.969, 22.9747)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -2.84013, 0, -4.06322)
+
+[node name="bluedestination" parent="StaticBody3D" instance=ExtResource("2_esf5o")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, -7.4914, 0)
+shape = SubResource("BoxShape3D_bisp7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.562083, 0.827081, 0, -0.827081, -0.562083, -0.0193291, 506.235, -309.019)
+light_energy = 0.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+transform = Transform3D(-0.994151, -0.0652964, 0.0860248, 0, 0.79653, 0.604599, -0.107999, 0.601063, -0.791871, -0.0985126, 269.986, -946.807)
+light_angular_distance = 87.74
+sky_mode = 1
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D/DirectionalLight3D"]
+transform = Transform3D(-0.0139622, 3.72529e-09, -0.999903, 7.45058e-09, 1, -3.72529e-09, 0.999903, 0, -0.0139622, -366.693, 1.29368, -383.461)
+sky_mode = 1
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="DirectionalLight3D/DirectionalLight3D"]
+transform = Transform3D(-0.0941083, 0, 0.995562, 0, 1, 0, -0.995562, 0, -0.0941083, 348.209, 49.0686, -460.19)
+sky_mode = 1
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="DirectionalLight3D/DirectionalLight3D"]
+transform = Transform3D(-0.0540352, 0.997732, 0.0401318, -0.998537, -0.0540788, 0, 0.00217028, -0.0400731, 0.999194, -22.9878, -248.006, -427.014)
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gwvpp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0763817, 10.5489, 0.936449)
+stream = SubResource("AudioStreamMicrophone_si3fq")
+volume_db = 20.68
+unit_size = 23.32
+autoplay = true
+max_distance = 390.09
+panning_strength = 0.51
+bus = &"microfone"

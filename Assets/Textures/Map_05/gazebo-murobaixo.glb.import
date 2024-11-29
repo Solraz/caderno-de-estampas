@@ -3,12 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://danf27ca2pmwb"
-valid=false
+uid="uid://ysgtaafw8prd"
+path="res://.godot/imported/gazebo-murobaixo.glb-14c277b445080274ce4c08e16722471d.scn"
 
 [deps]
 
-source_file="res://Assets/Textures/bridge.glb"
+source_file="res://Assets/Textures/Map_05/gazebo-murobaixo.glb"
+dest_files=["res://.godot/imported/gazebo-murobaixo.glb-14c277b445080274ce4c08e16722471d.scn"]
 
 [params]
 

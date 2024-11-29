@@ -14,13 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://bgylecvrprrq2" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree03.fbx" id="8_kp0bm"]
 [ext_resource type="PackedScene" uid="uid://b2miifxyqn8rk" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree02.fbx" id="9_lpr12"]
 [ext_resource type="PackedScene" uid="uid://qy38c0vd81t5" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree07.fbx" id="10_3vogi"]
-[ext_resource type="PackedScene" uid="uid://b3ow1g1pig7h3" path="res://Assets/Textures/Map_05/gazebo.glb" id="15_cp1ue"]
-[ext_resource type="AudioStream" uid="uid://bfv3iq4ewguld" path="res://Assets/sketch1grilos.mp3" id="15_cuylh"]
-[ext_resource type="PackedScene" uid="uid://byeewqdccm45a" path="res://Assets/Textures/bridge.glb" id="16_tfhc6"]
-[ext_resource type="AudioStream" uid="uid://42wulk4uoc06" path="res://Assets/sketch1outrosgrilos.mp3" id="16_wlqfc"]
-[ext_resource type="AudioStream" uid="uid://tpa3p6ott7tu" path="res://Assets/sketch1passaro1.mp3" id="17_ly231"]
-[ext_resource type="AudioStream" uid="uid://cm33uhapl0h5l" path="res://Assets/sketch1vento generativo.mp3" id="19_v5xin"]
-[ext_resource type="AudioStream" uid="uid://5cun4dvpst0h" path="res://Assets/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3" id="21_p6l4e"]
+[ext_resource type="AudioStream" uid="uid://bfv3iq4ewguld" path="res://Assets/Textures/Map_05/sketch1grilos.mp3" id="15_cuylh"]
+[ext_resource type="PackedScene" uid="uid://byeewqdccm45a" path="res://Assets/Textures/Map_05/bridge.glb" id="16_tfhc6"]
+[ext_resource type="AudioStream" uid="uid://42wulk4uoc06" path="res://Assets/Textures/Map_05/sketch1outrosgrilos.mp3" id="16_wlqfc"]
+[ext_resource type="AudioStream" uid="uid://tpa3p6ott7tu" path="res://Assets/Textures/Map_05/sketch1passaro1.mp3" id="17_ly231"]
+[ext_resource type="PackedScene" uid="uid://ysgtaafw8prd" path="res://Assets/Textures/Map_05/gazebo-murobaixo.glb" id="21_l0ipv"]
+[ext_resource type="AudioStream" uid="uid://5cun4dvpst0h" path="res://Assets/Textures/Map_05/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3" id="21_p6l4e"]
+[ext_resource type="PackedScene" uid="uid://bo6oa1v74tg7f" path="res://Assets/Textures/Map_05/skybox2.glb" id="22_xo24v"]
 
 [sub_resource type="Gradient" id="Gradient_wm1kk"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -190,8 +190,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.0075, -3.62695, 601.552)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5222, 0.732548, 688.857)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree07"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02455, 1.89331, 0.057373)
 stream = ExtResource("15_cuylh")
 unit_size = 29.46
+autoplay = true
 
 [node name="tree12" parent="." instance=ExtResource("8_kp0bm")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -364.368, -1.39793, 689.072)
@@ -212,6 +214,7 @@ transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 
 transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0.688354, 1, 0.725372)
 stream = ExtResource("16_wlqfc")
 unit_size = 22.37
+autoplay = true
 
 [node name="tree15" parent="." instance=ExtResource("10_3vogi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -404.061, -2.09825, 396.414)
@@ -321,6 +324,7 @@ transform = Transform3D(-0.994521, 0, -0.104528, 0, 1, 0, 0.104528, 0, -0.994521
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83954, 33.106, -2.35846)
 stream = ExtResource("15_cuylh")
 unit_size = 19.51
+autoplay = true
 
 [node name="tree04" parent="." instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 473.125, 0.531375, 662.022)
@@ -493,14 +497,6 @@ transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 
 [node name="tree61" parent="." instance=ExtResource("6_fd2oi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -161.261, 0.749497, -787.358)
 
-[node name="gazebo" parent="." instance=ExtResource("15_cp1ue")]
-transform = Transform3D(5.37, 0, 0, 0, 5.37, 0, 0, 0, 5.37, 140.558, 42.3976, -103.029)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="gazebo"]
-stream = ExtResource("19_v5xin")
-unit_size = 91.65
-max_distance = 1599.39
-
 [node name="bridge2" parent="." instance=ExtResource("16_tfhc6")]
 transform = Transform3D(-2.37237, 0, -14.8112, 0, 15, 0, 14.8112, 0, -2.37237, -109.922, 0.231054, -635.943)
 
@@ -508,6 +504,7 @@ transform = Transform3D(-2.37237, 0, -14.8112, 0, 15, 0, 14.8112, 0, -2.37237, -
 transform = Transform3D(0.0666667, 0, -9.31323e-10, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0658264, 0, -0.0105438)
 stream = ExtResource("21_p6l4e")
 unit_size = 21.42
+autoplay = true
 max_distance = 1092.27
 
 [node name="bridge" parent="." instance=ExtResource("16_tfhc6")]
@@ -517,10 +514,18 @@ transform = Transform3D(1.38552, 0, 13.1824, 0, 13.255, 0, -13.1824, 0, 1.38552,
 transform = Transform3D(0.0754432, 0, 0, 0, 0.0754432, 0, 0, 0, 0.0754432, -0.278837, 0.539007, -2.54487)
 stream = ExtResource("21_p6l4e")
 unit_size = 21.42
+autoplay = true
 max_distance = 1092.27
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="bridge/AudioStreamPlayer3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.933, 0, -48.2394)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.182, 2.16016, -47.7486)
 stream = ExtResource("21_p6l4e")
 unit_size = 21.42
+autoplay = true
 max_distance = 195.05
+
+[node name="skybox2" parent="." instance=ExtResource("22_xo24v")]
+transform = Transform3D(55, 0, 0, 0, 55, 0, 0, 0, 55, 0, -124.376, -125)
+
+[node name="gazebo-murobaixo" parent="." instance=ExtResource("21_l0ipv")]
+transform = Transform3D(2.58371, 0, -4.2807, 0, 5, 0, 4.2807, 0, 2.58371, 109.528, 51.3411, -74.8961)
