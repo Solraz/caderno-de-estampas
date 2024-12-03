@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfgu4p5yg7bq6"
-path.s3tc="res://.godot/imported/Plants_09.png-bab0be2c9097502db0661ea43bbcd44e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plants_09.png-deaba6a6d9db3e068d48c515345d46fe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/Map_05/ps1-style tree pack/textures/Plants_09.png"
-dest_files=["res://.godot/imported/Plants_09.png-bab0be2c9097502db0661ea43bbcd44e.s3tc.ctex"]
+source_file="res://Assets/Textures/Map_05/ps1-style tree pack/Textures/Plants_09.png"
+dest_files=["res://.godot/imported/Plants_09.png-deaba6a6d9db3e068d48c515345d46fe.s3tc.ctex"]
 
 [params]
 

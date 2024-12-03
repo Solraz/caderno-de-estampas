@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deybfaffa1var"
-path.s3tc="res://.godot/imported/tree02.png-53b8a7190f6d22f3b0248d9ad7aa7bbe.s3tc.ctex"
+path.s3tc="res://.godot/imported/tree02.png-e195586710321407caebf6c358ed04d9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/Map_05/ps1-style tree pack/textures/tree02.png"
-dest_files=["res://.godot/imported/tree02.png-53b8a7190f6d22f3b0248d9ad7aa7bbe.s3tc.ctex"]
+source_file="res://Assets/Textures/Map_05/ps1-style tree pack/Textures/tree02.png"
+dest_files=["res://.godot/imported/tree02.png-e195586710321407caebf6c358ed04d9.s3tc.ctex"]
 
 [params]
 
