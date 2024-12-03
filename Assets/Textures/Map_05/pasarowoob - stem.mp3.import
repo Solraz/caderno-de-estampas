@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb0gpji6e17nb"
+path="res://.godot/imported/pasarowoob - stem.mp3-eb6dfc0863d9b071f0e7a209eb8095c6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Textures/Map_05/pasarowoob - stem.mp3"
+dest_files=["res://.godot/imported/pasarowoob - stem.mp3-eb6dfc0863d9b071f0e7a209eb8095c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dksltjd8ejcce"]
+[gd_scene load_steps=42 format=3 uid="uid://dksltjd8ejcce"]
 
 [ext_resource type="Texture2D" uid="uid://djdsydknjobnv" path="res://Assets/Textures/Map_05/gramas2.png" id="1_0dycp"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_ftpap"]
@@ -18,9 +18,14 @@
 [ext_resource type="PackedScene" uid="uid://byeewqdccm45a" path="res://Assets/Textures/Map_05/bridge.glb" id="16_tfhc6"]
 [ext_resource type="AudioStream" uid="uid://42wulk4uoc06" path="res://Assets/Textures/Map_05/sketch1outrosgrilos.mp3" id="16_wlqfc"]
 [ext_resource type="AudioStream" uid="uid://tpa3p6ott7tu" path="res://Assets/Textures/Map_05/sketch1passaro1.mp3" id="17_ly231"]
+[ext_resource type="AudioStream" uid="uid://bw7xvo4bm153x" path="res://Assets/Textures/Map_05/chimes5.mp3" id="17_m0hr8"]
+[ext_resource type="AudioStream" uid="uid://chicanwl1vglg" path="res://Assets/Textures/Map_05/piu - stem.mp3" id="18_50pn7"]
+[ext_resource type="AudioStream" uid="uid://c1srcy08qpmo" path="res://Assets/Textures/Map_05/grilo - stem.mp3" id="19_7bva6"]
+[ext_resource type="AudioStream" uid="uid://bb0gpji6e17nb" path="res://Assets/Textures/Map_05/pasarowoob - stem.mp3" id="20_4r0aa"]
 [ext_resource type="PackedScene" uid="uid://ysgtaafw8prd" path="res://Assets/Textures/Map_05/gazebo-murobaixo.glb" id="21_l0ipv"]
 [ext_resource type="AudioStream" uid="uid://5cun4dvpst0h" path="res://Assets/Textures/Map_05/sketch1AMBIENCE Water Soft Spring Small Bubbling.mp3" id="21_p6l4e"]
 [ext_resource type="PackedScene" uid="uid://bo6oa1v74tg7f" path="res://Assets/Textures/Map_05/skybox2.glb" id="22_xo24v"]
+[ext_resource type="AudioStream" uid="uid://cm33uhapl0h5l" path="res://Assets/Textures/Map_05/sketch1vento generativo.mp3" id="25_32srn"]
 
 [sub_resource type="Gradient" id="Gradient_wm1kk"]
 offsets = PackedFloat32Array(0.2, 1)
@@ -190,10 +195,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.0075, -3.62695, 601.552)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5222, 0.732548, 688.857)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree07"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02455, 1.89331, 0.057373)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01839, 1.90221, 0.0466919)
 stream = ExtResource("15_cuylh")
 unit_size = 29.46
 autoplay = true
+parameters/looping = true
 
 [node name="tree12" parent="." instance=ExtResource("8_kp0bm")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -364.368, -1.39793, 689.072)
@@ -215,9 +221,17 @@ transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0.688354
 stream = ExtResource("16_wlqfc")
 unit_size = 22.37
 autoplay = true
+panning_strength = 0.55
+parameters/looping = true
 
 [node name="tree15" parent="." instance=ExtResource("10_3vogi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -404.061, -2.09825, 396.414)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree15"]
+stream = ExtResource("17_m0hr8")
+autoplay = true
+panning_strength = 0.2
+parameters/looping = true
 
 [node name="tree16" parent="." instance=ExtResource("8_kp0bm")]
 transform = Transform3D(-0.052336, 0, 0.998629, 0, 1, 0, -0.998629, 0, -0.052336, -621.319, -4.22873, 625.668)
@@ -304,6 +318,7 @@ transform = Transform3D(-0.760406, 0, 0.649448, 0, 1, 0, -0.649448, 0, -0.760406
 transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 32.8889, 0)
 stream = ExtResource("17_ly231")
 autoplay = true
+parameters/looping = true
 
 [node name="tree7" parent="tree25" instance=ExtResource("9_lpr12")]
 transform = Transform3D(-0.760406, 0, 0.649448, 0, 1, 0, -0.649448, 0, -0.760406, -37.415, -12.1193, 271.36)
@@ -324,13 +339,23 @@ transform = Transform3D(-0.994521, 0, -0.104528, 0, 1, 0, 0.104528, 0, -0.994521
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83954, 33.106, -2.35846)
 stream = ExtResource("15_cuylh")
 unit_size = 19.51
+pitch_scale = 1.6
 autoplay = true
+panning_strength = 0.3
+parameters/looping = true
 
 [node name="tree04" parent="." instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 473.125, 0.531375, 662.022)
 
 [node name="tree09" parent="." instance=ExtResource("5_g3bkx")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 586.636, -0.861898, 416.385)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree09"]
+stream = ExtResource("18_50pn7")
+unit_size = 36.64
+autoplay = true
+panning_strength = 0.63
+parameters/looping = true
 
 [node name="tree10" parent="." instance=ExtResource("6_fd2oi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 553.106, 0.749497, 545.941)
@@ -368,14 +393,25 @@ transform = Transform3D(1, 0, 0, 0, 0.999841, 0.0178189, 0, -0.0178189, 0.999841
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree26/tree27"]
 stream = ExtResource("17_ly231")
 unit_size = 24.27
+pitch_scale = 0.8
 autoplay = true
 max_distance = 234.01
+panning_strength = 0.6
+parameters/looping = true
 
 [node name="tree28" parent="tree26" instance=ExtResource("7_82pds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 182.218, -1.78271, 418.163)
 
 [node name="tree29" parent="tree26" instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 283.472, 0.531375, 581.739)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree26/tree29"]
+stream = ExtResource("19_7bva6")
+unit_size = 24.27
+pitch_scale = 1.3
+autoplay = true
+panning_strength = 0.47
+parameters/looping = true
 
 [node name="tree30" parent="tree26" instance=ExtResource("6_fd2oi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 363.453, 0.749497, 465.658)
@@ -389,6 +425,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 371.871, -1.78271, -469.328)
 [node name="tree29" parent="." instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 473.125, 0.531375, -305.752)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree29"]
+stream = ExtResource("17_m0hr8")
+autoplay = true
+panning_strength = 0.31
+parameters/looping = true
+
 [node name="tree30" parent="." instance=ExtResource("6_fd2oi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 553.106, 0.749497, -421.833)
 
@@ -397,6 +439,13 @@ transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 
 
 [node name="tree04" parent="tree31" instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 51.2902, -3.06825, -213.129)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree31/tree04"]
+stream = ExtResource("20_4r0aa")
+unit_size = 24.27
+autoplay = true
+panning_strength = 0.49
+parameters/looping = true
 
 [node name="tree09" parent="tree31" instance=ExtResource("5_g3bkx")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 56.4818, -0.861898, -494.682)
@@ -464,6 +513,12 @@ transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 
 [node name="tree50" parent="." instance=ExtResource("4_c6t7v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.794, 0.531375, -810.209)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree50"]
+stream = ExtResource("17_ly231")
+autoplay = true
+panning_strength = 0.6
+parameters/looping = true
+
 [node name="tree51" parent="." instance=ExtResource("5_g3bkx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 298.306, -0.861898, -1017.81)
 
@@ -472,6 +527,13 @@ transform = Transform3D(1, 0, 0, 0, 0.999841, 0.0178189, 0, -0.0178189, 0.999841
 
 [node name="tree53" parent="." instance=ExtResource("7_82pds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 371.871, -1.78271, -936.224)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree53"]
+stream = ExtResource("19_7bva6")
+unit_size = 22.0
+autoplay = true
+panning_strength = 0.35
+parameters/looping = true
 
 [node name="tree54" parent="." instance=ExtResource("4_c6t7v")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 473.125, 0.531375, -772.648)
@@ -487,6 +549,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -416.061, -0.861898, -916.438
 
 [node name="tree58" parent="." instance=ExtResource("6_fd2oi")]
 transform = Transform3D(1, 0, 0, 0, 0.999841, 0.0178189, 0, -0.0178189, 0.999841, -449.592, 0.749497, -786.883)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="tree58"]
+stream = ExtResource("17_m0hr8")
+autoplay = true
+panning_strength = 0.25
+parameters/looping = true
 
 [node name="tree59" parent="." instance=ExtResource("7_82pds")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -342.496, -1.78271, -834.853)
@@ -516,6 +584,7 @@ stream = ExtResource("21_p6l4e")
 unit_size = 21.42
 autoplay = true
 max_distance = 1092.27
+parameters/looping = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="bridge/AudioStreamPlayer3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.182, 2.16016, -47.7486)
@@ -523,9 +592,16 @@ stream = ExtResource("21_p6l4e")
 unit_size = 21.42
 autoplay = true
 max_distance = 195.05
+parameters/looping = true
 
 [node name="skybox2" parent="." instance=ExtResource("22_xo24v")]
 transform = Transform3D(55, 0, 0, 0, 55, 0, 0, 0, 55, 0, -124.376, -125)
 
 [node name="gazebo-murobaixo" parent="." instance=ExtResource("21_l0ipv")]
 transform = Transform3D(2.58371, 0, -4.2807, 0, 5, 0, 4.2807, 0, 2.58371, 109.528, 51.3411, -74.8961)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="gazebo-murobaixo"]
+stream = ExtResource("25_32srn")
+volume_db = 5.524
+autoplay = true
+parameters/looping = true
