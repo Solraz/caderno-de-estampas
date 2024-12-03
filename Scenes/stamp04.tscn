@@ -1,8 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=39 format=3 uid="uid://wdwbkdgc133m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
+[ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
 [ext_resource type="AudioStream" uid="uid://csfjdqdhwu2br" path="res://Assets/Sounds/test.wav" id="3_vooxm"]
+[ext_resource type="AudioStream" uid="uid://dnto7xxbya7fn" path="res://Assets/Textures/Map_04/ionian.mp3" id="5_jfptr"]
+[ext_resource type="AudioStream" uid="uid://dmrc7j1bo6qdr" path="res://Assets/Textures/Map_04/dorian.mp3" id="6_qr5t2"]
+[ext_resource type="AudioStream" uid="uid://de8aw8tofcmov" path="res://Assets/Textures/Map_04/lydian.mp3" id="7_4gg3k"]
+[ext_resource type="AudioStream" uid="uid://cb6nx5yv4nfno" path="res://Assets/Textures/Map_04/mixolydian.mp3" id="8_qf4t7"]
+[ext_resource type="AudioStream" uid="uid://cl8cack1bjosp" path="res://Assets/Textures/Map_04/phrygian.mp3" id="9_li7wp"]
+[ext_resource type="AudioStream" uid="uid://dqxecpc5axygy" path="res://Assets/Textures/Map_04/aeolian.mp3" id="10_djk5i"]
+[ext_resource type="AudioStream" uid="uid://60gu74agqhxn" path="res://Assets/Textures/Map_04/locrian.mp3" id="11_kraa7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_re6xu"]
 
@@ -13,7 +21,14 @@ sky_material = SubResource("PanoramaSkyMaterial_re6xu")
 background_mode = 2
 sky = SubResource("Sky_yaeql")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rglun"]
+albedo_texture = ExtResource("2_lxjs2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivan6"]
+
 [sub_resource type="SphereMesh" id="SphereMesh_avg8c"]
+lightmap_size_hint = Vector2i(6285, 3143)
+material = SubResource("StandardMaterial3D_ivan6")
 flip_faces = true
 radius = 200.0
 height = 400.0
@@ -39,6 +54,69 @@ size = Vector3(5, 5, 5)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_184gx"]
 points = PackedVector3Array(-2.5, -2.49951, -2.49951, 2.5, 2.49951, 2.49951, 2.5, -2.49951, 2.49951, 2.5, 2.49951, -2.49951, -2.5, 2.49951, 2.49951, 2.5, -2.49951, -2.49951, -2.5, -2.49951, 2.49951, -2.5, 2.49951, -2.49951)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_de0mw"]
+metallic = 1.0
+emission_enabled = true
+emission = Color(0.975718, 0.875162, 0.515239, 1)
+emission_energy_multiplier = 1.53
+rim_enabled = true
+rim_tint = 0.77
+refraction_enabled = true
+refraction_scale = 0.89
+refraction_texture_channel = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_qg0sn"]
+material = SubResource("StandardMaterial3D_de0mw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj2du"]
+emission_enabled = true
+emission = Color(0.337501, 0.561957, 0.445895, 1)
+emission_energy_multiplier = 2.93
+
+[sub_resource type="SphereMesh" id="SphereMesh_x254f"]
+material = SubResource("StandardMaterial3D_mj2du")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxcd3"]
+emission_enabled = true
+emission = Color(0.535659, 0.26165, 0.0541286, 1)
+emission_energy_multiplier = 2.41
+
+[sub_resource type="SphereMesh" id="SphereMesh_7sew3"]
+material = SubResource("StandardMaterial3D_vxcd3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su1m4"]
+emission_enabled = true
+emission = Color(0.839217, 0.417538, 1, 1)
+emission_energy_multiplier = 2.41
+
+[sub_resource type="SphereMesh" id="SphereMesh_etkp3"]
+material = SubResource("StandardMaterial3D_su1m4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3b5de"]
+emission_enabled = true
+emission = Color(0.207843, 0.8, 0.439216, 1)
+emission_energy_multiplier = 2.05
+
+[sub_resource type="SphereMesh" id="SphereMesh_s2xmm"]
+material = SubResource("StandardMaterial3D_3b5de")
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcx0x"]
+emission_enabled = true
+emission = Color(0.291707, 0.799855, 1, 1)
+emission_energy_multiplier = 1.88
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qta13"]
+material = SubResource("StandardMaterial3D_jcx0x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6f3k"]
+emission_enabled = true
+emission = Color(0.7119, 0.632336, 0.759897, 1)
+emission_energy_multiplier = 1.7
+
+[sub_resource type="TorusMesh" id="TorusMesh_8cxig"]
+material = SubResource("StandardMaterial3D_u6f3k")
+
 [node name="stamp04" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -62,6 +140,8 @@ omni_attenuation = 0.5
 [node name="Dome" type="StaticBody3D" parent="Structure"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Dome"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.072237, 0.0737152, -0.0178452)
+material_override = SubResource("StandardMaterial3D_rglun")
 mesh = SubResource("SphereMesh_avg8c")
 skeleton = NodePath("../..")
 
@@ -146,5 +226,70 @@ shape = SubResource("ConvexPolygonShape3D_184gx")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Test_Sound"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2)
 stream = ExtResource("3_vooxm")
+
+[node name="jonio" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.28, 0, 0, 0, 5.28, 0, 0, 0, 5.28, 0, 12, -181.807)
+mesh = SubResource("SphereMesh_qg0sn")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="jonio"]
+transform = Transform3D(0.189394, 0, 0, 0, 0.189394, 0, 0, 0, 0.189394, 0.0481895, 0.0613098, 0.0394974)
+stream = ExtResource("5_jfptr")
+autoplay = true
+parameters/looping = true
+
+[node name="dorio" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.155, 0, 0, 0, 3.155, 0, 0, 0, 3.155, -67, 5, 0)
+mesh = SubResource("SphereMesh_x254f")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="dorio"]
+stream = ExtResource("6_qr5t2")
+autoplay = true
+parameters/looping = true
+
+[node name="lídio" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.57, 0, 0, 0, 3.57, 0, 0, 0, 3.57, 0, 23.5028, 146.186)
+mesh = SubResource("SphereMesh_7sew3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lídio"]
+stream = ExtResource("7_4gg3k")
+autoplay = true
+parameters/looping = true
+
+[node name="mixolídio" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.415, 1.10127, 0)
+mesh = SubResource("SphereMesh_etkp3")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="mixolídio"]
+stream = ExtResource("8_qf4t7")
+autoplay = true
+parameters/looping = true
+
+[node name="frigio" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.536, 23.5951, -63)
+mesh = SubResource("SphereMesh_s2xmm")
+skeleton = NodePath("../mixolídio")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="frigio"]
+stream = ExtResource("9_li7wp")
+autoplay = true
+parameters/looping = true
+
+[node name="eólio" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
+mesh = SubResource("CapsuleMesh_qta13")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="eólio"]
+stream = ExtResource("10_djk5i")
+autoplay = true
+parameters/looping = true
+
+[node name="locrio" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873935, 0.998537, 0.318726, 0.947807, -0.00873935, -82.4345, 0, -125)
+mesh = SubResource("TorusMesh_8cxig")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="locrio"]
+stream = ExtResource("11_kraa7")
+autoplay = true
+parameters/looping = true
 
 [connection signal="play_sound" from="Objects/Test_Sound" to="Objects/Test_Sound" method="_on_play_sound"]
