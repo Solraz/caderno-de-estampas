@@ -201,7 +201,7 @@ void fragment() {
 "
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_np137"]
-viewport_path = NodePath("First_Corridor/Teleport_Point/Area3D/Vision")
+viewport_path = NodePath("First_Corridor/Teleport_Point_To_01/Area3D/Vision")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yevgb"]
 resource_local_to_scene = true
@@ -496,37 +496,51 @@ shape = SubResource("BoxShape3D_s4l0p")
 [node name="Spawn_Point" type="Node3D" parent="First_Corridor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 
-[node name="Teleport_Point" type="Node3D" parent="First_Corridor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -93)
+[node name="Teleport_Point_From_01" type="Node3D" parent="First_Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 
-[node name="Area3D" type="Area3D" parent="First_Corridor/Teleport_Point" node_paths=PackedStringArray("player", "from", "to")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -854)
+[node name="Area3D" type="Area3D" parent="First_Corridor/Teleport_Point_From_01"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point_From_01/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = SubResource("BoxMesh_aaob1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First_Corridor/Teleport_Point_From_01/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shape = SubResource("ConvexPolygonShape3D_nbnuh")
+
+[node name="Teleport_Point_To_01" type="Node3D" parent="First_Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -948)
+
+[node name="Area3D" type="Area3D" parent="First_Corridor/Teleport_Point_To_01" node_paths=PackedStringArray("player", "from", "to")]
 script = ExtResource("2_3p76o")
 player = NodePath("../../../Player")
 from = NodePath(".")
-to = NodePath("../../../Second_Corridor/Teleport_Point/Area3D")
+to = NodePath("../../../Second_Corridor/Teleport_Point_From_00/Area3D")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point/Area3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point_To_01/Area3D"]
 transparency = 1.0
 cast_shadow = 0
 mesh = SubResource("BoxMesh_aaob1")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="First_Corridor/Teleport_Point/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First_Corridor/Teleport_Point_To_01/Area3D"]
 shape = SubResource("ConvexPolygonShape3D_nbnuh")
 
-[node name="Vision" type="SubViewport" parent="First_Corridor/Teleport_Point/Area3D"]
+[node name="Vision" type="SubViewport" parent="First_Corridor/Teleport_Point_To_01/Area3D"]
 size = Vector2i(2226, 1080)
 
-[node name="Camera3D" type="Camera3D" parent="First_Corridor/Teleport_Point/Area3D/Vision"]
+[node name="Camera3D" type="Camera3D" parent="First_Corridor/Teleport_Point_To_01/Area3D/Vision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 4, 47)
 projection = 2
 fov = 50.0
 near = 1.0
 
-[node name="Vision_To_Destination" type="Node3D" parent="First_Corridor/Teleport_Point/Area3D"]
+[node name="Vision_To_Destination" type="Node3D" parent="First_Corridor/Teleport_Point_To_01/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point/Area3D/Vision_To_Destination"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point_To_01/Area3D/Vision_To_Destination"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 mesh = SubResource("QuadMesh_37k3b")
 
 [node name="Floor" type="StaticBody3D" parent="First_Corridor"]
@@ -590,17 +604,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 0, 0)
 [node name="Spawn_Point" type="Node3D" parent="Second_Corridor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 47)
 
-[node name="Teleport_Point" type="Node3D" parent="Second_Corridor"]
+[node name="Teleport_Point_To_00" type="Node3D" parent="Second_Corridor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -948)
 
-[node name="Area3D" type="Area3D" parent="Second_Corridor/Teleport_Point"]
+[node name="Area3D" type="Area3D" parent="Second_Corridor/Teleport_Point_To_00" node_paths=PackedStringArray("player", "from", "to")]
+script = ExtResource("2_3p76o")
+player = NodePath("../../../Player")
+from = NodePath(".")
+to = NodePath("../../../First_Corridor/Teleport_Point_From_01/Area3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Second_Corridor/Teleport_Point_To_00/Area3D"]
+transparency = 1.0
+cast_shadow = 0
+mesh = SubResource("BoxMesh_aaob1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Second_Corridor/Teleport_Point_To_00/Area3D"]
+shape = SubResource("ConvexPolygonShape3D_nbnuh")
+
+[node name="Vision" type="SubViewport" parent="Second_Corridor/Teleport_Point_To_00/Area3D"]
+size = Vector2i(2226, 1080)
+
+[node name="Camera3D" type="Camera3D" parent="Second_Corridor/Teleport_Point_To_00/Area3D/Vision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 4, 47)
+projection = 2
+fov = 50.0
+near = 1.0
+
+[node name="Vision_To_Destination" type="Node3D" parent="Second_Corridor/Teleport_Point_To_00/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Second_Corridor/Teleport_Point_To_00/Area3D/Vision_To_Destination"]
+mesh = SubResource("QuadMesh_37k3b")
+
+[node name="Teleport_Point_From_00" type="Node3D" parent="Second_Corridor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Second_Corridor/Teleport_Point/Area3D"]
+[node name="Area3D" type="Area3D" parent="Second_Corridor/Teleport_Point_From_00"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Second_Corridor/Teleport_Point_From_00/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 mesh = SubResource("BoxMesh_aaob1")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Second_Corridor/Teleport_Point/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Second_Corridor/Teleport_Point_From_00/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
 shape = SubResource("ConvexPolygonShape3D_nbnuh")
 
@@ -1560,5 +1606,5 @@ mesh = SubResource("PrismMesh_1wc0m")
 [connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_02" to="TheMixTaper" method="_on_01_body_entered"]
 [connection signal="body_entered" from="TheMixTaper/Second_Corridor_Mix_01" to="TheMixTaper" method="_on_02_body_entered"]
 [connection signal="body_entered" from="TheMixTaper/Second_Corridor_Mix_02" to="TheMixTaper" method="_on_03_body_entered"]
-[connection signal="body_entered" from="First_Corridor/Teleport_Point/Area3D" to="First_Corridor/Teleport_Point/Area3D" method="_on_body_entered"]
-[connection signal="body_entered" from="Second_Corridor/Teleport_Point/Area3D" to="Player" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="First_Corridor/Teleport_Point_To_01/Area3D" to="First_Corridor/Teleport_Point_To_01/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Second_Corridor/Teleport_Point_To_00/Area3D" to="Second_Corridor/Teleport_Point_To_00/Area3D" method="_on_body_entered"]

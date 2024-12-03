@@ -1,9 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=42 format=3 uid="uid://wdwbkdgc133m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
 [ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
-[ext_resource type="AudioStream" uid="uid://csfjdqdhwu2br" path="res://Assets/Sounds/test.wav" id="3_vooxm"]
 [ext_resource type="AudioStream" uid="uid://dnto7xxbya7fn" path="res://Assets/Textures/Map_04/ionian.mp3" id="5_jfptr"]
 [ext_resource type="AudioStream" uid="uid://dmrc7j1bo6qdr" path="res://Assets/Textures/Map_04/dorian.mp3" id="6_qr5t2"]
 [ext_resource type="AudioStream" uid="uid://de8aw8tofcmov" path="res://Assets/Textures/Map_04/lydian.mp3" id="7_4gg3k"]
@@ -62,14 +61,8 @@ material = SubResource("StandardMaterial3D_de0mw")
 radius = 5.0
 height = 10.0
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ay7vt"]
-points = PackedVector3Array(-1.36389, -4.71808, -0.90683, 0.922799, 4.88844, 0.463244, 1.22434, 4.72129, 1.07152, 4.41859, -0.455609, -2.27616, 1.52151, -1.36366, 4.5525, -4.54858, 1.21347, -1.6633, -0.452427, 0.916906, -4.88734, -3.48741, 0.759178, 3.49811, 4.40043, -1.66686, 1.67256, -3.46109, -3.01383, 1.96488, 2.11942, -3.62324, -2.71221, 1.06582, -4.39279, 2.1257, -2.85757, -2.41043, -3.30923, 2.71811, 2.56095, 3.31993, 3.79474, 2.87977, -1.50872, -1.96218, 4.38908, -1.35587, -1.95716, 3.32052, 3.17585, 1.36538, 3.32397, -3.46974, -0.758407, -0.610736, 4.89446, 1.37492, -0.912379, -4.71159, -4.56472, -1.98032, -0.450488, -4.39181, 2.12232, 1.06686, 4.57899, 1.82882, 0.766834, -2.25948, 2.11334, -3.92015, 3.04581, -3.9519, -0.298072, -1.20469, -3.78097, 3.03047, 0.462226, 2.28161, 4.41739, -0.448855, -3.03442, -3.93943, 3.03472, 1.21066, -3.77997, 3.49345, 0.758042, 3.49288, -4.88499, -0.457575, 0.921808, -2.11687, 4.39717, 1.06676)
-
-[sub_resource type="BoxMesh" id="BoxMesh_d1qun"]
-size = Vector3(5, 5, 5)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_184gx"]
-points = PackedVector3Array(-2.5, -2.49951, -2.49951, 2.5, 2.49951, 2.49951, 2.5, -2.49951, 2.49951, 2.5, 2.49951, -2.49951, -2.5, 2.49951, 2.49951, 2.5, -2.49951, -2.49951, -2.5, -2.49951, 2.49951, -2.5, 2.49951, -2.49951)
+[sub_resource type="BoxShape3D" id="BoxShape3D_bswc2"]
+size = Vector3(40, 40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mj2du"]
 emission_enabled = true
@@ -78,6 +71,11 @@ emission_energy_multiplier = 2.93
 
 [sub_resource type="SphereMesh" id="SphereMesh_x254f"]
 material = SubResource("StandardMaterial3D_mj2du")
+radius = 3.0
+height = 6.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cas5v"]
+size = Vector3(40, 40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxcd3"]
 emission_enabled = true
@@ -86,6 +84,11 @@ emission_energy_multiplier = 2.41
 
 [sub_resource type="SphereMesh" id="SphereMesh_7sew3"]
 material = SubResource("StandardMaterial3D_vxcd3")
+radius = 2.5
+height = 5.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cuier"]
+size = Vector3(40, 40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_su1m4"]
 emission_enabled = true
@@ -94,6 +97,9 @@ emission_energy_multiplier = 2.41
 
 [sub_resource type="SphereMesh" id="SphereMesh_etkp3"]
 material = SubResource("StandardMaterial3D_su1m4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4hoid"]
+size = Vector3(40, 40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3b5de"]
 emission_enabled = true
@@ -104,6 +110,9 @@ emission_energy_multiplier = 2.05
 material = SubResource("StandardMaterial3D_3b5de")
 is_hemisphere = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_olyfh"]
+size = Vector3(40, 40, 40)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcx0x"]
 emission_enabled = true
 emission = Color(0.291707, 0.799855, 1, 1)
@@ -112,6 +121,9 @@ emission_energy_multiplier = 1.88
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qta13"]
 material = SubResource("StandardMaterial3D_jcx0x")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_qoix5"]
+size = Vector3(40, 40, 40)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6f3k"]
 emission_enabled = true
 emission = Color(0.7119, 0.632336, 0.759897, 1)
@@ -119,6 +131,9 @@ emission_energy_multiplier = 1.7
 
 [sub_resource type="TorusMesh" id="TorusMesh_8cxig"]
 material = SubResource("StandardMaterial3D_u6f3k")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hil65"]
+size = Vector3(40, 40, 40)
 
 [node name="stamp04" type="Node3D"]
 
@@ -222,7 +237,7 @@ mesh = SubResource("SphereMesh_qg0sn")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Jonio"]
-shape = SubResource("ConvexPolygonShape3D_ay7vt")
+shape = SubResource("BoxShape3D_bswc2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Jonio"]
 stream = ExtResource("5_jfptr")
@@ -230,73 +245,128 @@ unit_size = 24.56
 autoplay = true
 parameters/looping = true
 
-[node name="Test_Sound" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 1, -22)
+[node name="Dorio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 5, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Test_Sound"]
-mesh = SubResource("BoxMesh_d1qun")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Test_Sound"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.74228e-08, 0, -2)
-shape = SubResource("ConvexPolygonShape3D_184gx")
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Test_Sound"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -2)
-stream = ExtResource("3_vooxm")
-
-[node name="dorio" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.155, 0, 0, 0, 3.155, 0, 0, 0, 3.155, -67, 5, 0)
+[node name="dorio" type="MeshInstance3D" parent="Objects/Dorio"]
 mesh = SubResource("SphereMesh_x254f")
+skeleton = NodePath("../../..")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="dorio"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Dorio"]
+shape = SubResource("BoxShape3D_cas5v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Dorio"]
 stream = ExtResource("6_qr5t2")
 parameters/looping = true
 
-[node name="lídio" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.57, 0, 0, 0, 3.57, 0, 0, 0, 3.57, 0, 23.5028, 146.186)
-mesh = SubResource("SphereMesh_7sew3")
+[node name="Lidio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 146)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lídio"]
+[node name="lídio" type="MeshInstance3D" parent="Objects/Lidio"]
+mesh = SubResource("SphereMesh_7sew3")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Lidio"]
+shape = SubResource("BoxShape3D_cuier")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Lidio"]
 stream = ExtResource("7_4gg3k")
 parameters/looping = true
 
-[node name="mixolídio" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120.415, 1.10127, 0)
-mesh = SubResource("SphereMesh_etkp3")
+[node name="Mixolidio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="mixolídio"]
+[node name="mixolídio" type="MeshInstance3D" parent="Objects/Mixolidio"]
+mesh = SubResource("SphereMesh_etkp3")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Mixolidio"]
+shape = SubResource("BoxShape3D_4hoid")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Mixolidio"]
 stream = ExtResource("8_qf4t7")
 parameters/looping = true
 
-[node name="frigio" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104.536, 23.5951, -63)
-mesh = SubResource("SphereMesh_s2xmm")
-skeleton = NodePath("../mixolídio")
+[node name="Frigio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 23, -63)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="frigio"]
+[node name="frigio" type="MeshInstance3D" parent="Objects/Frigio"]
+mesh = SubResource("SphereMesh_s2xmm")
+skeleton = NodePath("../../Mixolidio/mixolídio")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Frigio"]
 stream = ExtResource("9_li7wp")
 parameters/looping = true
 
-[node name="eólio" type="MeshInstance3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Frigio"]
+shape = SubResource("BoxShape3D_olyfh")
+
+[node name="Eolio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
+
+[node name="eólio" type="MeshInstance3D" parent="Objects/Eolio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
 mesh = SubResource("CapsuleMesh_qta13")
+skeleton = NodePath("../../..")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="eólio"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Eolio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
 stream = ExtResource("10_djk5i")
 parameters/looping = true
 
-[node name="locrio" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873935, 0.998537, 0.318726, 0.947807, -0.00873935, -82.4345, 0, -125)
-mesh = SubResource("TorusMesh_8cxig")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Eolio"]
+shape = SubResource("BoxShape3D_qoix5")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="locrio"]
+[node name="Locrio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, -125)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_gkrr6")
+player = NodePath("../../Player")
+sound = NodePath("AudioStreamPlayer3D")
+
+[node name="locrio" type="MeshInstance3D" parent="Objects/Locrio"]
+transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873935, 0.998537, 0.318726, 0.947807, -0.00873935, 0, 0, 0)
+mesh = SubResource("TorusMesh_8cxig")
+skeleton = NodePath("../../..")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Locrio"]
+transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873936, 0.998537, 0.318726, 0.947807, -0.00873934, 0, 0, 0)
 stream = ExtResource("11_kraa7")
 parameters/looping = true
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Locrio"]
+shape = SubResource("BoxShape3D_hil65")
+
 [connection signal="play_sound" from="Objects/Jonio" to="Objects/Jonio" method="_on_play_sound"]
-[connection signal="play_sound" from="Objects/Test_Sound" to="Objects/Test_Sound" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Dorio" to="Objects/Dorio" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Lidio" to="Objects/Lidio" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Mixolidio" to="Objects/Mixolidio" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Frigio" to="Objects/Frigio" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Eolio" to="Objects/Eolio" method="_on_play_sound"]
+[connection signal="play_sound" from="Objects/Locrio" to="Objects/Locrio" method="_on_play_sound"]

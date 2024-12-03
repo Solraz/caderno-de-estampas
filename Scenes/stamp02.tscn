@@ -103,14 +103,16 @@ sky_custom_fov = 90.0
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_8a0vp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999992, -0.00395298, 0.000690019, -0.000841523, -0.0384541, 0.99926, -0.00392352, -0.999253, -0.0384571, 1.06808, 56.0536, -0.3006)
 light_energy = 0.3
 
-[node name="Ground_Below" type="StaticBody3D" parent="."]
+[node name="Ground_Below" type="StaticBody3D" parent="." node_paths=PackedStringArray("player", "gravity_well")]
 script = ExtResource("2_8q2kq")
+player = NodePath("../Player")
+gravity_well = NodePath("GravityWell")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground_Below"]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -2, 0)
@@ -119,6 +121,9 @@ mesh = SubResource("SphereMesh_iinxu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground_Below"]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -2, 0)
 shape = SubResource("ConvexPolygonShape3D_euusf")
+
+[node name="GravityWell" type="Node3D" parent="Ground_Below"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13, 0)
 
 [node name="Pillar_Quadrant" type="Node3D" parent="."]
 
