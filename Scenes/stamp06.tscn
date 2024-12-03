@@ -1,25 +1,376 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyq33ebk1lryo"]
+[gd_scene load_steps=31 format=3 uid="uid://dyq33ebk1lryo"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_8bfif"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_avyv0"]
+size = Vector2(50, 70)
+
+[sub_resource type="QuadMesh" id="QuadMesh_f7huq"]
+size = Vector2(70, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_shn6t"]
+size = Vector2(18, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6s5ky"]
+size = Vector2(54, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_qix2h"]
+size = Vector2(10, 14)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fd5gs"]
+size = Vector2(6, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_mwfo1"]
+size = Vector2(50, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pnag6"]
+size = Vector2(20, 10)
+
+[sub_resource type="QuadMesh" id="QuadMesh_cvui4"]
+size = Vector2(20, 6)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j0d65"]
+size = Vector2(20, 6)
+
+[sub_resource type="QuadMesh" id="QuadMesh_cv0ke"]
+size = Vector2(20, 10)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6njsf"]
+points = PackedVector3Array(-25.5556, -0.555556, -35.5556, 25.5556, 0.555556, 35.5556, 25.5556, -0.555556, 35.5556, 25.5556, 0.555556, -35.5556, -25.5556, 0.555556, 35.5556, -25.5556, -0.555556, 35.5556, 25.5556, -0.555556, -35.5556, -25.5556, 0.555556, -35.5556)
+
+[sub_resource type="QuadMesh" id="QuadMesh_5apgp"]
+size = Vector2(6, 20)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hin71"]
+size = Vector2(12, 8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_36y6r"]
+size = Vector2(40, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hfdsg"]
+size = Vector2(20, 36)
+
+[sub_resource type="QuadMesh" id="QuadMesh_m04iq"]
+size = Vector2(94, 6)
+
+[sub_resource type="QuadMesh" id="QuadMesh_spga3"]
+size = Vector2(6, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ll7rn"]
 size = Vector2(60, 60)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_usao5"]
-points = PackedVector3Array(12.1881, 0.190439, 12.1881, -12.1881, -0.190439, -12.1881, -12.1881, 0.190439, -12.1881, 12.1881, -0.190439, -12.1881, -12.1881, -0.190439, 12.1881, -12.1881, 0.190439, 12.1881, 12.1881, 0.190439, -12.1881, 12.1881, -0.190439, 12.1881)
+[sub_resource type="QuadMesh" id="QuadMesh_obfhn"]
+size = Vector2(8, 12)
+
+[sub_resource type="QuadMesh" id="QuadMesh_lqmcu"]
+size = Vector2(6, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_b3p0q"]
+size = Vector2(46, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ct7qb"]
+size = Vector2(60, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_gumbk"]
+size = Vector2(60, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_q0w75"]
+size = Vector2(60, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_5aase"]
+size = Vector2(90, 30)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8gsxn"]
+size = Vector2(40, 80)
+
+[sub_resource type="QuadMesh" id="QuadMesh_axk7r"]
+size = Vector2(28, 3)
+
+[sub_resource type="QuadMesh" id="QuadMesh_xin3d"]
+size = Vector2(30, 30)
 
 [node name="stamp06" type="Node3D"]
 
 [node name="House" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Room01" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House/Room01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
+omni_range = 4096.0
 
 [node name="Floor" type="StaticBody3D" parent="House/Room01"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/Floor"]
 mesh = SubResource("PlaneMesh_avyv0")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room01/Floor"]
-shape = SubResource("ConvexPolygonShape3D_usao5")
+[node name="West_Wall" type="StaticBody3D" parent="House/Room01"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 10, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/West_Wall"]
+mesh = SubResource("QuadMesh_f7huq")
+
+[node name="North_Wall" type="StaticBody3D" parent="House/Room01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -35)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/North_Wall"]
+mesh = SubResource("QuadMesh_shn6t")
+
+[node name="East_Wall" type="Node3D" parent="House/Room01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 10, 0)
+
+[node name="Section01" type="StaticBody3D" parent="House/Room01/East_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -8)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/East_Wall/Section01"]
+mesh = SubResource("QuadMesh_6s5ky")
+
+[node name="Section02" type="StaticBody3D" parent="House/Room01/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 23)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/East_Wall/Section02"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 1)
+mesh = SubResource("QuadMesh_qix2h")
+
+[node name="Section03" type="StaticBody3D" parent="House/Room01/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/East_Wall/Section03"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_fd5gs")
+
+[node name="South_Wall" type="StaticBody3D" parent="House/Room01"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 35)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/South_Wall"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_mwfo1")
+
+[node name="Corridor01_02" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 26)
+
+[node name="Floor" type="StaticBody3D" parent="House/Corridor01_02"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor01_02/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_pnag6")
+
+[node name="South_Wall" type="StaticBody3D" parent="House/Corridor01_02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor01_02/South_Wall"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_cvui4")
+
+[node name="North_Wall" type="StaticBody3D" parent="House/Corridor01_02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor01_02/North_Wall"]
+mesh = SubResource("QuadMesh_j0d65")
+
+[node name="Ceiling" type="StaticBody3D" parent="House/Corridor01_02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor01_02/Ceiling"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_cv0ke")
+
+[node name="Room02" type="Node3D" parent="House"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 70, 0, 50)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House/Room02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
+omni_range = 4096.0
+
+[node name="Floor" type="StaticBody3D" parent="House/Room02"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/Floor"]
+mesh = SubResource("PlaneMesh_avyv0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room02/Floor"]
+shape = SubResource("ConvexPolygonShape3D_6njsf")
+
+[node name="West_Wall" type="StaticBody3D" parent="House/Room02"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25, 10, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/West_Wall"]
+mesh = SubResource("QuadMesh_f7huq")
+
+[node name="North_Wall" type="Node3D" parent="House/Room02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -35)
+
+[node name="Section00" type="StaticBody3D" parent="House/Room02/North_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/North_Wall/Section00"]
+mesh = SubResource("QuadMesh_shn6t")
+
+[node name="Section01" type="StaticBody3D" parent="House/Room02/North_Wall"]
+
+[node name="East_Wall" type="Node3D" parent="House/Room02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 10, 0)
+
+[node name="Section00" type="StaticBody3D" parent="House/Room02/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 0, -32)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/East_Wall/Section00"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_5apgp")
+
+[node name="Section00_01" type="StaticBody3D" parent="House/Room02/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 4, -25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/East_Wall/Section00_01"]
+transform = Transform3D(1.31134e-07, -1, -8.74228e-08, 1, 1.31134e-07, 8.74228e-08, -8.74228e-08, -8.74228e-08, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_hin71")
+
+[node name="Section01" type="StaticBody3D" parent="House/Room02/East_Wall"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/East_Wall/Section01"]
+mesh = SubResource("QuadMesh_36y6r")
+
+[node name="Section02" type="StaticBody3D" parent="House/Room02/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 3, 24)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/East_Wall/Section02"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_qix2h")
+
+[node name="Section03" type="StaticBody3D" parent="House/Room02/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/East_Wall/Section03"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_fd5gs")
+
+[node name="South_Wall" type="StaticBody3D" parent="House/Room02"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 35)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/South_Wall"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_mwfo1")
+
+[node name="Corridor02_04" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 0, 103)
+
+[node name="Floor" type="StaticBody3D" parent="House/Corridor02_04"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor02_04/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_hfdsg")
+
+[node name="Corridor02_05" type="Node3D" parent="House"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 142, 0, 25)
+
+[node name="Floor" type="StaticBody3D" parent="House/Corridor02_05"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor02_05/Floor"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_m04iq")
+
+[node name="Floor02" type="StaticBody3D" parent="House/Corridor02_05"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -5.99999)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor02_05/Floor02"]
+transform = Transform3D(1, 8.74228e-08, 8.74228e-08, -8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_spga3")
+
+[node name="Room03" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 101)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="House/Room03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+omni_range = 4096.0
+
+[node name="Floor" type="StaticBody3D" parent="House/Room03"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_ll7rn")
+
+[node name="East_Wall" type="Node3D" parent="House/Room03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 3)
+
+[node name="Section00" type="StaticBody3D" parent="House/Room03/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -29)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/East_Wall/Section00"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_obfhn")
+
+[node name="Section01" type="StaticBody3D" parent="House/Room03/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -22)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/East_Wall/Section01"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_lqmcu")
+
+[node name="Section02" type="StaticBody3D" parent="House/Room03/East_Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/East_Wall/Section02"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_b3p0q")
+
+[node name="North_Wall" type="StaticBody3D" parent="House/Room03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -30)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/North_Wall"]
+mesh = SubResource("QuadMesh_ct7qb")
+
+[node name="West_Wall" type="StaticBody3D" parent="House/Room03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 10, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/West_Wall"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_gumbk")
+
+[node name="South_Wall" type="StaticBody3D" parent="House/Room03"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/South_Wall"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_q0w75")
+
+[node name="Room04" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 0, 136)
+
+[node name="Floor" type="StaticBody3D" parent="House/Room04"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_5aase")
+
+[node name="Room05" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 187, 0, 81)
+
+[node name="Floor" type="StaticBody3D" parent="House/Room05"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_8gsxn")
+
+[node name="Cooridor05_06" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154, 0, 101)
+
+[node name="Floor" type="StaticBody3D" parent="House/Cooridor05_06"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Cooridor05_06/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_axk7r")
+
+[node name="Room06" type="Node3D" parent="House"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124, 0, 100)
+
+[node name="Floor" type="StaticBody3D" parent="House/Room06"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room06/Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_xin3d")
 
 [node name="Player" parent="." instance=ExtResource("1_8bfif")]

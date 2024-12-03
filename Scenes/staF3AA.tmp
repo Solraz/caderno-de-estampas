@@ -135,12 +135,6 @@ Vector2i(3, 2): {
 }
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_s4l0p"]
-size = Vector3(9, 5, 200)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_h2lcf"]
-size = Vector3(9, 5, 200)
-
 [sub_resource type="BoxMesh" id="BoxMesh_aaob1"]
 size = Vector3(10, 10, 5)
 
@@ -443,6 +437,12 @@ albedo_texture = ExtResource("36_25iph")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlpt5"]
 albedo_texture = ExtResource("29_xdmvq")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4l0p"]
+size = Vector3(9, 5, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2lcf"]
+size = Vector3(9, 5, 200)
+
 [node name="stamp03" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -455,27 +455,11 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 33.244
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44)
 
 [node name="TheMixTaper" type="AudioStreamPlayer" parent="."]
+
+[node name="TheMixTaper_Old" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_6xqd3")
 volume_db = -3.0
-
-[node name="First_Corridor_Mix_01" type="Area3D" parent="TheMixTaper" node_paths=PackedStringArray("mixer", "player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -52)
-script = ExtResource("57_ecg5d")
-mixer = NodePath("..")
-player = NodePath("../../Player")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/First_Corridor_Mix_01"]
-shape = SubResource("BoxShape3D_s4l0p")
-
-[node name="First_Corridor_Mix_02" type="Area3D" parent="TheMixTaper" node_paths=PackedStringArray("mixer", "player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -253)
-script = ExtResource("57_ecg5d")
-mixer = NodePath("..")
-player = NodePath("../../Player")
-clip = 1
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/First_Corridor_Mix_02"]
-shape = SubResource("BoxShape3D_h2lcf")
+autoplay = true
 
 [node name="First_Corridor" type="Node3D" parent="."]
 
@@ -1542,6 +1526,24 @@ mesh = SubResource("PrismMesh_1wc0m")
 transform = Transform3D(-12.0926, -13.2962, 5.73321, 14.3036, -12.1303, 2.03741, 2.25052, 5.65296, 17.8569, 82.6712, 12.9148, -621.058)
 mesh = SubResource("PrismMesh_1wc0m")
 
+[node name="First_Corridor_Mix_01" type="Area3D" parent="." node_paths=PackedStringArray("mixer", "player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -52)
+script = ExtResource("57_ecg5d")
+mixer = NodePath("../TheMixTaper_Old")
+player = NodePath("../Player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First_Corridor_Mix_01"]
+shape = SubResource("BoxShape3D_s4l0p")
+
+[node name="First_Corridor_Mix_02" type="Area3D" parent="." node_paths=PackedStringArray("mixer", "player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -253)
+script = ExtResource("57_ecg5d")
+mixer = NodePath("../TheMixTaper_Old")
+player = NodePath("../Player")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="First_Corridor_Mix_02"]
+shape = SubResource("BoxShape3D_h2lcf")
+
 [node name="AreaC" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 0, 0)
 
@@ -1556,7 +1558,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 0, -499.952)
 transform = Transform3D(10, 0, 0, 0, 50, 0, 0, 0, 500, 0, 0, -199.754)
 shape = SubResource("BoxShape3D_s4l0p")
 
-[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_01" to="TheMixTaper/First_Corridor_Mix_01" method="_on_body_entered"]
-[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_02" to="TheMixTaper/First_Corridor_Mix_02" method="_on_body_entered"]
 [connection signal="body_entered" from="First_Corridor/Teleport_Point/Area3D" to="First_Corridor/Teleport_Point/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Second_Corridor/Teleport_Point/Area3D" to="Player" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="First_Corridor_Mix_01" to="First_Corridor_Mix_01" method="_on_body_entered"]
+[connection signal="body_entered" from="First_Corridor_Mix_02" to="First_Corridor_Mix_02" method="_on_body_entered"]
