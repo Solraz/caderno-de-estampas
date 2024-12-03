@@ -12,5 +12,5 @@ func _process(_delta):
 			current_sound = colliding_with.sound
 
 	if (!is_colliding() && current_sound != null):
-		current_sound.stop()
+		current_sound.volume_db = -80.0
 		current_sound = null

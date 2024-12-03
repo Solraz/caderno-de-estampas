@@ -2,8 +2,7 @@
 extends PlayerState
 
 func enter(_msg := {}) -> void:
-
-	print("RUN")
+	pass
 	
 func physics_update(delta: float) -> void:
 	Move(delta)
@@ -150,4 +149,3 @@ func CheckJumpButton():
 	var jumpvel = flGroundFactor * flMul + max(0, stats.vel.y) # 2 * gravity * height
 	
 	stats.vel.y = max(jumpvel, jumpvel + stats.vel.y)
-	print("nomral jump: ", stats.vel.y)

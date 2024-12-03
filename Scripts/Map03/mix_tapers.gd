@@ -1,16 +1,38 @@
-extends Area3D
+extends AudioStreamPlayer
 
 @export var mixer: AudioStreamPlayer
-var stream
+@export var counter: Node
+var streamer
 @export var player: Player
-@export var clip: int = 0
 
 func _ready():
-	stream = mixer.get_stream_playback()
+	mixer.play()
+	streamer = mixer.get_stream_playback()
 
-func _on_body_entered(body):
-	if (body == player):
-		stream.switch_to_clip(clip)
-
+func switch_clip(body, number):
 	if (!mixer.playing):
-		player.play()
+		mixer.play()
+
+	if (body == player):
+		print(counter.current_clip)
+		# if (counter.current_clip != clip):
+		# stream.switch_to_clip_by_name(clip)
+		streamer.switch_to_clip(number)
+
+		print(counter.current_clip)
+
+func _on_03_body_entered(body):
+	switch_clip(body, 3)
+
+func _on_02_body_entered(body):
+	switch_clip(body, 2)
+
+func _on_01_body_entered(body):
+	switch_clip(body, 1)
+
+func _on_00_body_entered(body):
+	switch_clip(body, 0)
+
+
+func _on_first_corridor_mix_01_body_entered(body):
+	pass # Replace with function body.

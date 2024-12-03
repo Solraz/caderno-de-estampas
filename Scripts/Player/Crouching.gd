@@ -3,7 +3,6 @@ extends PlayerState
 var try_uncrouch = false
 
 func enter(_msg := {}) -> void:
-	print("crouching")
 	stats.crouching = true
 	try_uncrouch = false
 	stats.speed = stats.ply_crouchspeed

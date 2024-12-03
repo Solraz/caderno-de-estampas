@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=3 uid="uid://b44jmggslniff"]
+[gd_scene load_steps=142 format=3 uid="uid://b44jmggslniff"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_10bm4"]
 [ext_resource type="Script" path="res://Scripts/Map03/teleporters.gd" id="2_3p76o"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dtvpfomi4noof" path="res://Assets/Textures/Map_03/casa1.glb" id="4_e0xsl"]
 [ext_resource type="PackedScene" uid="uid://d2iir0gfwq2ev" path="res://Assets/Textures/Map_03/hedgewall.glb" id="4_jfvrc"]
 [ext_resource type="PackedScene" uid="uid://5wjsvpomoqao" path="res://Assets/Textures/Map_03/casaspixel1.glb" id="6_6b56j"]
+[ext_resource type="Script" path="res://Scripts/Map03/current_clip.gd" id="6_wst2k"]
 [ext_resource type="PackedScene" uid="uid://cbgggnnvs060m" path="res://Assets/Textures/Map_03/casa2.glb" id="7_4ssv3"]
 [ext_resource type="PackedScene" uid="uid://lo6h6ilxqms3" path="res://Assets/Textures/Map_03/casa6.glb" id="8_48hsk"]
 [ext_resource type="PackedScene" uid="uid://0b1b54bhnrmi" path="res://Assets/Textures/Map_03/casa5.glb" id="9_tkqe6"]
@@ -72,16 +73,16 @@ ambient_light_color = Color(1, 1, 1, 1)
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_6xqd3"]
 clip_count = 4
-clip_0/name = &"Queriaserpso A"
+clip_0/name = &"QueriaserpsoA"
 clip_0/stream = ExtResource("53_j0r2o")
 clip_0/auto_advance = 0
-clip_1/name = &"Queriaserpso B"
+clip_1/name = &"QueriaserpsoB"
 clip_1/stream = ExtResource("54_7sg8i")
 clip_1/auto_advance = 0
-clip_2/name = &"Queriaserpso C"
+clip_2/name = &"QueriaserpsoC"
 clip_2/stream = ExtResource("55_osm3y")
 clip_2/auto_advance = 0
-clip_3/name = &"Queriaserpso D"
+clip_3/name = &"QueriaserpsoD"
 clip_3/stream = ExtResource("56_oi8qc")
 clip_3/auto_advance = 0
 _transitions = {
@@ -136,10 +137,10 @@ Vector2i(3, 2): {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s4l0p"]
-size = Vector3(9, 5, 200)
+size = Vector3(9, 5, 495)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h2lcf"]
-size = Vector3(9, 5, 200)
+size = Vector3(9, 5, 495)
 
 [sub_resource type="BoxMesh" id="BoxMesh_aaob1"]
 size = Vector3(10, 10, 5)
@@ -210,7 +211,7 @@ shader_parameter/albedo = Color(0, 0, 0, 1)
 shader_parameter/point_size = 1.0
 shader_parameter/roughness = 1.0
 shader_parameter/metallic_texture_channel = null
-shader_parameter/specular = 0.5
+shader_parameter/specular = 1.0
 shader_parameter/metallic = 0.0
 shader_parameter/emission = Color(0, 0, 0, 1)
 shader_parameter/emission_energy = 1.0
@@ -454,28 +455,41 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 33.244
 [node name="Player" parent="." instance=ExtResource("1_10bm4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44)
 
-[node name="TheMixTaper" type="AudioStreamPlayer" parent="."]
+[node name="TheMixTaper" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("mixer", "counter", "player")]
 stream = SubResource("AudioStreamInteractive_6xqd3")
-volume_db = -3.0
-
-[node name="First_Corridor_Mix_01" type="Area3D" parent="TheMixTaper" node_paths=PackedStringArray("mixer", "player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -52)
+volume_db = -18.0
 script = ExtResource("57_ecg5d")
-mixer = NodePath("..")
-player = NodePath("../../Player")
+mixer = NodePath(".")
+counter = NodePath("Current_Clip")
+player = NodePath("../Player")
+
+[node name="Current_Clip" type="Node" parent="TheMixTaper"]
+script = ExtResource("6_wst2k")
+current_clip = "QueriaserpsoA"
+
+[node name="First_Corridor_Mix_01" type="Area3D" parent="TheMixTaper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -194)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/First_Corridor_Mix_01"]
 shape = SubResource("BoxShape3D_s4l0p")
 
-[node name="First_Corridor_Mix_02" type="Area3D" parent="TheMixTaper" node_paths=PackedStringArray("mixer", "player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -253)
-script = ExtResource("57_ecg5d")
-mixer = NodePath("..")
-player = NodePath("../../Player")
-clip = 1
+[node name="First_Corridor_Mix_02" type="Area3D" parent="TheMixTaper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -703)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/First_Corridor_Mix_02"]
 shape = SubResource("BoxShape3D_h2lcf")
+
+[node name="Second_Corridor_Mix_01" type="Area3D" parent="TheMixTaper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 3, -201)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/Second_Corridor_Mix_01"]
+shape = SubResource("BoxShape3D_s4l0p")
+
+[node name="Second_Corridor_Mix_02" type="Area3D" parent="TheMixTaper"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 3, -722.952)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TheMixTaper/Second_Corridor_Mix_02"]
+shape = SubResource("BoxShape3D_s4l0p")
 
 [node name="First_Corridor" type="Node3D" parent="."]
 
@@ -501,18 +515,18 @@ mesh = SubResource("BoxMesh_aaob1")
 shape = SubResource("ConvexPolygonShape3D_nbnuh")
 
 [node name="Vision" type="SubViewport" parent="First_Corridor/Teleport_Point/Area3D"]
+size = Vector2i(2226, 1080)
 
 [node name="Camera3D" type="Camera3D" parent="First_Corridor/Teleport_Point/Area3D/Vision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 4, 47)
 projection = 2
-fov = 90.0
+fov = 50.0
 near = 1.0
 
 [node name="Vision_To_Destination" type="Node3D" parent="First_Corridor/Teleport_Point/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="First_Corridor/Teleport_Point/Area3D/Vision_To_Destination"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("QuadMesh_37k3b")
 
 [node name="Floor" type="StaticBody3D" parent="First_Corridor"]
@@ -1542,21 +1556,9 @@ mesh = SubResource("PrismMesh_1wc0m")
 transform = Transform3D(-12.0926, -13.2962, 5.73321, 14.3036, -12.1303, 2.03741, 2.25052, 5.65296, 17.8569, 82.6712, 12.9148, -621.058)
 mesh = SubResource("PrismMesh_1wc0m")
 
-[node name="AreaC" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaC"]
-transform = Transform3D(10, 0, 0, 0, 50, 0, 0, 0, 500, 0, 0, -199.754)
-shape = SubResource("BoxShape3D_s4l0p")
-
-[node name="AreaD" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.0216, 0, -499.952)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaD"]
-transform = Transform3D(10, 0, 0, 0, 50, 0, 0, 0, 500, 0, 0, -199.754)
-shape = SubResource("BoxShape3D_s4l0p")
-
-[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_01" to="TheMixTaper/First_Corridor_Mix_01" method="_on_body_entered"]
-[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_02" to="TheMixTaper/First_Corridor_Mix_02" method="_on_body_entered"]
+[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_01" to="TheMixTaper" method="_on_00_body_entered"]
+[connection signal="body_entered" from="TheMixTaper/First_Corridor_Mix_02" to="TheMixTaper" method="_on_01_body_entered"]
+[connection signal="body_entered" from="TheMixTaper/Second_Corridor_Mix_01" to="TheMixTaper" method="_on_02_body_entered"]
+[connection signal="body_entered" from="TheMixTaper/Second_Corridor_Mix_02" to="TheMixTaper" method="_on_03_body_entered"]
 [connection signal="body_entered" from="First_Corridor/Teleport_Point/Area3D" to="First_Corridor/Teleport_Point/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Second_Corridor/Teleport_Point/Area3D" to="Player" method="_on_area_3d_body_entered"]

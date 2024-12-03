@@ -18,7 +18,6 @@ func _ready() -> void:
 	# The state machine assigns itself to the State objects' state_machine property.
 	
 	for child in get_children():
-		#print(child.get_class())
 		child.state_machine = self
 	state.enter()
 

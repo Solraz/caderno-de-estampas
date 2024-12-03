@@ -16,7 +16,6 @@ func _ready():
 	mySkin.set_sorting_offset(1)
 	#get_viewport().get_camera_3d()
 	camera = get_node(stats.camPath)
-	print(stats.vel)
 	
 	stats.on_floor = false
 	spring.add_excluded_object(self.get_rid())
@@ -43,7 +42,6 @@ func _process(delta):
 	
 	
 	if stats.wasOnFloor && !stats.on_floor:
-		print("start timer")
 		coyoteTimer.start()
 	
 	if (stats.on_floor):
@@ -51,7 +49,6 @@ func _process(delta):
 	else:
 		if coyoteTimer.is_stopped():
 			stats.shouldJump = false
-			#print("timer stopped")
 			pass
 	
 	

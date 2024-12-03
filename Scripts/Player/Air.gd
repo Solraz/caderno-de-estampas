@@ -4,7 +4,6 @@ extends PlayerState
 
 # If we get a message asking us to jump, we jump.
 func enter(msg := {}) -> void:
-	print("AIR")
 	stats.on_floor = false
 	if msg.has("do_jump"):
 		#player.clearCoyote()
@@ -33,9 +32,7 @@ func AirMove(delta):
 	forward = forward.normalized()
 	side = side.normalized()
 	
-	stats.vel.y -= stats.ply_gravity * delta
-	#print("huh ",stats.vel.y)
-	
+	stats.vel.y -= stats.ply_gravity * delta	
 
 	var fmove = stats.forwardmove
 	var smove = stats.sidemove
@@ -57,7 +54,6 @@ func AirMove(delta):
 	if wishspeed != 0.0 and wishspeed > stats.ply_maxspeed:
 		wishvel *= stats.ply_maxspeed / wishspeed
 		wishspeed = stats.ply_maxspeed
-	#print(stats.ply_airaccelerate, " ", stats.ply_airspeedcap)
 	AirAccelerate(wishdir, wishspeed, stats.ply_airaccelerate, delta)
 	player.CheckVelocity()
 
@@ -106,4 +102,3 @@ func CheckJumpButton():
 	var jumpvel = flGroundFactor * flMul + max(0, stats.vel.y) # 2 * gravity * height
 	
 	stats.vel.y = max(jumpvel, jumpvel + stats.vel.y)
-	print("Coyote jump: ", stats.vel.y)

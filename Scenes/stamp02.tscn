@@ -1,7 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=25 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="2_8a0vp"]
+[ext_resource type="Script" path="res://Scripts/Map02/planetoid_gravity.gd" id="2_8q2kq"]
 [ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
 [ext_resource type="PackedScene" uid="uid://lmigyfvjejll" path="res://Assets/Objects/polyballtrue.tscn" id="3_ihgqk"]
 [ext_resource type="Shader" path="res://Assets/Shaders/fountain_ball.gdshader" id="4_dl4kr"]
@@ -37,15 +38,6 @@ is_hemisphere = true
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_euusf"]
 points = PackedVector3Array(-97.6542, 3.55271e-15, -59.2963, 116.292, 6.39362, 21.7878, 109.604, 13.8598, 24.7428, -36.2898, 6.40714, 112.578, -25.5546, 36.9106, -38.3318, 59.2745, 0, -97.6761, -41.87, 33.8178, 48.3302, 45.3301, -3.55271e-15, 104.648, 39.3246, 30.7627, 65.5479, 73.1118, 27.5762, -46.5333, -24.7208, 13.8639, -109.604, -109.599, 13.8643, 24.7417, -97.6542, 0, 59.2963, -88.6488, 24.3381, -34.1006, 44.5962, 36.8591, 12.7361, 108.145, 7.10543e-15, -34.8828, 23.8309, 24.3331, -91.9314, 53.1086, 13.8535, 99.1405, -41.4394, 20.9289, 93.244, -20.8947, 0, -111.642, 95.0476, 13.8937, -59.8432, -55.0028, 20.9289, -85.9621, -84.5143, 13.891, 73.9666, -72.6431, 30.8369, 23.1109, 90.682, 0, 69.7655, 36.2898, 6.40714, -112.578, 25.5546, 36.9106, -38.3318, -112.57, 6.40815, -36.31, 88.6488, 24.3381, 34.1006, -3.15429, 39.9292, 3.15429, -72.034, 6.52083, -93.6826, 24.4853, 17.4352, 104.956)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfhuu"]
-albedo_texture = ExtResource("1_ayrd7")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_0a0fx"]
-size = Vector2(240, 240)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v4igc"]
-points = PackedVector3Array(121.905, 1.90476, 121.905, -121.905, -1.90476, -121.905, -121.905, 1.90476, -121.905, 121.905, -1.90476, -121.905, -121.905, -1.90476, 121.905, -121.905, 1.90476, 121.905, 121.905, 1.90476, -121.905, 121.905, -1.90476, 121.905)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6s1ka"]
 albedo_texture = ExtResource("3_g6eus")
@@ -118,6 +110,7 @@ transform = Transform3D(0.999992, -0.00395298, 0.000690019, -0.000841523, -0.038
 light_energy = 0.3
 
 [node name="Ground_Below" type="StaticBody3D" parent="."]
+script = ExtResource("2_8q2kq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground_Below"]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -2, 0)
@@ -126,19 +119,6 @@ mesh = SubResource("SphereMesh_iinxu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground_Below"]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -2, 0)
 shape = SubResource("ConvexPolygonShape3D_euusf")
-
-[node name="Ground" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
-visible = false
-material_override = SubResource("StandardMaterial3D_mfhuu")
-mesh = SubResource("PlaneMesh_0a0fx")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
-shape = SubResource("ConvexPolygonShape3D_v4igc")
 
 [node name="Pillar_Quadrant" type="Node3D" parent="."]
 
