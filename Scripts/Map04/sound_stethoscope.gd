@@ -8,7 +8,7 @@ signal play_sound
 
 func _ready():
 	sound.volume_db = -80.0
-	look_at(player.get_global_transform().origin, Vector3.UP, true)
+	# look_at(player.get_global_transform().origin, Vector3.UP, true)
 
 func _on_play_sound():
 	if (!sound.playing):
