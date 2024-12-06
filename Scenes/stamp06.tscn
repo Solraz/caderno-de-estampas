@@ -92,7 +92,6 @@
 [ext_resource type="AudioStream" uid="uid://p42746tfxvup" path="res://Assets/Textures/Map_06/musga/recital-instalaçãojanela.mp3" id="60_r5uah"]
 [ext_resource type="Texture2D" uid="uid://bjfx4gdx5afg4" path="res://Assets/Textures/Map_06/fotos amigos/7f3674f0-2621-4822-929a-47aee742b074.jpg" id="61_6rroq"]
 [ext_resource type="Texture2D" uid="uid://biow6vc6mi533" path="res://Assets/Textures/Map_04/front.png" id="61_u3ke4"]
-[ext_resource type="AudioStream" uid="uid://too8r1l8j2k" path="res://Assets/Textures/Map_06/musga/pequenos-reparos.wav" id="62_wd3q2"]
 [ext_resource type="Texture2D" uid="uid://d1bpecs136hsl" path="res://Assets/Textures/Map_06/fotos amigos/chao-unreleased.png" id="63_3rydv"]
 [ext_resource type="Texture2D" uid="uid://cp8herqm30vrk" path="res://Assets/Textures/Map_06/fotos amigos/larn-unreleased.png" id="64_laqo2"]
 [ext_resource type="AudioStream" uid="uid://dojhn846xh8ii" path="res://Assets/Textures/Map_06/musga/Unreleased/intro-portasruídos.wav.mp3" id="64_qh4ks"]
@@ -124,6 +123,7 @@
 [ext_resource type="Texture2D" uid="uid://c47cybhyui5u6" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.43.jpeg" id="101_jwijv"]
 [ext_resource type="Texture2D" uid="uid://ch0s032ocuwlx" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.44.jpeg" id="103_74stt"]
 [ext_resource type="Texture2D" uid="uid://git3l600gvb0" path="res://Assets/Textures/Map_06/fotos amigos/IMG_20141003_172630.jpg" id="104_4xdl3"]
+[ext_resource type="AudioStream" uid="uid://cn6jj4klc4mt0" path="res://Assets/Textures/Map_06/pequenos reparos.mp3" id="104_iw4ww"]
 [ext_resource type="Texture2D" uid="uid://cvnmqgpw8midg" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.44 (1).jpeg" id="105_in634"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y85p2"]
@@ -1355,6 +1355,16 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20,
 material_override = SubResource("StandardMaterial3D_832y7")
 mesh = SubResource("PlaneMesh_oe423")
 
+[node name="Label3D" type="Label3D" parent="House/Room01/StaticBody3D3/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -12.211, 0.44943, -1.19209e-07)
+text = "Ao árquipélago.
+Recital de formatura da Jessica Marinho.
+flauta - Jessica Marinho
+piano - eu
+no input - PG Nasnuven
+Violão e voz - Sergio Fiuza"
+font_size = 80
+
 [node name="Quadros" type="Node3D" parent="House/Room01"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room01/Quadros"]
@@ -1375,6 +1385,13 @@ unit_size = 0.5
 autoplay = true
 max_distance = 30.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room01/Quadros/MeshInstance3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1.57214, 0)
+text = "Trio Bomba Patch.
+Lucca Totti
+Pedro Fadel
+Eu"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="House/Room01/Quadros"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -34.951)
@@ -1482,6 +1499,13 @@ autoplay = true
 max_distance = 30.0
 parameters/looping = true
 
+[node name="Label3D" type="Label3D" parent="House/Room07/North_Wall/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0.130386)
+text = "Não quero consertar esse relógio.
+piano preparado com microfonia.
+
+Essa gravação foi em um dos meus recitais. Deu tudo errado"
+
 [node name="Section02" type="StaticBody3D" parent="House/Room07/North_Wall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.9938, 3, -1.28192)
 
@@ -1528,6 +1552,11 @@ autoplay = true
 max_distance = 50.0
 parameters/looping = true
 
+[node name="Label3D" type="Label3D" parent="House/Room07/East_Wall/Section01/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.90201, -9.0776, 0.219034)
+text = "Hipnagogia - para piano preparado e supercollider. 
+Vozes de Pedro Fadel, Filipe Sousa, Luíza Morena, Sergio Fiuza e João Pedro Barradas"
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room07/East_Wall/Section01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0640869, -0.187561, -0.208069)
 shape = SubResource("BoxShape3D_prukq")
@@ -1563,6 +1592,11 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 material_override = SubResource("StandardMaterial3D_bjsmp")
 mesh = SubResource("QuadMesh_mwfo1")
 
+[node name="Label3D" type="Label3D" parent="House/Room07/South_Wall/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03553e-08, -8.69052, 0.173615)
+text = "Liminaridade - Fotocromia.
+piano e flauta, com Jessica Marinho."
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room07/South_Wall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0806426, -0.227234, 0.22522)
 shape = SubResource("BoxShape3D_bpvpl")
@@ -1576,6 +1610,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room07/East_Wall2/Section01"]
 material_override = SubResource("StandardMaterial3D_v3a54")
 mesh = SubResource("QuadMesh_6s5ky")
+
+[node name="Label3D" type="Label3D" parent="House/Room07/East_Wall2/Section01/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.2, 0.102634)
+text = "Miniatura n.1 - a small token for your affection."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room07/East_Wall2/Section01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.297913, 0, 0)
@@ -2010,6 +2048,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32.0401)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -0.0244579)
 mesh = SubResource("QuadMesh_fd5gs")
 
+[node name="Label3D" type="Label3D" parent="House/Room02/East_Wall/Section03/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.04208, 0.211449)
+text = "Existe uma coisa sobre a busca por respostas que não é linear
+Constantemente encontramos ferramentas para testar
+outros ângulos.
+algumas nos levam mais longe que outras.
+Essa sala é sobre a curiosidade infinita, 
+sobre símbolos e seus desdobramentos."
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room02/East_Wall/Section03"]
 shape = SubResource("BoxShape3D_nc5j2")
 
@@ -2071,6 +2118,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 32)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room08/East_Wall/Section03"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_fd5gs")
+
+[node name="Label3D" type="Label3D" parent="House/Room08/East_Wall/Section03/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.2738, 0.0675621)
+text = "Essa sala foi para as coisas que não estão mapeadas
+A imaginação, a singularidade da ação no momento.
+Estão tocando duas gravações de campo que eu gosto."
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room08/East_Wall/Section03"]
 shape = SubResource("BoxShape3D_x4rlr")
@@ -2329,19 +2382,49 @@ shape = SubResource("BoxShape3D_5dawy")
 
 [node name="tracksunreleased" type="Node3D" parent="House/Room10"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/tracksunreleased"]
+[node name="Intro_portas" type="Node3D" parent="House/Room10/tracksunreleased"]
+
+[node name="area_intro" type="MeshInstance3D" parent="House/Room10/tracksunreleased/Intro_portas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2454, 2.35794, 23.7057)
 material_override = SubResource("StandardMaterial3D_k7k48")
 mesh = SubResource("PlaneMesh_r4adu")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room10/tracksunreleased/MeshInstance3D"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
 stream = ExtResource("64_qh4ks")
 unit_size = 3.0
 autoplay = true
 max_distance = 40.0
 panning_strength = 0.3
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0.530502, -2.29585, 0)
+text = "Intro- Portas e Ruídos"
+
+[node name="Label3D2" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.9047, -2.29585, -2.61382)
+text = "Andando a lugar nenhum"
+
+[node name="Label3D3" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2587, -2.29585, -5.98297)
+text = "Ar raspa"
+
+[node name="Label3D4" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.2587, -2.29585, -39.9619)
+text = "glass dropc.transluc."
+
+[node name="Label3D5" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(1, 0, -4.37114e-08, 4.37114e-08, 1.91069e-15, 1, 0, -1, 1.91069e-15, -20.7174, -2.29585, -54.9522)
+text = "ponte"
+
+[node name="Label3D7" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, -17.5742, -2.29585, -24.7373)
+text = "névoa \"heart wants out\""
+
+[node name="Label3D6" type="Label3D" parent="House/Room10/tracksunreleased/Intro_portas/area_intro"]
+transform = Transform3D(-4.37114e-08, 1, 0, 4.37114e-08, 1.91069e-15, 1, 1, 4.37114e-08, -4.37114e-08, 1.44696, -2.29585, -38.882)
+text = "kalimba respira"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="House/Room10/tracksunreleased"]
 transform = Transform3D(-1.74846e-07, -4, 0, 4, -1.74846e-07, 0, 0, 0, 4, 0, 0, 30.4278)
@@ -2603,6 +2686,15 @@ transform = Transform3D(1, 0, -1.42109e-14, 0, 1.06, 0, 0, 0, 1, 0, 0, 32)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_fd5gs")
 
+[node name="Label3D" type="Label3D" parent="House/Room03/East_Wall2/Section03/MeshInstance3D"]
+transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 1.42109e-14, 0, 1, -0.174271, -8.16705, 0.199028)
+text = "Eu queria uma sala que falasse do acaso,
+já que estou conectando oráculos e música.
+Um dado me lembra que viver é uma aposta.
+A peça que toca aqui é a
+Liminaridade 'heterocromia'
+com a Jessica e eu."
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room03/East_Wall2/Section03"]
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 0, 0, 1, 0, 0, -0.129745)
 shape = SubResource("BoxShape3D_xlfus")
@@ -2758,12 +2850,20 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
+transform = Transform3D(0.369686, 0, -3.73035e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -9.40809, 0)
 stream = ExtResource("54_twu8l")
-unit_size = 2.0
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.42109e-14, 0, 1, 0, -9.25082, 0.840347)
+text = "Alguma pedra colorida que eu não sei o nome.
+Essa peça foi uma das 
+tentativas de transformar um som em outro.
+A mistura de sintese com gravação de campo.
+"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, 22.1664, 10, 0.758629)
@@ -2772,12 +2872,23 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D2"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
+transform = Transform3D(0.369686, 0, -4.08562e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -9.86445, 0)
 stream = ExtResource("56_v5p1u")
-unit_size = 2.0
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D2"]
+transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, 1.37099, -9.94269, 0)
+text = "Material.
+foi um impulso criativo.
+síntese granular e texturas
+de objetos. Queria criar um
+objeto que se transforma
+em outro por atrito, torsão.
+Como um demiurgo entediado faria.
+"
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 6.6055, 10, -4.41011)
@@ -2788,10 +2899,20 @@ mesh = SubResource("CylinderMesh_ne41o")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D3"]
 transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
 stream = ExtResource("57_suspe")
-unit_size = 2.0
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D3"]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, -9.94825, -1.42109)
+text = "Counting Out (2021)
+Piano, gravação de campo e síntese.
+Olho para a janela 
+descontando o tempo.
+
+Uma das angústias que eu 
+soube nomear no passado."
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 5.32907e-14, 0, 1, 0, -5.32907e-14, 0, 1, -7.26734, 10, 4.33212)
@@ -2800,12 +2921,21 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D4"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
+transform = Transform3D(0.369686, 0, -4.79616e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -4.88883, 0)
 stream = ExtResource("58_emih0")
-unit_size = 2.0
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.06581e-14, 0, 1, 0, -9.42285, 0.965294)
+text = "minha primeira peça eletroacústica.
+usei sons da minha casa.
+portões idiosincráticos
+melodias em lugares estranhos.
+é bonito mas minha mãe não gosta
+"
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 6.03961e-14, 0, 1, 0, -6.03961e-14, 0, 1, -24.9993, 10, 9.47628)
@@ -2814,12 +2944,25 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D5"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
+transform = Transform3D(0.369686, 0, -4.79616e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -6.24811, 0)
 stream = ExtResource("60_r5uah")
-unit_size = 2.0
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
 parameters/looping = true
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D5"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -7.68634, 5.19197)
+text = "Essa peça foi um improviso
+sobre uma instalação que
+fiz na janela do meu quarto
+durante a pandemia.
+Existe a montagem de vídeo
+que fiz para ela.
+Fez parte do meu recital de
+formatura, mas nunca falei
+sobre ela com ninguém"
+font_size = 35
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 7.81597e-14, 0, 1, 0, -7.81597e-14, 0, 1, -38.8842, 10, -5.53008)
@@ -2828,11 +2971,15 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D6"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
-stream = ExtResource("62_wd3q2")
-unit_size = 2.0
+transform = Transform3D(0.369686, 0, -5.15143e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -8.93097, 0)
+stream = ExtResource("104_iw4ww")
+unit_size = 3.0
 autoplay = true
-max_distance = 30.0
+max_distance = 35.0
+
+[node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D6"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -9.83942, 0.872131)
+text = "Pequenos reparos - essa miniatura não ganhou um concurso"
 
 [node name="Room05" type="Node3D" parent="House"]
 transform = Transform3D(2.045, 0, 0, 0, 1, 0, 0, 0, 1, 171.53, 0, 51.4037)
@@ -2851,6 +2998,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 40)
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_faofx")
 mesh = SubResource("PlaneMesh_s8hst")
+
+[node name="Label3D" type="Label3D" parent="House/Room05/StaticBody3D/MeshInstance3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, -14.363, 8, 0.511452)
+text = "No caminho da curiosidade, encontrei outra ferramenta, 
+que desafia meu próprio pragmatismo
+São 16 figuras na geomancia e sua lógica funciona
+em matemáticas. 
+Nessa sala eu sonifiquei a construção de um mapa escudo,
+reconstruindo as contas matemáticas no Pure Data.
+São 4 gravações de múltiplos mapas sendo disparados em sequência."
+horizontal_alignment = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room05/StaticBody3D"]
 shape = SubResource("BoxShape3D_lpti5")
@@ -3083,25 +3241,50 @@ material_override = SubResource("StandardMaterial3D_8hlmt")
 mesh = SubResource("PlaneMesh_fxcgu")
 
 [node name="mapa1" type="MeshInstance3D" parent="House/Room06"]
-transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, 34.4956, 7.48492, 24.8263)
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, 34.4956, 3.63439, 24.8263)
 material_override = SubResource("StandardMaterial3D_ly4ye")
 mesh = SubResource("PlaneMesh_4dtjm")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room06/mapa1"]
-transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, -6.5319, -0.505653, 0)
+transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, 0, 0, 0)
 stream = ExtResource("65_hy8pj")
 unit_size = 1.5
 autoplay = true
 max_distance = 20.0
 parameters/looping = true
 
+[node name="Label3D" type="Label3D" parent="House/Room06/mapa1"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.69463e-22, 1, -0.414424, -5.03022, 0)
+text = "Mapa n.1 - Observatório 11/11/2018 
+20:55 Rio de janeiro
+good will further,
+six in the fourth place:
+if you are sincere,
+blood will vanish and
+fear gives way.
+No blame."
+
 [node name="mapa2" type="MeshInstance3D" parent="House/Room06"]
-transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, 0.971327, 7.48492, 24.8263)
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, 0.971327, 3.59778, 24.8263)
 material_override = SubResource("StandardMaterial3D_pfuxg")
 mesh = SubResource("PlaneMesh_4dtjm")
 
+[node name="Label3D2" type="Label3D" parent="House/Room06/mapa2"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 5.08389e-22, 1, -1.21811, -5.19825, 0)
+text = "Mapa n.2 - Observatório 18/11/2018 12:58
+Rio de janeiro
+O cavalo vê dois homens conversando, em atrito, medos.
+
+O cavalo busca no fundo do lago o abismo,
+suas respostas.
+O cavalo encontra um tigre
+o |cavalo|grilo|cobra|javali|tudo| se torna então
+o próprio tigre,
+que por sua vez, se torna o cavalo,
+agora livre do obstáculo."
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room06/mapa2"]
-transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, -6.94483, -0.127808, 0)
+transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, 0, 0, 0)
 stream = ExtResource("66_oxqkj")
 unit_size = 1.5
 autoplay = true
@@ -3109,12 +3292,22 @@ max_distance = 20.0
 parameters/looping = true
 
 [node name="mapa3" type="MeshInstance3D" parent="House/Room06"]
-transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, -36.6954, 7.48492, 24.8263)
+transform = Transform3D(4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, 0, 3.82137e-15, 8.74228e-08, -1, -36.6954, 3.58271, 24.8263)
 material_override = SubResource("StandardMaterial3D_myis8")
 mesh = SubResource("PlaneMesh_4dtjm")
 
+[node name="Label3D3" type="Label3D" parent="House/Room06/mapa3"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 9.32046e-22, 1, -2.0246, -4.4917, 0)
+text = "Mapa n.3 13/06/1256BC
+Tankei morreu escultor,
+como seu pai lhe ensinou, 
+assim como seu avô, seus irmãos
+e seus filhos seriam.
+O fim da tarde foi um lamento.
+"
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room06/mapa3"]
-transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, -6.83956, -0.330874, 0)
+transform = Transform3D(1, 3.34075e-22, 0, 3.34075e-22, 1, 0, 0, 0, 1, 0, 0, 0)
 stream = ExtResource("67_dim80")
 unit_size = 2.0
 autoplay = true
@@ -3125,6 +3318,12 @@ parameters/looping = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4491, -24.9082)
 material_override = SubResource("StandardMaterial3D_reubp")
 mesh = SubResource("PlaneMesh_01xse")
+
+[node name="Label3D4" type="Label3D" parent="House/Room06/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.13516, -2.02431, 0)
+text = "Miniatura da chuva.
+piano + patch de pd.
+"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room06/MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.85213, 0)
@@ -3240,6 +3439,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 5, -5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103889, 0, 0)
 material_override = ExtResource("23_0d17r")
 mesh = SubResource("PlaneMesh_tu3we")
+
+[node name="Label3D" type="Label3D" parent="corredor-room2/StaticBody3D/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2182, -3.37561, 0.0590591)
+text = "Essa sala é um álbum que nunca foi lançado.
+São 7 faixas que até agora, ninguém ouviu.
+A sala então fica como símbolo de um futuro imaginado.
+Assim que você entrar, estarei renunciando essa não-existência.
+O momento em que oferecemos contorno às possibilidades
+é um sacrifício ao futuro.
+"
+horizontal_alignment = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="corredor-room2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108887, 0, 0)
