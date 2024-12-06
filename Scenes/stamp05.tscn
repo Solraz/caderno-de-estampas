@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dksltjd8ejcce"]
+[gd_scene load_steps=45 format=3 uid="uid://dksltjd8ejcce"]
 
 [ext_resource type="Texture2D" uid="uid://djdsydknjobnv" path="res://Assets/Textures/Map_05/gramas2.png" id="1_0dycp"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_ftpap"]
@@ -153,6 +153,15 @@ fog_sky_affect = 0.0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.01
 volumetric_fog_length = 40.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kdven"]
+size = Vector3(1.89392, 0.538086, 3.22583)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fltae"]
+size = Vector3(21.0527, 7, 40.6508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_80tmd"]
+size = Vector3(222.549, 27.0939, 1852.93)
 
 [node name="stamp05" type="Node3D"]
 
@@ -565,35 +574,6 @@ transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, 
 [node name="tree61" parent="." instance=ExtResource("6_fd2oi")]
 transform = Transform3D(0.688354, 0, 0.725374, 0, 1, 0, -0.725374, 0, 0.688354, -161.261, 0.749497, -787.358)
 
-[node name="bridge2" parent="." instance=ExtResource("16_tfhc6")]
-transform = Transform3D(-2.37237, 0, -14.8112, 0, 15, 0, 14.8112, 0, -2.37237, -109.922, 0.231054, -635.943)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="bridge2"]
-transform = Transform3D(0.0666667, 0, -9.31323e-10, 0, 0.0666667, 0, 0, 0, 0.0666667, 0.0658264, 0, -0.0105438)
-stream = ExtResource("21_p6l4e")
-unit_size = 21.42
-autoplay = true
-max_distance = 1092.27
-
-[node name="bridge" parent="." instance=ExtResource("16_tfhc6")]
-transform = Transform3D(1.38552, 0, 13.1824, 0, 13.255, 0, -13.1824, 0, 1.38552, 58.0662, -1.66856, 391.002)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="bridge"]
-transform = Transform3D(0.0754432, 0, 0, 0, 0.0754432, 0, 0, 0, 0.0754432, -0.278837, 0.539007, -2.54487)
-stream = ExtResource("21_p6l4e")
-unit_size = 21.42
-autoplay = true
-max_distance = 1092.27
-parameters/looping = true
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="bridge/AudioStreamPlayer3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 458.182, 2.16016, -47.7486)
-stream = ExtResource("21_p6l4e")
-unit_size = 21.42
-autoplay = true
-max_distance = 195.05
-parameters/looping = true
-
 [node name="skybox2" parent="." instance=ExtResource("22_xo24v")]
 transform = Transform3D(55, 0, 0, 0, 55, 0, 0, 0, 55, 0, -124.376, -125)
 
@@ -604,4 +584,39 @@ transform = Transform3D(2.58371, 0, -4.2807, 0, 5, 0, 4.2807, 0, 2.58371, 109.52
 stream = ExtResource("25_32srn")
 volume_db = 5.524
 autoplay = true
+parameters/looping = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.00872653, 0, -0.999962, 0, 1, 0, 0.999962, 0, -0.00872653, -95.6592, 0, -474.942)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(9.47, 0, 4.32134e-07, 0, 6.945, 0, -1.77324e-06, 0, 14.9998, -5.21652, -1.89042, -34.9197)
+shape = SubResource("BoxShape3D_kdven")
+
+[node name="bridge2_colonly" parent="StaticBody3D" instance=ExtResource("16_tfhc6")]
+transform = Transform3D(9.47, 0, 4.47035e-08, 0, 6.945, 0, 0, 0, 15, -1.3241, -3.89048, -2.27052)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 88.988, -4.1439, 544.144)
+
+[node name="bridge" parent="StaticBody3D2" instance=ExtResource("16_tfhc6")]
+transform = Transform3D(10, 0, 0, 0, 7, 0, 0, 0, 15, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.01788, 0.57016, -30.4177)
+shape = SubResource("BoxShape3D_fltae")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7219, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73579, 1.35172, -159.695)
+shape = SubResource("BoxShape3D_80tmd")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05775, 11.6952, 159.695)
+stream = ExtResource("21_p6l4e")
+unit_size = 15.0
+autoplay = true
+max_distance = 4096.0
 parameters/looping = true

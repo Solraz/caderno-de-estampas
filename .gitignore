@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+Terrain/polyknight.dae
+Terrain/polyknight.dae.import
+Scenes/collision_shape_3d.gd
+Scenes/jonio.gd

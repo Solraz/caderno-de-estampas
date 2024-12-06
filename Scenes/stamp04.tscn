@@ -231,6 +231,7 @@ collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+radius = 60.0
 
 [node name="jonio" type="MeshInstance3D" parent="Objects/Jonio"]
 mesh = SubResource("SphereMesh_qg0sn")
@@ -280,7 +281,10 @@ skeleton = NodePath("../../..")
 shape = SubResource("BoxShape3D_cuier")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Lidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0380325, 0.328899, 0.0757751)
 stream = ExtResource("7_4gg3k")
+volume_db = 10.0
+unit_size = 15.0
 parameters/looping = true
 
 [node name="Mixolidio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
@@ -330,13 +334,15 @@ player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
 
 [node name="eólio" type="MeshInstance3D" parent="Objects/Eolio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.486603, 0, 0.577011)
 mesh = SubResource("CapsuleMesh_qta13")
 skeleton = NodePath("../../..")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Eolio"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.913124, -5.41937, 9.87173)
 stream = ExtResource("10_djk5i")
+volume_db = 5.0
+unit_size = 15.0
 parameters/looping = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Eolio"]

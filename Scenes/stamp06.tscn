@@ -1,4 +1,4 @@
-[gd_scene load_steps=468 format=3 uid="uid://dyq33ebk1lryo"]
+[gd_scene load_steps=471 format=3 uid="uid://dyq33ebk1lryo"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_8bfif"]
 [ext_resource type="Texture2D" uid="uid://bre0wyqxc5hih" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20190730-WA0050.jpg" id="1_inbph"]
@@ -1236,6 +1236,18 @@ item/0/shapes = []
 item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/0/navigation_layers = 1
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_piahp"]
+sky_top_color = Color(0.596002, 0.386347, 0.346117, 1)
+sky_horizon_color = Color(0.396229, 0.664921, 1, 1)
+sky_energy_multiplier = 3.0
+
+[sub_resource type="Sky" id="Sky_c8l72"]
+sky_material = SubResource("ProceduralSkyMaterial_piahp")
+
+[sub_resource type="Environment" id="Environment_pwlyk"]
+background_mode = 2
+sky = SubResource("Sky_c8l72")
+
 [node name="stamp06" type="Node3D"]
 
 [node name="House" type="Node3D" parent="."]
@@ -1245,7 +1257,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="House/Room01"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 0)
-omni_range = 4096.0
+light_energy = 16.0
+light_specular = 0.0
+omni_range = 120.0
 
 [node name="Floor" type="StaticBody3D" parent="House/Room01"]
 
@@ -1887,7 +1901,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.551, -4.76837e-07, -15.28
 transform = Transform3D(1.75, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor01_08/Floor"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.01, 0)
 material_override = ExtResource("22_3r7ri")
 mesh = SubResource("QuadMesh_pnag6")
 
@@ -2235,14 +2249,15 @@ mesh = SubResource("QuadMesh_mwfo1")
 shape = SubResource("BoxShape3D_ekqmu")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="House/Room09"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 10, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-14, 0, 1, -25.006, 10, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-14, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_dqcd6")
 mesh = SubResource("PlaneMesh_41blt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, -25, 10, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_xvf73")
 
 [node name="Node3D" type="Node3D" parent="House/Room09"]
@@ -2550,7 +2565,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 112.88
 [node name="Floor" type="StaticBody3D" parent="House/Corridor02_04"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Corridor02_04/Floor"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.01, 0)
 material_override = ExtResource("20_y2h6y")
 mesh = SubResource("QuadMesh_hfdsg")
 
@@ -2880,7 +2895,7 @@ max_distance = 35.0
 parameters/looping = true
 
 [node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D2"]
-transform = Transform3D(-4.37114e-08, -1, 0, -4.37114e-08, 1.91069e-15, 1, -1, 4.37114e-08, -4.37114e-08, 1.37099, -9.94269, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.976484, -8.02525, 0)
 text = "Material.
 foi um impulso criativo.
 síntese granular e texturas
@@ -2897,7 +2912,7 @@ transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D3"]
-transform = Transform3D(0.369686, 0, -3.90799e-14, 0, 1, 0, -1.77636e-15, 0, 0.492611, 0, -0.204148, 0)
+transform = Transform3D(0.369686, 0, -4.44089e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -6.71726, 0)
 stream = ExtResource("57_suspe")
 unit_size = 3.0
 autoplay = true
@@ -2905,7 +2920,7 @@ max_distance = 35.0
 parameters/looping = true
 
 [node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D3"]
-transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, -9.94825, -1.42109)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -8.72215, -1.42109)
 text = "Counting Out (2021)
 Piano, gravação de campo e síntese.
 Olho para a janela 
@@ -2978,8 +2993,14 @@ autoplay = true
 max_distance = 35.0
 
 [node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D6"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -9.83942, 0.872131)
-text = "Pequenos reparos - essa miniatura não ganhou um concurso"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.00691, 0.872128)
+text = "Pequenos reparos.
+
+A forma dela é de dois temas
+que ocorrem sobre uma
+dilatação do segundo.
+Por fim um terceiro tema
+que condensa e sintetiza todos."
 
 [node name="Room05" type="Node3D" parent="House"]
 transform = Transform3D(2.045, 0, 0, 0, 1, 0, 0, 0, 1, 171.53, 0, 51.4037)
@@ -3472,6 +3493,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.346, 0, 109.952)
 [node name="StaticBody3D" type="StaticBody3D" parent="corredor-room6"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="corredor-room6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 material_override = ExtResource("23_0d17r")
 mesh = SubResource("PlaneMesh_exgje")
 
@@ -3512,3 +3534,6 @@ data = {
 }
 
 [node name="Player" parent="." instance=ExtResource("1_8bfif")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pwlyk")
