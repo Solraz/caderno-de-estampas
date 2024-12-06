@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=26 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
+[ext_resource type="Texture2D" uid="uid://dallu77otr7t4" path="res://Assets/Textures/Map_05/Wispy_Sky-Sunset_02-1024x512.png" id="1_vtntl"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="2_8a0vp"]
 [ext_resource type="Script" path="res://Scripts/Map02/planetoid_gravity.gd" id="2_8q2kq"]
 [ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
@@ -12,6 +13,30 @@
 [ext_resource type="AudioStream" uid="uid://bqt4uqopc1kif" path="res://Assets/Textures/Map_02/dreamscapejam-breakcoreDRUM.mp3" id="7_vmr48"]
 [ext_resource type="AudioStream" uid="uid://c0te3ey45yi4x" path="res://Assets/Textures/Map_02/temaprincipal-bonus.mp3" id="9_el5lg"]
 [ext_resource type="AudioStream" uid="uid://bxors0vo5h4xw" path="res://Assets/Textures/Map_02/guitarrassuja.mp3" id="11_umfw5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gbfqv"]
+panorama = ExtResource("1_vtntl")
+
+[sub_resource type="Sky" id="Sky_xm8v5"]
+sky_material = SubResource("PanoramaSkyMaterial_gbfqv")
+
+[sub_resource type="Environment" id="Environment_r40dt"]
+background_mode = 2
+sky = SubResource("Sky_xm8v5")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_white = 2.0
+ssao_enabled = true
+glow_enabled = true
+glow_intensity = 0.87
+fog_enabled = true
+fog_density = 0.0005
+fog_aerial_perspective = 0.3
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_length = 40.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1ffgk"]
 render_priority = 0
@@ -87,20 +112,10 @@ material = SubResource("ShaderMaterial_o48jb")
 radius = 20.0
 height = 40.0
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_c0gor"]
-sky_top_color = Color(0.932558, 0.741568, 0.838894, 1)
-sky_horizon_color = Color(0.737611, 0.836949, 0.793184, 1)
-energy_multiplier = 1.5
-
-[sub_resource type="Sky" id="Sky_xm8v5"]
-sky_material = SubResource("ProceduralSkyMaterial_c0gor")
-
-[sub_resource type="Environment" id="Environment_r40dt"]
-background_mode = 2
-sky = SubResource("Sky_xm8v5")
-sky_custom_fov = 90.0
-
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r40dt")
 
 [node name="Player" parent="." instance=ExtResource("2_8a0vp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0)
@@ -202,6 +217,3 @@ stream = ExtResource("11_umfw5")
 unit_size = 2.0
 autoplay = true
 parameters/looping = true
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_r40dt")

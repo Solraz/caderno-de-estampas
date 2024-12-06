@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cfwqeoicmlmfh"]
+[gd_scene load_steps=30 format=3 uid="uid://cfwqeoicmlmfh"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_3btrj"]
 [ext_resource type="Texture2D" uid="uid://ld2pjh8bj80p" path="res://Assets/Textures/Map_01/Floor.jpg" id="2_gf7ry"]
@@ -12,6 +12,29 @@
 [ext_resource type="AudioStream" uid="uid://2wg7cfkvaxeb" path="res://Assets/Textures/Map_01/gaze-002.mp3" id="10_ufmtj"]
 [ext_resource type="AudioStream" uid="uid://heoi20x1sr1a" path="res://Assets/Textures/Map_01/fita-vhspiano.mp3" id="11_1s8tl"]
 [ext_resource type="AudioStream" uid="uid://dc0v1vyeoo3s3" path="res://Assets/Textures/Map_01/torre-do-mago.mp3" id="12_sg7rw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b6ao3"]
+
+[sub_resource type="Sky" id="Sky_8nt5f"]
+sky_material = SubResource("ProceduralSkyMaterial_b6ao3")
+
+[sub_resource type="Environment" id="Environment_5qhy8"]
+background_mode = 2
+sky = SubResource("Sky_8nt5f")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 1.07
+tonemap_white = 2.4
+ssao_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.180465, 0.199519, 0.229475, 1)
+fog_light_energy = 0.66
+fog_density = 0.3472
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cxats"]
 size = Vector3(240, 1, 240)
@@ -60,6 +83,9 @@ data = PackedVector3Array(0.0098, 0.3211, -2.4263, 0, 0.3211, -2.4263, 3.5616, 0
 size = Vector3(2, 0.001, 4.842)
 
 [node name="Map01" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5qhy8")
 
 [node name="Player" parent="." instance=ExtResource("1_3btrj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.479, 14.6283, 0)

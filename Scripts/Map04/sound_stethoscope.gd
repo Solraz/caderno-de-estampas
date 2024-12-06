@@ -2,6 +2,7 @@ extends StaticBody3D
 
 @export var player: Player
 @export var sound: AudioStreamPlayer3D
+@export var rotation_speed_mult: float = 1.0
 
 signal play_sound
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=42 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=43 format=3 uid="uid://wdwbkdgc133m"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
 [ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
+[ext_resource type="Script" path="res://Scripts/Map04/rotate_sounds.gd" id="3_au0qk"]
 [ext_resource type="AudioStream" uid="uid://dnto7xxbya7fn" path="res://Assets/Textures/Map_04/ionian.mp3" id="5_jfptr"]
 [ext_resource type="AudioStream" uid="uid://dmrc7j1bo6qdr" path="res://Assets/Textures/Map_04/dorian.mp3" id="6_qr5t2"]
 [ext_resource type="AudioStream" uid="uid://de8aw8tofcmov" path="res://Assets/Textures/Map_04/lydian.mp3" id="7_4gg3k"]
@@ -223,9 +224,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 1, 
 shape = SubResource("ConvexPolygonShape3D_85jpb")
 
 [node name="Objects" type="Node3D" parent="."]
+script = ExtResource("3_au0qk")
 
 [node name="Jonio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -176)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
@@ -233,101 +234,116 @@ player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
 
 [node name="jonio" type="MeshInstance3D" parent="Objects/Jonio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -176)
 mesh = SubResource("SphereMesh_qg0sn")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Jonio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -176)
 shape = SubResource("BoxShape3D_bswc2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Jonio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -176)
 stream = ExtResource("5_jfptr")
 unit_size = 24.56
 autoplay = true
 parameters/looping = true
 
 [node name="Dorio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 5, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 3.0
 
 [node name="dorio" type="MeshInstance3D" parent="Objects/Dorio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 0)
 mesh = SubResource("SphereMesh_x254f")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Dorio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 0)
 shape = SubResource("BoxShape3D_cas5v")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Dorio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 0)
 stream = ExtResource("6_qr5t2")
 parameters/looping = true
 
 [node name="Lidio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 146)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 1.5
 
 [node name="lídio" type="MeshInstance3D" parent="Objects/Lidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 146)
 mesh = SubResource("SphereMesh_7sew3")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Lidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 146)
 shape = SubResource("BoxShape3D_cuier")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Lidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 146)
 stream = ExtResource("7_4gg3k")
 parameters/looping = true
 
 [node name="Mixolidio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 2.5
 
 [node name="mixolídio" type="MeshInstance3D" parent="Objects/Mixolidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0)
 mesh = SubResource("SphereMesh_etkp3")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Mixolidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0)
 shape = SubResource("BoxShape3D_4hoid")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Mixolidio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0)
 stream = ExtResource("8_qf4t7")
 parameters/looping = true
 
 [node name="Frigio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 23, -63)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 0.5
 
 [node name="frigio" type="MeshInstance3D" parent="Objects/Frigio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 23, -63)
 mesh = SubResource("SphereMesh_s2xmm")
 skeleton = NodePath("../../Mixolidio/mixolídio")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Frigio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 23, -63)
 stream = ExtResource("9_li7wp")
 parameters/looping = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Frigio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 23, -63)
 shape = SubResource("BoxShape3D_olyfh")
 
 [node name="Eolio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 4.0
 
 [node name="eólio" type="MeshInstance3D" parent="Objects/Eolio"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -112, 0, 119)
@@ -343,24 +359,25 @@ parameters/looping = true
 shape = SubResource("BoxShape3D_qoix5")
 
 [node name="Locrio" type="StaticBody3D" parent="Objects" node_paths=PackedStringArray("player", "sound") groups=["StethoscopeSound"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, -125)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_gkrr6")
 player = NodePath("../../Player")
 sound = NodePath("AudioStreamPlayer3D")
+rotation_speed_mult = 1.5
 
 [node name="locrio" type="MeshInstance3D" parent="Objects/Locrio"]
-transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873935, 0.998537, 0.318726, 0.947807, -0.00873935, 0, 0, 0)
+transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873935, 0.998537, 0.318726, 0.947807, -0.00873935, -82, 0, -125)
 mesh = SubResource("TorusMesh_8cxig")
 skeleton = NodePath("../../..")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Objects/Locrio"]
-transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873936, 0.998537, 0.318726, 0.947807, -0.00873934, 0, 0, 0)
+transform = Transform3D(-0.946343, 0.318726, 0.053368, 0.053368, -0.00873936, 0.998537, 0.318726, 0.947807, -0.00873934, -82, 0, -125)
 stream = ExtResource("11_kraa7")
 parameters/looping = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/Locrio"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 0, -125)
 shape = SubResource("BoxShape3D_hil65")
 
 [connection signal="play_sound" from="Objects/Jonio" to="Objects/Jonio" method="_on_play_sound"]
