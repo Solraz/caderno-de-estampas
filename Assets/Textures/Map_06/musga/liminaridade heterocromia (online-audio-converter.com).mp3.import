@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu25y6t0he6tc"
+path="res://.godot/imported/liminaridade heterocromia (online-audio-converter.com).mp3-5c79bd373bdfdefb2c8772d75895e7dc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Textures/Map_06/musga/liminaridade heterocromia (online-audio-converter.com).mp3"
+dest_files=["res://.godot/imported/liminaridade heterocromia (online-audio-converter.com).mp3-5c79bd373bdfdefb2c8772d75895e7dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

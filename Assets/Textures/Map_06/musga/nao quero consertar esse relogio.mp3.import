@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq13v37kw0shn"
+path="res://.godot/imported/nao quero consertar esse relogio.mp3-f7ff9db7d6fc8ae300dd24aa492a4dc4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Textures/Map_06/musga/nao quero consertar esse relogio.mp3"
+dest_files=["res://.godot/imported/nao quero consertar esse relogio.mp3-f7ff9db7d6fc8ae300dd24aa492a4dc4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -176,6 +176,15 @@ shader_parameter/water_texture2 = ExtResource("10_ij7br")
 material = SubResource("ShaderMaterial_lmq5j")
 size = Vector2(400, 2000)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kdven"]
+size = Vector3(1.89392, 0.538086, 3.22583)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fltae"]
+size = Vector3(21.0527, 7, 40.6508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_80tmd"]
+size = Vector3(222.549, 27.0939, 1852.93)
+
 [node name="stamp05" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
