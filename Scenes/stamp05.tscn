@@ -105,6 +105,7 @@ distance_fade_max_distance = 480.0
 [sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_iknyw"]
 height_offset = 0.5
 density = 10.0
+visibility_range = 4096.0
 material_override = SubResource("StandardMaterial3D_i61jj")
 generated_type = 1
 
@@ -123,6 +124,7 @@ distance_fade_max_distance = 480.0
 id = 1
 height_offset = 0.5
 density = 10.0
+visibility_range = 4096.0
 material_override = SubResource("StandardMaterial3D_db8t5")
 generated_type = 1
 
@@ -141,6 +143,7 @@ distance_fade_max_distance = 480.0
 id = 2
 height_offset = 0.5
 density = 10.0
+visibility_range = 4096.0
 material_override = SubResource("StandardMaterial3D_ephey")
 generated_type = 1
 
