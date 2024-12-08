@@ -157,14 +157,14 @@ texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lmq5j"]
 render_priority = 0
 shader = ExtResource("8_d7jud")
-shader_parameter/albedo = Color(0.674815, 0.674815, 0.674815, 1)
+shader_parameter/albedo = Color(0.607843, 0.607843, 0.607843, 1)
 shader_parameter/scroll_speed1 = Vector2(0.05, 0)
 shader_parameter/scroll_speed2 = Vector2(-0.03, 0)
 shader_parameter/blend_factor = 0.5
-shader_parameter/scale1 = Vector2(1, 1)
-shader_parameter/scale2 = Vector2(1, 1)
-shader_parameter/wave_strength = 1.0
-shader_parameter/wave_scale = 0.001
+shader_parameter/scale1 = Vector2(10, 10)
+shader_parameter/scale2 = Vector2(10, 10)
+shader_parameter/wave_strength = 0.29
+shader_parameter/wave_scale = 0.471
 shader_parameter/pixelation_level = 64
 shader_parameter/FoamSize = 0.5
 shader_parameter/WaterOpacity = 1.0
@@ -174,16 +174,7 @@ shader_parameter/water_texture2 = ExtResource("10_ij7br")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mlw01"]
 material = SubResource("ShaderMaterial_lmq5j")
-size = Vector2(400, 2000)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kdven"]
-size = Vector3(1.89392, 0.538086, 3.22583)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fltae"]
-size = Vector3(21.0527, 7, 40.6508)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_80tmd"]
-size = Vector3(222.549, 27.0939, 1852.93)
+size = Vector2(2000, 2000)
 
 [node name="stamp05" type="Node3D"]
 
@@ -215,7 +206,7 @@ max_distance = 195.05
 parameters/looping = true
 
 [node name="Water_Surface" type="MeshInstance3D" parent="Water"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, -87)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -8, -87)
 mesh = SubResource("PlaneMesh_mlw01")
 skeleton = NodePath("../..")
 
