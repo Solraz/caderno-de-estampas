@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="Texture2D" uid="uid://dallu77otr7t4" path="res://Assets/Textures/Map_05/Wispy_Sky-Sunset_02-1024x512.png" id="1_vtntl"]
-[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="2_8a0vp"]
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="2_8a0vp"]
 [ext_resource type="Script" path="res://Scripts/Map02/planetoid_gravity.gd" id="2_8q2kq"]
 [ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
 [ext_resource type="PackedScene" uid="uid://lmigyfvjejll" path="res://Assets/Objects/polyballtrue.tscn" id="3_ihgqk"]
@@ -201,18 +201,20 @@ unit_size = 25.0
 autoplay = true
 parameters/looping = true
 
-[node name="polyballtrue" parent="." instance=ExtResource("3_ihgqk")]
+[node name="Ball_Quadrant" parent="." instance=ExtResource("3_ihgqk")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -72, 7, -67)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="polyballtrue"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Ball_Quadrant"]
 stream = ExtResource("9_el5lg")
 autoplay = true
 parameters/looping = true
 
-[node name="lilbromoves2" parent="." instance=ExtResource("6_jcm6j")]
+[node name="NPC_Quadrant2" type="Node3D" parent="."]
+
+[node name="NPC_Quadrant" parent="NPC_Quadrant2" instance=ExtResource("6_jcm6j")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 74, -0.0110693, -62)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="lilbromoves2"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NPC_Quadrant2/NPC_Quadrant"]
 stream = ExtResource("11_umfw5")
 unit_size = 2.0
 autoplay = true

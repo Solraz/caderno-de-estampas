@@ -1,6 +1,6 @@
 [gd_scene load_steps=471 format=3 uid="uid://dyq33ebk1lryo"]
 
-[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_8bfif"]
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_8bfif"]
 [ext_resource type="Texture2D" uid="uid://bre0wyqxc5hih" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20190730-WA0050.jpg" id="1_inbph"]
 [ext_resource type="Texture2D" uid="uid://bpq833peuuavl" path="res://Assets/Textures/Map_06/fotos amigos/received_1045332978842698.jpeg" id="1_p57ml"]
 [ext_resource type="Texture2D" uid="uid://b8xeu0kbp4fca" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-sala1.2.png" id="1_witma"]

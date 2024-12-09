@@ -5,6 +5,8 @@ class_name PlayerInputs
 @export var stats: Resource
 var camera: Node3D
 
+var main_menu = preload("res://Scenes/main_menu.tscn")
+
 
 func _ready():
 	push_warning("You should not be seeing this (player_inputs.gd is being initiated)")
@@ -23,6 +25,11 @@ func _input(event):
 	if event.is_action_pressed("restart"):
 		stats.vel = Vector3(0, 0, 0)
 		get_tree().reload_current_scene()
+
+	if event.is_action_pressed("back_to_menu"):
+		stats.vel = Vector3(0, 0, 0)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().change_scene_to_packed(main_menu)
 
 func InputMouse(event):
 	stats.xlook += -event.relative.y * stats.ply_xlookspeed

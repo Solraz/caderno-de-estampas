@@ -1,6 +1,6 @@
 [gd_scene load_steps=43 format=3 uid="uid://wdwbkdgc133m"]
 
-[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_n1mok"]
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
 [ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
 [ext_resource type="Script" path="res://Scripts/Map04/rotate_sounds.gd" id="3_au0qk"]

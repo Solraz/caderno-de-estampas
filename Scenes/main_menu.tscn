@@ -1,32 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://by03fj11ihsox"]
+[gd_scene load_steps=6 format=3 uid="uid://by03fj11ihsox"]
 
-[ext_resource type="Texture2D" uid="uid://cwyiocfe50ctr" path="res://Assets/Textures/Map_04/top.png" id="1_whp0t"]
-[ext_resource type="Texture2D" uid="uid://3thniut4qpp4" path="res://Assets/Textures/Map_04/right.png" id="2_u1t3v"]
+[ext_resource type="Texture2D" uid="uid://djojrjhkah4fc" path="res://Assets/Textures/Main_Menu/andancasmenutrue.png" id="1_4lt26"]
+[ext_resource type="Texture2D" uid="uid://cbhwtis02ho8m" path="res://Assets/Textures/Main_Menu/stamp01.png" id="2_8jqi2"]
+[ext_resource type="Script" path="res://Scripts/Main_Menu/level_loader.gd" id="3_vdnuq"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_eijtg"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_dbg4l"]
 lightmap_size_hint = Vector2i(9602, 5402)
-size = Vector2(2048, 2048)
+add_uv2 = true
+size = Vector2(1920, 1080)
+orientation = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_pksbf"]
-size = Vector2(100, 100)
+size = Vector2(320, 180)
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 768.0
-offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(976, -282)
-rotation = -1.5708
-mesh = SubResource("QuadMesh_eijtg")
-texture = ExtResource("1_whp0t")
+position = Vector2(960, 540)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+mesh = SubResource("PlaneMesh_dbg4l")
+texture = ExtResource("1_4lt26")
 
-[node name="High Levels" type="Control" parent="."]
+[node name="Holder" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +36,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="High Levels"]
+[node name="Stamp01" type="Control" parent="Holder"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,14 +46,191 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="High Levels/Control"]
-layout_mode = 0
-offset_left = -747.0
-offset_top = -357.0
-offset_right = -671.0
-offset_bottom = -326.0
-text = "Stamp01"
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="High Levels/Control/Button"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp01"]
+position = Vector2(-604, -87)
+scale = Vector2(1, -1)
 mesh = SubResource("QuadMesh_pksbf")
-texture = ExtResource("2_u1t3v")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp01"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -764.0
+offset_top = -178.0
+offset_right = -444.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp01"
+
+[node name="Stamp02" type="Control" parent="Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp02"]
+position = Vector2(-52, -93)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_pksbf")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp02"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -184.0
+offset_right = 108.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp02"
+
+[node name="Stamp03" type="Control" parent="Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp03"]
+position = Vector2(-525, 347)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_pksbf")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp03"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -685.0
+offset_top = 256.0
+offset_right = -365.0
+offset_bottom = 436.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp03"
+
+[node name="Stamp04" type="Control" parent="Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp04"]
+position = Vector2(469, -95)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_pksbf")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp04"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 309.0
+offset_top = -186.0
+offset_right = 629.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp04"
+
+[node name="Stamp05" type="Control" parent="Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp05"]
+position = Vector2(800, 65)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_pksbf")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp05"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_top = -26.0
+offset_right = 960.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp05"
+
+[node name="Stamp06" type="Control" parent="Holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Holder/Stamp06"]
+position = Vector2(453, 316)
+scale = Vector2(1, -1)
+mesh = SubResource("QuadMesh_pksbf")
+texture = ExtResource("2_8jqi2")
+
+[node name="Button" type="Button" parent="Holder/Stamp06"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 293.0
+offset_top = 225.0
+offset_right = 613.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_vdnuq")
+level_name = "stamp06"
+
+[connection signal="pressed" from="Holder/Stamp01/Button" to="Holder/Stamp01/Button" method="_on_pressed"]
+[connection signal="pressed" from="Holder/Stamp02/Button" to="Holder/Stamp02/Button" method="_on_pressed"]
+[connection signal="pressed" from="Holder/Stamp03/Button" to="Holder/Stamp03/Button" method="_on_pressed"]
+[connection signal="pressed" from="Holder/Stamp04/Button" to="Holder/Stamp04/Button" method="_on_pressed"]
+[connection signal="pressed" from="Holder/Stamp05/Button" to="Holder/Stamp05/Button" method="_on_pressed"]
+[connection signal="pressed" from="Holder/Stamp06/Button" to="Holder/Stamp06/Button" method="_on_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=142 format=3 uid="uid://b44jmggslniff"]
 
-[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_10bm4"]
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_10bm4"]
 [ext_resource type="Script" path="res://Scripts/Map03/teleporters.gd" id="2_3p76o"]
 [ext_resource type="Texture2D" uid="uid://dbtxrqtf7mvl7" path="res://Assets/Textures/Map_03/stamp03_floor.jpg" id="3_uwl5e"]
 [ext_resource type="PackedScene" uid="uid://dtvpfomi4noof" path="res://Assets/Textures/Map_03/casa1.glb" id="4_e0xsl"]

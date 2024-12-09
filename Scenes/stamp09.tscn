@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://w32vb0766xg2"]
 
-[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://player.tscn" id="1_75h3n"]
+[ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_75h3n"]
 [ext_resource type="Script" path="res://Scripts/Map09/sound_waves.gd" id="1_btcor"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_glqyp"]
