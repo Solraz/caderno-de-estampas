@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dksltjd8ejcce"]
+[gd_scene load_steps=48 format=3 uid="uid://dksltjd8ejcce"]
 
 [ext_resource type="Texture2D" uid="uid://djdsydknjobnv" path="res://Assets/Textures/Map_05/gramas2.png" id="1_0dycp"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_ftpap"]
@@ -14,6 +14,7 @@
 [ext_resource type="Shader" path="res://Assets/Shaders/fountain_ball.gdshader" id="8_d7jud"]
 [ext_resource type="PackedScene" uid="uid://bgylecvrprrq2" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree03.fbx" id="8_kp0bm"]
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="9_0peqh"]
+[ext_resource type="Script" path="res://Scenes/water_audio.gd" id="9_lcq0a"]
 [ext_resource type="PackedScene" uid="uid://b2miifxyqn8rk" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree02.fbx" id="9_lpr12"]
 [ext_resource type="PackedScene" uid="uid://qy38c0vd81t5" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/tree07.fbx" id="10_3vogi"]
 [ext_resource type="Texture2D" uid="uid://cobdu0nnoiqqi" path="res://Assets/Textures/Map_02/stamp_02_frosted_balls.jpg" id="10_ij7br"]
@@ -200,13 +201,15 @@ sky_mode = 1
 
 [node name="Water" type="Node3D" parent="."]
 
-[node name="Water_Audio" type="AudioStreamPlayer3D" parent="Water"]
-transform = Transform3D(0.104528, 0, 0.994522, 0, 1, 0, -0.994522, 0, 0.104528, 0, -8, -87)
+[node name="Water_Audio" type="AudioStreamPlayer3D" parent="Water" node_paths=PackedStringArray("player")]
+transform = Transform3D(0.104528, 0, 0.994522, 0, 1, 0, -0.994522, 0, 0.104528, -4.68661, 6.49696, -87)
 stream = ExtResource("21_p6l4e")
-unit_size = 21.42
+unit_size = 25.0
 autoplay = true
-max_distance = 195.05
+max_distance = 100.0
 parameters/looping = true
+script = ExtResource("9_lcq0a")
+player = NodePath("../../Player")
 
 [node name="Water_Surface" type="MeshInstance3D" parent="Water"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -8, -87)
