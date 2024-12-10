@@ -36,11 +36,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_0gcrr")
 
 [node name="Headbonk" type="ShapeCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_02jld")
+target_position = Vector3(0, 0, 0)
 
 [node name="TwistPivot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14651, -0.182286)
 
 [node name="PitchPivot" type="SpringArm3D" parent="TwistPivot"]
 shape = SubResource("SeparationRayShape3D_jcay5")
@@ -50,6 +51,7 @@ margin = 0.0
 [node name="view" type="Camera3D" parent="TwistPivot/PitchPivot"]
 current = true
 fov = 90.0
+near = 0.5
 
 [node name="RayCast3D" type="RayCast3D" parent="TwistPivot/PitchPivot/view" node_paths=PackedStringArray("camera")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.2)

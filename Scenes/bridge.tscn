@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=4 uid="uid://dsgjvqum3vo2n"]
+
+[ext_resource type="Texture2D" uid="uid://d0tnkwpw4v7do" path="res://Assets/Textures/Map_05/bridge_Cottage-Rectangle.jpg" id="1_pa018"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihih8"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_pa018")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h4iaq"]
+_surfaces = [{
+"aabb": AABB(-1.52088, -0.0566648, -5.42925, 2.33941, 4.39797, 6.35398),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAFAAMAAgAEAAUABAAHAAUABAAGAAcABgAJAAcABgAIAAkAAAAEAAIABAAIAAYABAAAAAgAAwAJAAEACQAFAAcACQADAAUAEQASABMAEgAOABAADgAKAAwACgANAAsADwASABEACgAPAA0AEgAKAA4AEgAPAAoACwAKAAoACwALAAoA"),
+"lods": [0.397052, PackedByteArray("AAAFAAEAAAAEAAUABAAJAAUABAAIAAkABAAAAAgABQAJAAEAEQASABMADwASABEAEgAPAAoACgAPAA0ACgANAAsAEgAKAA4ADgAKAAwAEgAOABAA")],
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("JCUAAP//AAD//wAA//8AAFsVsiI+0QAANvCyIj7RAADIDDwp1IkAAKPnPCnUiQAAywNtH783AACm3m0fvzcAAAAAHAcAAAAA2tocBwAAAAAkJcLW//8AAP//wtb//wAAWxV0+T7RAAA28HT5PtEAAMgM///UiQAAo+f//9SJAADLAy/2vzcAAKbeL/a/NwAAAADe3QAAAADa2t7dAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_o5tmc"]
+resource_name = "bridge_Plane"
+_surfaces = [{
+"aabb": AABB(-1.52088, -0.0566648, -5.42925, 2.33941, 4.39797, 6.35398),
+"attribute_data": PackedByteArray("P7fp/+9SCcsntqvwWkwB2diokP7YqJD+6V0Jx7yoz+68qM/uok0Y1YGDt/2Bg7f9JnXixw6Fx+0OhcftkWbr01xpbP9caWz/75x3yMdsdO/HbHTvyn8O1FlUU//Po53M1FiL7yut99kBMjR6AAD//5M8s3oAAP//ijE+dT88vnW/MShuaTymbhQyaWaaPORmdzKjYc08HGIAAP//AAD//w=="),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAAHAAIAAAAEAAcABQAOAAgABQALAA4ACgAUAA0ACgARABQAEAAYABMAEAAWABgAAQAMAAYADAAXABIADAABABcACQAZAAMAGQAPABUAGQAJAA8AIwAkACUAJAAgACIAIAAaAB4AGgAfABwAIQAkACMAGgAhAB8AJAAaACAAJAAhABoAHQAmABsAHQAnACYA"),
+"lods": [0.397052, PackedByteArray("AAANAAIAAAAKAA0ACgAYAA0ACgAWABgADAABABcADwAZAAMAIwAkACUAIQAkACMAJAAhABoAGgAhAB8AGgAfABwAJAAaACAAIAAaAB4AJAAgACIA")],
+"material": SubResource("StandardMaterial3D_ihih8"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("JCUAAP//i8MkJQAA//9oAP//AAD//5vC//8AAP//K8JbFbIiPtEXxFsVsiI+0TXRWxWyIj7RYQA28LIiPtEkwzbwsiI+0QnRNvCyIj7RKcLIDDwp1Im52MgMPCnUiVvRyAw8KdSJRgGj5zwp1Im02KPnPCnUiS/Ro+c8KdSJDcLLA20fvzcL3MsDbR+/N77YywNtH7831wSm3m0fvzc53KbebR+/N7nYpt5tH7838sEAABwHAADs2wAAHAcAAK0C2tocBwAAGtza2hwHAAAGwiQlwtb//z2/JCXC1v///7///8LW//9Av///wtb///+/WxV0+T7Rt8M28HT5PtE7v8gM///UiaTNo+f//9SJN7/LAy/2vzfg0abeL/a/Nzi/AADe3QAAOr/a2t7dAABDvyQlwtb///+////C1v///78oqomgq0TfeSCrK6BGjKwDnKm/oOmsOage+RTFkapioCCtHqhIjNADA6rDrLmsUKg1RLd6CarArPCsNahljEIGcK85rv2px6xCQkp+J69jrgOqxKyajKIKoa8drnRDGXxXr0eub4wIB/H81nn///9/cPzQeP///3/Q5SBLkv0Ze3HaKTTc/o+AdNchLqr+T32y/Vt77fvId////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_h4iaq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hvcwf"]
+size = Vector3(2.04115, 0.745117, 3.32764)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2rmo"]
+size = Vector3(2.01197, 0.297363, 1.47113)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm0cl"]
+size = Vector3(1.99329, 0.640572, 1.59738)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wgc3y"]
+size = Vector3(2.0752, 1.02222, 0.569824)
+
+[node name="bridge" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Plane" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+mesh = SubResource("ArrayMesh_o5tmc")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.99768, 0, 0.068085, 0, 1, 0, -0.068085, 0, 0.99768, -0.394004, 0.220576, 0.0403688)
+shape = SubResource("BoxShape3D_hvcwf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997877, 1.76773e-09, 0.0651245, 0.0319599, 0.871299, -0.48971, -0.0567429, 0.490752, 0.86945, -0.258077, 0.123452, 2.28756)
+shape = SubResource("BoxShape3D_i2rmo")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997984, -0.00975298, 0.0627138, -0.0106606, 0.948324, 0.317124, -0.0625659, -0.317153, 0.946308, -0.506634, -0.00682048, -2.6254)
+shape = SubResource("BoxShape3D_pm0cl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.997881, 0, 0.0650722, -0.0045664, 0.997535, 0.0700256, -0.0649118, -0.0701743, 0.995421, -0.509682, 0.0138687, -1.67646)
+shape = SubResource("BoxShape3D_wgc3y")
