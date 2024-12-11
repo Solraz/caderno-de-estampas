@@ -212,10 +212,10 @@ parameters/looping = true
 
 [node name="NPC_Quadrant2" type="Node3D" parent="."]
 
-[node name="NPC_Quadrant" parent="NPC_Quadrant2" instance=ExtResource("6_jcm6j")]
+[node name="NPC" parent="NPC_Quadrant2" instance=ExtResource("6_jcm6j")]
 transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 74, -0.0110693, -62)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NPC_Quadrant2/NPC_Quadrant"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NPC_Quadrant2/NPC"]
 stream = ExtResource("11_umfw5")
 unit_size = 2.0
 autoplay = true
