@@ -67,9 +67,11 @@ sky_horizon_color = Color(0.683422, 0.618774, 0.796577, 1)
 sky_material = SubResource("ProceduralSkyMaterial_kaii0")
 
 [sub_resource type="Environment" id="Environment_cmrkw"]
+background_mode = 2
 sky = SubResource("Sky_ami82")
 ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.45
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_6xqd3"]
 clip_count = 4

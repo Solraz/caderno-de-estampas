@@ -30,11 +30,11 @@ ssao_enabled = true
 glow_enabled = true
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.180465, 0.199519, 0.229475, 1)
+fog_light_color = Color(0.227708, 0.250281, 0.285768, 1)
 fog_light_energy = 0.66
 fog_density = 0.3472
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.02
+volumetric_fog_density = 0.005
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cxats"]
 size = Vector3(240, 1, 240)
@@ -92,7 +92,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.479, 14.6283, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 55.5403, 0)
-omni_range = 8192.0
+light_energy = 0.1
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.5
+light_size = 0.745
+light_specular = 6.141
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="OmniLight3D"]
+light_energy = 0.2
+light_angular_distance = 60.91
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, -0.857167, 0.515038, 0, -0.515038, -0.857167, 0, 0, 0)
+light_energy = 0.2
+light_angular_distance = 60.91
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="OmniLight3D"]
+transform = Transform3D(0.46793, -0.455173, -0.757535, 0, -0.857167, 0.515038, -0.883766, -0.241002, -0.401094, 0, 0, 0)
+light_energy = 0.2
+light_angular_distance = 60.91
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="OmniLight3D"]
+transform = Transform3D(0.64812, 0.13224, 0.749969, -8.60946e-08, -0.984808, 0.173648, 0.761538, -0.112545, -0.638273, 0, 0, 0)
+light_energy = 0.2
+light_angular_distance = 60.91
 
 [node name="The_Room" type="Node3D" parent="."]
 
@@ -180,6 +203,12 @@ mesh = ExtResource("7_k2tce")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="The_Room/Objects/Stairs/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_t274t")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="The_Room/Objects/Stairs/MeshInstance3D/StaticBody3D"]
+stream = ExtResource("8_1ukk3")
+unit_size = 31.88
+autoplay = true
+panning_strength = 0.0
+
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="The_Room/Objects/Stairs/MeshInstance3D"]
 transform = Transform3D(-0.24996, 0, 0.0044678, 0, 0.25, 0, -0.0044678, 0, -0.24996, 2.53046, 0.00722539, 0.0452295)
 stream = ExtResource("8_1ukk3")
@@ -197,7 +226,6 @@ shape = SubResource("BoxShape3D_or7t7")
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="The_Room/Objects/Stairs"]
 transform = Transform3D(-0.216473, -0.124128, 0.0152201, 0.0338907, -0.0289408, 0.245996, -0.120378, 0.215069, 0.0418868, 27.8361, 2.08933, -28.6767)
 stream = ExtResource("9_rt2l7")
-unit_size = 1.0
 autoplay = true
 parameters/looping = true
 
@@ -208,14 +236,13 @@ volume_db = 10.0
 unit_size = 0.5
 autoplay = true
 emission_angle_enabled = true
-emission_angle_degrees = 9.0
+emission_angle_degrees = 12.0
 parameters/looping = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.941, 6.45051, 116.401)
 stream = ExtResource("11_1s8tl")
 volume_db = -5.0
-unit_size = 8.0
 autoplay = true
 panning_strength = 0.45
 parameters/looping = true
