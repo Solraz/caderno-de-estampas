@@ -598,6 +598,8 @@ size = Vector2(50, 70)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5k0r0"]
 albedo_texture = ExtResource("63_3rydv")
+metallic_specular = 1.0
+roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xwfh"]
 albedo_texture = ExtResource("64_laqo2")
@@ -607,12 +609,15 @@ size = Vector3(50, 20, 0.05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipd04"]
 albedo_texture = ExtResource("65_kskmo")
+roughness = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tvso"]
 size = Vector3(50, 20, 0.05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ex3u"]
 albedo_texture = ExtResource("66_ss1c1")
+metallic_specular = 1.0
+roughness = 0.3
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ht7wq"]
 size = Vector2(70, 20)
@@ -1260,7 +1265,7 @@ adjustment_saturation = 1.1
 [node name="stamp06" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_8bfif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -171, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.713, 0, 0)
 
 [node name="House" type="Node3D" parent="."]
 
