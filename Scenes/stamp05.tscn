@@ -216,7 +216,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117, 4, 749)
 curve = SubResource("Curve3D_x2v2n")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Water/Path3D" node_paths=PackedStringArray("player")]
-transform = Transform3D(0.996706, 0, 0.0807973, 0, 0.999962, 0, -0.0807991, 0, 0.996685, -138.585, 0, -1017.2)
+transform = Transform3D(0.996706, 0, 0.0807971, 0, 0.999962, 0, -0.0807988, 0, 0.996685, -138.584, 0, -1017.2)
 progress = 1063.93
 loop = false
 script = ExtResource("8_10l2f")

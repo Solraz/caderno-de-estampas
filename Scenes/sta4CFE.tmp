@@ -1,8 +1,9 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=26 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="Texture2D" uid="uid://dallu77otr7t4" path="res://Assets/Textures/Map_05/Wispy_Sky-Sunset_02-1024x512.png" id="1_vtntl"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="2_8a0vp"]
+[ext_resource type="Script" path="res://Scripts/Map02/planetoid_gravity.gd" id="2_8q2kq"]
 [ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
 [ext_resource type="PackedScene" uid="uid://lmigyfvjejll" path="res://Assets/Objects/polyballtrue.tscn" id="3_ihgqk"]
 [ext_resource type="Shader" path="res://Assets/Shaders/fountain_ball.gdshader" id="4_dl4kr"]
@@ -12,7 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://bqt4uqopc1kif" path="res://Assets/Textures/Map_02/dreamscapejam-breakcoreDRUM.mp3" id="7_vmr48"]
 [ext_resource type="AudioStream" uid="uid://c0te3ey45yi4x" path="res://Assets/Textures/Map_02/temaprincipal-bonus.mp3" id="9_el5lg"]
 [ext_resource type="AudioStream" uid="uid://bxors0vo5h4xw" path="res://Assets/Textures/Map_02/guitarrassuja.mp3" id="11_umfw5"]
-[ext_resource type="Script" path="res://Scripts/Map02/Dialogue_Activator.gd" id="13_iah67"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gbfqv"]
 panorama = ExtResource("1_vtntl")
@@ -112,9 +112,6 @@ material = SubResource("ShaderMaterial_o48jb")
 radius = 20.0
 height = 40.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qfeeh"]
-size = Vector3(30, 30, 30)
-
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_8a0vp")]
@@ -126,7 +123,10 @@ environment = SubResource("Environment_r40dt")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999992, -0.00395298, 0.000690019, -0.000841523, -0.0384541, 0.99926, -0.00392352, -0.999253, -0.0384571, 1.06808, 56.0536, -0.3006)
 
-[node name="Ground_Below" type="StaticBody3D" parent="."]
+[node name="Ground_Below" type="StaticBody3D" parent="." node_paths=PackedStringArray("player", "gravity_well")]
+script = ExtResource("2_8q2kq")
+player = NodePath("../Player")
+gravity_well = NodePath("GravityWell")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground_Below"]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -2, 0)
@@ -210,25 +210,12 @@ autoplay = true
 parameters/looping = true
 
 [node name="NPC_Quadrant2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, -62)
 
 [node name="NPC" parent="NPC_Quadrant2" instance=ExtResource("6_jcm6j")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 0, 0, 0)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 74, -0.0110693, -62)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="NPC_Quadrant2/NPC"]
 stream = ExtResource("11_umfw5")
 unit_size = 2.0
 autoplay = true
 parameters/looping = true
-
-[node name="Area3D" type="Area3D" parent="NPC_Quadrant2/NPC" node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0, 7.47938, 0)
-script = ExtResource("13_iah67")
-player = NodePath("../../../Player")
-dialogue = ["Me desculpe, isso não é real. ", "Sua imaginação é mais real do que eu mesmo.", "Pilhas e pilhas de subtrações e adições aconteceram para que eu estivesse aqui.", "É assim com você, humano, também.", "Os registros de um grande polígono, se desdobrando longamente. Sem caminhos óbvios em suas faces.", "A imaginação de um mundo inteiro em cores de prisma.", "Uma volta cartesiana para dizer que:", "\"Cogitas, ergo sum.\".", "Você pensa, logo eu existo.", "Então vou te ajudar a continuar me imaginando.", "Meu nome é v-g9ser-g9sij", "Não ando porque não preciso.", "Mas gosto de dançar.", "Não tenho muitos sonhos aqui para além das minhas roupas, não criei muito e nem preciso.", "Existe uma certa paz aqui, não acha? ", "", "", "", "", "", "", "", "", ""]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC_Quadrant2/NPC/Area3D"]
-shape = SubResource("BoxShape3D_qfeeh")
-
-[connection signal="body_entered" from="NPC_Quadrant2/NPC/Area3D" to="NPC_Quadrant2/NPC/Area3D" method="_on_body_entered"]
-[connection signal="body_exited" from="NPC_Quadrant2/NPC/Area3D" to="NPC_Quadrant2/NPC/Area3D" method="_on_body_exited"]

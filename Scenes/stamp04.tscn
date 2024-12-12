@@ -1,5 +1,6 @@
-[gd_scene load_steps=43 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=44 format=3 uid="uid://wdwbkdgc133m"]
 
+[ext_resource type="Texture2D" uid="uid://3thniut4qpp4" path="res://Assets/Textures/Map_04/right.png" id="1_h00q2"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
 [ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
@@ -13,13 +14,21 @@
 [ext_resource type="AudioStream" uid="uid://60gu74agqhxn" path="res://Assets/Textures/Map_04/locrian.mp3" id="11_kraa7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_re6xu"]
+panorama = ExtResource("1_h00q2")
+energy_multiplier = 5.47
 
 [sub_resource type="Sky" id="Sky_yaeql"]
 sky_material = SubResource("PanoramaSkyMaterial_re6xu")
 
 [sub_resource type="Environment" id="Environment_pbb7b"]
 background_mode = 2
+background_energy_multiplier = 2.0
 sky = SubResource("Sky_yaeql")
+tonemap_mode = 3
+tonemap_white = 0.38
+glow_enabled = true
+glow_bloom = 0.42
+glow_blend_mode = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rglun"]
 albedo_texture = ExtResource("2_lxjs2")
@@ -140,17 +149,6 @@ size = Vector3(40, 40, 40)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pbb7b")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 57, 0)
-light_energy = 1.484
-light_indirect_energy = 10.697
-light_volumetric_fog_energy = 15.435
-light_size = 0.101
-light_specular = 0.662
-light_bake_mode = 1
-omni_range = 200000.0
-omni_attenuation = 0.5
 
 [node name="Player" parent="." instance=ExtResource("1_n1mok")]
 

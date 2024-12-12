@@ -1,6 +1,7 @@
-[gd_scene load_steps=142 format=3 uid="uid://b44jmggslniff"]
+[gd_scene load_steps=143 format=3 uid="uid://b44jmggslniff"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_10bm4"]
+[ext_resource type="Texture2D" uid="uid://ci0i5mvo8stj8" path="res://Assets/Textures/Map_04/back.png" id="1_kt008"]
 [ext_resource type="Script" path="res://Scripts/Map03/teleporters.gd" id="2_3p76o"]
 [ext_resource type="Texture2D" uid="uid://dbtxrqtf7mvl7" path="res://Assets/Textures/Map_03/stamp03_floor.jpg" id="3_uwl5e"]
 [ext_resource type="PackedScene" uid="uid://dtvpfomi4noof" path="res://Assets/Textures/Map_03/casa1.glb" id="4_e0xsl"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbgggnnvs060m" path="res://Assets/Textures/Map_03/casa2.glb" id="7_4ssv3"]
 [ext_resource type="PackedScene" uid="uid://lo6h6ilxqms3" path="res://Assets/Textures/Map_03/casa6.glb" id="8_48hsk"]
 [ext_resource type="PackedScene" uid="uid://0b1b54bhnrmi" path="res://Assets/Textures/Map_03/casa5.glb" id="9_tkqe6"]
+[ext_resource type="Shader" path="res://Assets/Shaders/view_through_v2.gdshader" id="9_wc824"]
 [ext_resource type="PackedScene" uid="uid://ftt3xhbh3k68" path="res://Assets/Textures/Map_03/casa4.glb" id="10_s0utt"]
 [ext_resource type="PackedScene" uid="uid://dui1bct382vr0" path="res://Assets/Textures/Map_03/casa3.glb" id="11_x6tj0"]
 [ext_resource type="PackedScene" uid="uid://wgs3mooaswki" path="res://Assets/Textures/Map_05/ps1-style tree pack/Models/grass01.fbx" id="12_6ygth"]
@@ -59,17 +61,23 @@
 [ext_resource type="AudioStream" uid="uid://cp7gdsfw0orte" path="res://Assets/Textures/Map_03/queriaserpsoD.mp3" id="56_oi8qc"]
 [ext_resource type="Script" path="res://Scripts/Map03/mix_tapers.gd" id="57_ecg5d"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kaii0"]
-sky_top_color = Color(0.611147, 0.755764, 0.818197, 1)
-sky_horizon_color = Color(0.683422, 0.618774, 0.796577, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_8tkme"]
+panorama = ExtResource("1_kt008")
 
 [sub_resource type="Sky" id="Sky_ami82"]
-sky_material = SubResource("ProceduralSkyMaterial_kaii0")
+sky_material = SubResource("PanoramaSkyMaterial_8tkme")
 
 [sub_resource type="Environment" id="Environment_cmrkw"]
+background_mode = 2
+background_energy_multiplier = 4.73
 sky = SubResource("Sky_ami82")
-ambient_light_source = 3
+sky_rotation = Vector3(-2.35619, 0, 0)
 ambient_light_color = Color(1, 1, 1, 1)
+tonemap_mode = 3
+fog_enabled = true
+fog_density = 0.005
+fog_aerial_perspective = 0.78
+fog_sky_affect = 0.372
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_6xqd3"]
 clip_count = 4
@@ -148,82 +156,18 @@ size = Vector3(10, 10, 5)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nbnuh"]
 points = PackedVector3Array(5, 5, 2.5, 5, 5, -2.5, -5, 5, 2.5, 5, -5, 2.5, 5, -5, -2.5, -5, 5, -2.5, -5, -5, 2.5, -5, -5, -2.5)
 
-[sub_resource type="Shader" id="Shader_bcln6"]
-code = "// NOTE: Shader automatically converted from Godot Engine 4.3.stable's StandardMaterial3D.
+[sub_resource type="ViewportTexture" id="ViewportTexture_10opi"]
+viewport_path = NodePath("Second_Corridor/Teleport_Point_To_00/Area3D/Vision")
 
-shader_type spatial;
-render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
-
-uniform vec4 albedo : source_color;
-uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
-uniform float point_size : hint_range(0.1, 128.0, 0.1);
-
-uniform float roughness : hint_range(0.0, 1.0);
-uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
-uniform vec4 metallic_texture_channel;
-uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
-
-uniform float specular : hint_range(0.0, 1.0, 0.01);
-uniform float metallic : hint_range(0.0, 1.0, 0.01);
-
-uniform sampler2D texture_emission : source_color, hint_default_black, filter_linear_mipmap, repeat_enable;
-uniform vec4 emission : source_color;
-uniform float emission_energy : hint_range(0.0, 100.0, 0.01);
-
-uniform vec3 uv1_scale;
-uniform vec3 uv1_offset;
-uniform vec3 uv2_scale;
-uniform vec3 uv2_offset;
-
-void vertex() {
-	UV = UV * uv1_scale.xy + uv1_offset.xy;
-}
-
-void fragment() {
-	vec2 base_uv = SCREEN_UV;
-
-	vec4 albedo_tex = texture(texture_albedo, base_uv);
-	ALBEDO = albedo.rgb * albedo_tex.rgb;
-
-	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
-	METALLIC = metallic_tex * metallic;
-	SPECULAR = specular;
-
-	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
-	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
-	ROUGHNESS = roughness_tex * roughness;
-
-	// Emission: Enabled
-	vec3 emission_tex = texture(texture_emission, base_uv).rgb;
-	// Emission Operator: Add
-	EMISSION = (emission.rgb + emission_tex) * emission_energy;
-}
-"
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_np137"]
-viewport_path = NodePath("First_Corridor/Teleport_Point_To_01/Area3D/Vision")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yevgb"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bxrj8"]
 resource_local_to_scene = true
 render_priority = 0
-shader = SubResource("Shader_bcln6")
-shader_parameter/albedo = Color(0, 0, 0, 1)
-shader_parameter/point_size = 1.0
-shader_parameter/roughness = 1.0
-shader_parameter/metallic_texture_channel = null
-shader_parameter/specular = 1.0
-shader_parameter/metallic = 0.0
-shader_parameter/emission = Color(0, 0, 0, 1)
-shader_parameter/emission_energy = 1.0
-shader_parameter/uv1_scale = Vector3(1, 1, 1)
-shader_parameter/uv1_offset = Vector3(0, 0, 0)
-shader_parameter/uv2_scale = Vector3(1, 1, 1)
-shader_parameter/uv2_offset = Vector3(0, 0, 0)
-shader_parameter/texture_emission = SubResource("ViewportTexture_np137")
+shader = ExtResource("9_wc824")
+shader_parameter/viewport_texture = SubResource("ViewportTexture_10opi")
 
 [sub_resource type="QuadMesh" id="QuadMesh_37k3b"]
 resource_local_to_scene = true
-material = SubResource("ShaderMaterial_yevgb")
+material = SubResource("ShaderMaterial_bxrj8")
 size = Vector2(10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c080b"]
@@ -451,6 +395,7 @@ environment = SubResource("Environment_cmrkw")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 33.244, 103.369, -480.358)
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_10bm4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44)
@@ -528,7 +473,6 @@ mesh = SubResource("BoxMesh_aaob1")
 shape = SubResource("ConvexPolygonShape3D_nbnuh")
 
 [node name="Vision" type="SubViewport" parent="First_Corridor/Teleport_Point_To_01/Area3D"]
-size = Vector2i(2226, 1080)
 
 [node name="Camera3D" type="Camera3D" parent="First_Corridor/Teleport_Point_To_01/Area3D/Vision"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 4, 47)

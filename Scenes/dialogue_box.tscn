@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://cl2pr4kyi10sr"]
+[gd_scene load_steps=41 format=4 uid="uid://cl2pr4kyi10sr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki07x"]
 resource_name = "Material.001"
@@ -441,60 +441,134 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jd12c")
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uwvtm"]
+animation = &"small_tilt"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ou7l0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lgljt"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2248v"]
+states/Start/position = Vector2(197, 110)
+states/small_tilt/node = SubResource("AnimationNodeAnimation_uwvtm")
+states/small_tilt/position = Vector2(330, 100)
+transitions = ["Start", "small_tilt", SubResource("AnimationNodeStateMachineTransition_ou7l0"), "small_tilt", "End", SubResource("AnimationNodeStateMachineTransition_lgljt")]
+
+[sub_resource type="Animation" id="Animation_m2036"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xr5go"]
+resource_name = "small_tilt"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0.0261799), Vector3(0, -1.5708, -0.0261799), Vector3(0, -1.5708, 0.0261799), Vector3(0, -1.5708, -0.0261799)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3h1mh"]
+_data = {
+"RESET": SubResource("Animation_m2036"),
+"small_tilt": SubResource("Animation_xr5go")
+}
+
 [node name="dialoguesegundaestampa" type="Node3D"]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(-1.80999e-07, 5.2957e-10, -0.05, 0.000146291, 0.0499998, 0, 0.0499998, -0.000146291, -1.81e-07, -0.35, -0.122, -0.29)
 
 [node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 1.55472, 0, -1.55472, 0, 0, 0, 0, 1.55472, 0.00628835, -0.00812776, -1.55572)
+layers = 2
 mesh = SubResource("ArrayMesh_ykifh")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.04, 0, 0, 0, 1.55, 0, 0, 0, -0.02, 0, 0, 0)
+layers = 2
 mesh = SubResource("ArrayMesh_0n5kt")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.04, 0, 0, 0, 1.55, 0, 0, 0, -0.02, 0, 0, -13.714)
+layers = 2
 mesh = SubResource("ArrayMesh_77xo7")
 skeleton = NodePath("")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.04, 0, 0, 0, 0, 0.02, 0, 6.91, 0, 0, 1.52781, -6.86084)
+layers = 2
 mesh = SubResource("ArrayMesh_3omda")
 skeleton = NodePath("")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.04, 0, 0, 0, 0, 0.02, 0, 6.91, 0, 0, -1.56848, -6.86084)
+layers = 2
 mesh = SubResource("ArrayMesh_qned3")
 skeleton = NodePath("")
 
 [node name="Icosphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.23255, 0, 0, 0, -0.23255, 0, 0, 0, -0.23255, 0, 1.47035, 0)
+layers = 2
 mesh = SubResource("ArrayMesh_umf4w")
 skeleton = NodePath("")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.284869, 0, 0, 0, 0.284869, 0, 0, 0, 0.284869, 0, -1.58889, -13.4379)
+layers = 2
 mesh = SubResource("ArrayMesh_gn8gi")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.140993, 0, 0, 0, -0.140993, 0, 0, 0, -0.140993, 0.237478, -1.67632, -13.6589)
+layers = 2
 mesh = SubResource("ArrayMesh_bcpiq")
 skeleton = NodePath("")
 
 [node name="Cone" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.336945, 0, 0, 0, 0.336945, 0, 0, 0, 0.336945, 0, -0.757943, -13.7107)
+layers = 2
 mesh = SubResource("ArrayMesh_h7xx3")
 skeleton = NodePath("")
 
 [node name="Torus" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.103613, 0.283752, 0, -0.283752, -0.103613, 0, 0, 0, 0.302078, 0, -1.30958, -0.15327)
+layers = 2
 mesh = SubResource("ArrayMesh_1o8ho")
 skeleton = NodePath("")
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.373017, 0, 0, 0, 0.373017, 0, 0, 0, 0.373017, 0, 1.35964, -12.5387)
+layers = 2
 mesh = SubResource("ArrayMesh_y461u")
 skeleton = NodePath("")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_2248v")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3h1mh")
+}
+speed_scale = 0.5

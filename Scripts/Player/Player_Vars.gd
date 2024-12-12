@@ -33,7 +33,7 @@ class_name playerVariables
 @export var ply_jumpheight = 4#4
 @export var ply_stepsize = 8
 
-@export var ply_maxspeed = 16
+@export var ply_maxspeed = 10
 @export var ply_crouchspeed = 10
 var speed = ply_maxspeed
 
@@ -46,6 +46,7 @@ var speed = ply_maxspeed
 @export var wasOnFloor = false
 @export var on_floor = false
 @export var shouldJump = false
+@export var dialoguing = false
 
 
 
@@ -57,7 +58,11 @@ var speed = ply_maxspeed
 @export var xlook : float
 
 @export var camPath : NodePath
+@export var dialoguePath : NodePath
 
+@export var dialogue : Array = []
+@export var curr_diag_page : int = 0
+@export var curr_diag : String = ""
 
 
 func _ready():

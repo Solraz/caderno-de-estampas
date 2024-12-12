@@ -1,12 +1,10 @@
 extends CharacterBody3D
 class_name PlayerInputs
-#CODE THAT PARSES USER INPUT
-#just organized like this for organization's sake
+
 @export var stats: Resource
 var camera: Node3D
 
 var main_menu = preload("res://Scenes/main_menu.tscn")
-
 
 func _ready():
 	push_warning("You should not be seeing this (player_inputs.gd is being initiated)")
@@ -34,8 +32,6 @@ func _input(event):
 func InputMouse(event):
 	stats.xlook += -event.relative.y * stats.ply_xlookspeed
 	stats.ylook += -event.relative.x * stats.ply_ylookspeed
-	
-	
 	stats.xlook = clamp(stats.xlook, stats.ply_maxlookangle_down, stats.ply_maxlookangle_up)
 	
 func ViewAngles(_delta):
@@ -48,8 +44,7 @@ func InputKeys():
 	
 	stats.forwardmove += int(stats.ply_forwardspeed) * (int(Input.get_action_strength("move_forward") * 50))
 	stats.forwardmove -= int(stats.ply_backspeed) * (int(Input.get_action_strength("move_back") * 50))
-	
-	# Clamp that shit so it doesn't go too high
+
 	if Input.is_action_just_released("move_left") or Input.is_action_just_released("move_right"):
 		stats.sidemove = 0
 	else:
@@ -59,6 +54,7 @@ func InputKeys():
 		stats.upmove = 0
 	else:
 		stats.upmove = clamp(stats.upmove, -4096, 4096)
+		
 	if Input.is_action_just_released("move_forward") or Input.is_action_just_released("move_back"):
 		stats.forwardmove = 0
 	else:
