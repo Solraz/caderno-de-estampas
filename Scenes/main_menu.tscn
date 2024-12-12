@@ -21,17 +21,6 @@ orientation = 2
 [sub_resource type="QuadMesh" id="QuadMesh_pksbf"]
 size = Vector2(320, 180)
 
-<<<<<<< HEAD
-[sub_resource type="RichTextEffect" id="RichTextEffect_8uc41"]
-resource_name = "growin"
-script = ExtResource("4_gwt0i")
-metadata/rt = 2067909378050
-
-[sub_resource type="RichTextEffect" id="RichTextEffect_s0hf3"]
-resource_name = "console"
-script = ExtResource("4_qonr4")
-metadata/rt = 2094266384392
-=======
 [sub_resource type="RichTextEffect" id="RichTextEffect_3ttkx"]
 resource_name = "growin"
 script = ExtResource("4_gwt0i")
@@ -41,7 +30,6 @@ metadata/rt = 2294200478072
 resource_name = "console"
 script = ExtResource("4_qonr4")
 metadata/rt = 2320289048958
->>>>>>> ecc41e879d0ad5a50d91a9f79b5a94548edf8e81
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -281,11 +269,7 @@ theme_override_font_sizes/normal_font_size = 42
 theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 fit_content = true
-<<<<<<< HEAD
-custom_effects = [SubResource("RichTextEffect_8uc41")]
-=======
 custom_effects = [SubResource("RichTextEffect_3ttkx")]
->>>>>>> ecc41e879d0ad5a50d91a9f79b5a94548edf8e81
 script = ExtResource("4_mr7ox")
 animation = "growin"
 progress = 1.0
@@ -377,11 +361,7 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 fit_content = true
-<<<<<<< HEAD
-custom_effects = [SubResource("RichTextEffect_s0hf3")]
-=======
 custom_effects = [SubResource("RichTextEffect_qs7hk")]
->>>>>>> ecc41e879d0ad5a50d91a9f79b5a94548edf8e81
 script = ExtResource("4_mr7ox")
 animation = "console"
 progress = 1.0
