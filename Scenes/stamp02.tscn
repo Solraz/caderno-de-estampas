@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
-[ext_resource type="Texture2D" uid="uid://dallu77otr7t4" path="res://Assets/Textures/Map_05/Wispy_Sky-Sunset_02-1024x512.png" id="1_vtntl"]
+[ext_resource type="Sky" uid="uid://gulub3axg84i" path="res://Scenes/skyeye.tres" id="1_sqwne"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="2_8a0vp"]
 [ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
 [ext_resource type="PackedScene" uid="uid://lmigyfvjejll" path="res://Assets/Objects/polyballtrue.tscn" id="3_ihgqk"]
@@ -14,29 +14,26 @@
 [ext_resource type="AudioStream" uid="uid://bxors0vo5h4xw" path="res://Assets/Textures/Map_02/guitarrassuja.mp3" id="11_umfw5"]
 [ext_resource type="Script" path="res://Scripts/Map02/Dialogue_Activator.gd" id="13_iah67"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_gbfqv"]
-panorama = ExtResource("1_vtntl")
-
-[sub_resource type="Sky" id="Sky_xm8v5"]
-sky_material = SubResource("PanoramaSkyMaterial_gbfqv")
-
 [sub_resource type="Environment" id="Environment_r40dt"]
 background_mode = 2
-sky = SubResource("Sky_xm8v5")
+background_energy_multiplier = 1.5
+sky = ExtResource("1_sqwne")
 ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
-tonemap_mode = 3
-tonemap_white = 2.0
 ssao_enabled = true
 glow_enabled = true
 glow_intensity = 0.87
-fog_enabled = true
+fog_light_energy = 5.21
 fog_density = 0.0005
-fog_aerial_perspective = 0.3
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
-volumetric_fog_length = 40.0
+volumetric_fog_density = 0.005
+volumetric_fog_emission = Color(1, 0.72549, 0.717647, 1)
+volumetric_fog_emission_energy = 53.8
+volumetric_fog_length = 15.0
+volumetric_fog_detail_spread = 6.0
+volumetric_fog_sky_affect = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1ffgk"]
 render_priority = 0
@@ -148,6 +145,7 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Pillar_Quadrant/MeshInstance3D2"]
 stream = ExtResource("5_k48im")
+volume_db = 5.0
 unit_size = 5.0
 autoplay = true
 parameters/looping = true
@@ -196,9 +194,10 @@ mesh = SubResource("SphereMesh_6d8t5")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Fountain_Quadrant/MeshInstance3D"]
 stream = ExtResource("7_vmr48")
-unit_size = 25.0
+volume_db = 5.0
+unit_size = 20.0
 autoplay = true
-max_distance = 500.0
+panning_strength = 0.32
 parameters/looping = true
 
 [node name="Ball_Quadrant" parent="." instance=ExtResource("3_ihgqk")]

@@ -1246,10 +1246,15 @@ sky_material = SubResource("PanoramaSkyMaterial_rrt57")
 [sub_resource type="Environment" id="Environment_pwlyk"]
 background_mode = 2
 sky = SubResource("Sky_c8l72")
+<<<<<<< HEAD
 ambient_light_source = 3
 tonemap_mode = 3
 tonemap_white = 2.05
 glow_enabled = true
+=======
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+>>>>>>> 49bca84018d2cc44e41eb333954ec669a156bdd2
 
 [node name="stamp06" type="Node3D"]
 
@@ -1956,12 +1961,12 @@ material_override = SubResource("StandardMaterial3D_mrij1")
 mesh = SubResource("PlaneMesh_avyv0")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room02/Floor/MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04814, 0, -3.96971)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993385, 0, 1.39705)
 stream = ExtResource("39_nurig")
 unit_size = 3.0
 autoplay = true
-max_distance = 70.0
-panning_strength = 0.4
+max_distance = 90.0
+panning_strength = 0.06
 parameters/looping = true
 
 [node name="West_Wall" type="StaticBody3D" parent="House/Room02"]
@@ -3540,3 +3545,8 @@ data = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pwlyk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.976672, -0.206926, 0.0573855, 0, 0.267238, 0.96363, -0.214735, -0.941151, 0.261004, -178.015, 88.2636, 33.3876)
+light_energy = 1.2
+light_angular_distance = 8.83
