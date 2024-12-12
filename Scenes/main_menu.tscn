@@ -21,15 +21,15 @@ orientation = 2
 [sub_resource type="QuadMesh" id="QuadMesh_pksbf"]
 size = Vector2(320, 180)
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_3ttkx"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_5c7ty"]
 resource_name = "growin"
 script = ExtResource("4_gwt0i")
-metadata/rt = 2294200478072
+metadata/rt = 2080911720476
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_qs7hk"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_xi22j"]
 resource_name = "console"
 script = ExtResource("4_qonr4")
-metadata/rt = 2320289048958
+metadata/rt = 2107268726818
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -269,7 +269,7 @@ theme_override_font_sizes/normal_font_size = 42
 theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_3ttkx")]
+custom_effects = [SubResource("RichTextEffect_5c7ty")]
 script = ExtResource("4_mr7ox")
 animation = "growin"
 progress = 1.0
@@ -361,13 +361,13 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_qs7hk")]
+custom_effects = [SubResource("RichTextEffect_xi22j")]
 script = ExtResource("4_mr7ox")
 animation = "console"
 progress = 1.0
 visible_character = 8
 _transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 18, 26), Transform2D(1, 0, 0, 1, 24, 26), Transform2D(1, 0, 0, 1, 37, 26), Transform2D(1, 0, 0, 1, 52, 26), Transform2D(1, 0, 0, 1, 59, 26), Transform2D(1, 0, 0, 1, 69, 26), Transform2D(1, 0, 0, 1, 83, 26)])
-_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 18), Vector2(14, 18), Vector2(15, 18), Vector2(6, 18), Vector2(11, 18), Vector2(14, 18), Vector2(13, 18)])
+_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 18), Vector2(14, 18), Vector2(15, 18), Vector2(6, 18), Vector2(11, 18), Vector2(14, 18), Vector2(0, 18)])
 _alpha = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
 _alpha_goal = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
 _forced_finish_delay = -0.025817

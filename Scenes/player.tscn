@@ -25,10 +25,10 @@ size = Vector3(0.2, 0.2, 0.2)
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_jcay5"]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_6vlsm"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_hedy7"]
 resource_name = "wfc"
 script = ExtResource("5_ubq3m")
-metadata/rt = 1990935510633
+metadata/rt = 2003954630275
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("3_a5reg")
@@ -108,7 +108,7 @@ theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 60
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_6vlsm")]
+custom_effects = [SubResource("RichTextEffect_hedy7")]
 script = ExtResource("5_8a16l")
 animation = "wfc"
 _transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0)])
