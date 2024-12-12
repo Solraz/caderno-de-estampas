@@ -25,10 +25,10 @@ size = Vector3(0.2, 0.2, 0.2)
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_jcay5"]
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_gqomy"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_6vlsm"]
 resource_name = "wfc"
 script = ExtResource("5_ubq3m")
-metadata/rt = 110857535181259
+metadata/rt = 1990935510633
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("3_a5reg")
@@ -108,15 +108,13 @@ theme_override_font_sizes/normal_font_size = 60
 theme_override_font_sizes/bold_font_size = 60
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_gqomy")]
+custom_effects = [SubResource("RichTextEffect_6vlsm")]
 script = ExtResource("5_8a16l")
 animation = "wfc"
-progress = 1.0
-visible_character = 5
-_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 34, 65), Transform2D(1, 0, 0, 1, 69, 65), Transform2D(1, 0, 0, 1, 98, 65), Transform2D(1, 0, 0, 1, 121, 65)])
-_char_size = Array[Vector2]([Vector2(0, 0), Vector2(32, 47), Vector2(27, 47), Vector2(24, 47), Vector2(32, 47)])
-_alpha = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0])
-_alpha_goal = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0])
+_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0)])
+_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+_alpha = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0])
+_alpha_goal = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0])
 _forced_finish_delay = -0.0448308
 animation = "wfc"
 default_wait_time = 1.0

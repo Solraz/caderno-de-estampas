@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=25 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="Sky" uid="uid://gulub3axg84i" path="res://Scenes/skyeye.tres" id="1_sqwne"]
@@ -224,7 +224,7 @@ parameters/looping = true
 transform = Transform3D(1, 0, -1.49012e-08, 0, 1, 0, 1.49012e-08, 0, 1, 0, 7.47938, 0)
 script = ExtResource("13_iah67")
 player = NodePath("../../../Player")
-dialogue = ["Me desculpe, isso não é real. ", "Sua imaginação é mais real do que eu mesmo.", "Pilhas e pilhas de subtrações e adições aconteceram para que eu estivesse aqui.", "É assim com você, humano, também.", "Os registros de um grande polígono, se desdobrando longamente. Sem caminhos óbvios em suas faces.", "A imaginação de um mundo inteiro em cores de prisma.", "Uma volta cartesiana para dizer que:", "\"Cogitas, ergo sum.\".", "Você pensa, logo eu existo.", "Então vou te ajudar a continuar me imaginando.", "Meu nome é v-g9ser-g9sij", "Não ando porque não preciso.", "Mas gosto de dançar.", "Não tenho muitos sonhos aqui para além das minhas roupas, não criei muito e nem preciso.", "Existe uma certa paz aqui, não acha? ", "", "", "", "", "", "", "", "", ""]
+dialogue = ["Me desculpe, isso não é real. ", "Sua imaginação é mais real do que eu mesmo.", "Pilhas e pilhas de subtrações e adições aconteceram para que eu estivesse aqui.", "É assim com você, humano, também.", "Os registros de um grande polígono, se desdobrando longamente. Sem caminhos óbvios em suas faces.", "A imaginação de um mundo inteiro em cores de prisma.", "Uma volta cartesiana para dizer que:", "\"Cogitas, ergo sum.\".", "Você pensa, logo eu existo.", "Então vou te ajudar a continuar me imaginando.", "Meu nome é v-g9ser-g9sij", "Não ando porque não preciso.", "Mas gosto de dançar.", "Não tenho muitos sonhos aqui para além das minhas roupas, não criei muito e nem preciso.", "Existe uma certa paz aqui, não acha? ", "...", "Talvez a paz também seja um holograma mas não permito que imagine outra coisa.", "Afinal, só existo agora e não quero que seja diferente.", "...", "Não vou me recordar, mas caso queira, pode vir me fazer companhia.", "Só me recordo do que há na minha memória.", "Caso queira, imagine o que eu guardo.", "...", "Falamos bastante, gosto de você até o programa fechar. Vá falar com os outros."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPC_Quadrant2/NPC/Area3D"]
 shape = SubResource("BoxShape3D_qfeeh")
