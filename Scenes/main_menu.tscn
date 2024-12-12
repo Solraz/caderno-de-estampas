@@ -21,15 +21,15 @@ orientation = 2
 [sub_resource type="QuadMesh" id="QuadMesh_pksbf"]
 size = Vector2(320, 180)
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_5c7ty"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_xmugf"]
 resource_name = "growin"
 script = ExtResource("4_gwt0i")
-metadata/rt = 2080911720476
+metadata/rt = 2321463454059
 
-[sub_resource type="RichTextEffect" id="RichTextEffect_xi22j"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_tbrxa"]
 resource_name = "console"
 script = ExtResource("4_qonr4")
-metadata/rt = 2107268726818
+metadata/rt = 2347552024945
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -269,15 +269,13 @@ theme_override_font_sizes/normal_font_size = 42
 theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_5c7ty")]
+custom_effects = [SubResource("RichTextEffect_xmugf")]
 script = ExtResource("4_mr7ox")
 animation = "growin"
-progress = 1.0
-visible_character = 16
-_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 31, 45), Transform2D(1, 0, 0, 1, 55, 45), Transform2D(1, 0, 0, 1, 81, 45), Transform2D(1, 0, 0, 1, 99, 45), Transform2D(1, 0, 0, 1, 111, 45), Transform2D(1, 0, 0, 1, 135, 45), Transform2D(1, 0, 0, 1, 147, 45), Transform2D(1, 0, 0, 1, 158, 45), Transform2D(1, 0, 0, 1, 188, 45), Transform2D(1, 0, 0, 1, 213, 45), Transform2D(1, 0, 0, 1, 231, 45), Transform2D(1, 0, 0, 1, 254, 45), Transform2D(1, 0, 0, 1, 279, 45), Transform2D(1, 0, 0, 1, 290, 45), Transform2D(1, 0, 0, 1, 317, 45)])
-_char_size = Array[Vector2]([Vector2(0, 0), Vector2(23, 32), Vector2(24, 32), Vector2(17, 32), Vector2(8, 32), Vector2(23, 32), Vector2(8, 32), Vector2(0, 32), Vector2(28, 32), Vector2(23, 32), Vector2(17, 32), Vector2(25, 32), Vector2(23, 32), Vector2(8, 32), Vector2(23, 32), Vector2(19, 32)])
-_alpha = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-_alpha_goal = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0)])
+_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+_alpha = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+_alpha_goal = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 _forced_finish_delay = -0.0414056
 animation = "growin"
 default_wait_time = 1.0
@@ -361,15 +359,18 @@ theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 bbcode_enabled = true
 fit_content = true
-custom_effects = [SubResource("RichTextEffect_xi22j")]
+custom_effects = [SubResource("RichTextEffect_tbrxa")]
 script = ExtResource("4_mr7ox")
 animation = "console"
-progress = 1.0
-visible_character = 8
-_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 18, 26), Transform2D(1, 0, 0, 1, 24, 26), Transform2D(1, 0, 0, 1, 37, 26), Transform2D(1, 0, 0, 1, 52, 26), Transform2D(1, 0, 0, 1, 59, 26), Transform2D(1, 0, 0, 1, 69, 26), Transform2D(1, 0, 0, 1, 83, 26)])
-_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 18), Vector2(14, 18), Vector2(15, 18), Vector2(6, 18), Vector2(11, 18), Vector2(14, 18), Vector2(0, 18)])
-_alpha = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
-_alpha_goal = Array[float]([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0])
+_triggers = {
+-1: [[1001, {
+"w": 3
+}]]
+}
+_transforms = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0)])
+_char_size = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+_alpha = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+_alpha_goal = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 _forced_finish_delay = -0.025817
 animation = "console"
 default_wait_time = 1.0
