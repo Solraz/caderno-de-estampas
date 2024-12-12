@@ -205,6 +205,7 @@ shape = SubResource("ConcavePolygonShape3D_t274t")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="The_Room/Objects/Stairs/MeshInstance3D/StaticBody3D"]
 stream = ExtResource("8_1ukk3")
+volume_db = -12.19
 unit_size = 31.88
 autoplay = true
 panning_strength = 0.0
@@ -232,11 +233,12 @@ parameters/looping = true
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="The_Room/Objects/Stairs"]
 transform = Transform3D(-0.216473, -0.124128, 0.0152201, 0.0338907, -0.0289408, 0.245996, -0.120378, 0.215069, 0.0418868, 1.56469, 7.14201, 0.000208158)
 stream = ExtResource("10_ufmtj")
-volume_db = 10.0
-unit_size = 0.5
+volume_db = 16.095
+unit_size = 1.0
 autoplay = true
 emission_angle_enabled = true
-emission_angle_degrees = 12.0
+emission_angle_degrees = 15.7
+emission_angle_filter_attenuation_db = -29.7
 parameters/looping = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

@@ -3004,6 +3004,7 @@ stream = ExtResource("104_iw4ww")
 unit_size = 3.0
 autoplay = true
 max_distance = 35.0
+parameters/looping = true
 
 [node name="Label3D" type="Label3D" parent="House/Room04/tracks/MeshInstance3D6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.00691, 0.872128)
