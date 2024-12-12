@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=25 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="Sky" uid="uid://gulub3axg84i" path="res://Scenes/skyeye.tres" id="1_sqwne"]
