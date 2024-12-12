@@ -1,4 +1,4 @@
-[gd_scene load_steps=471 format=3 uid="uid://dyq33ebk1lryo"]
+[gd_scene load_steps=468 format=3 uid="uid://dyq33ebk1lryo"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_8bfif"]
 [ext_resource type="Texture2D" uid="uid://bre0wyqxc5hih" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20190730-WA0050.jpg" id="1_inbph"]
@@ -45,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://w68sqe2yvnom" path="res://Assets/Textures/Map_06/fotos amigos/300px-Ioanniskepplerih00kepl_0081.jpg" id="26_3bpox"]
 [ext_resource type="Texture2D" uid="uid://c1s2jhjqkdt0q" path="res://Assets/Textures/Map_06/fotos amigos/Ancientlibraryalex.jpg" id="26_aggnw"]
 [ext_resource type="Texture2D" uid="uid://75het46y3182" path="res://Assets/Textures/Map_06/fotos amigos/Pegasup.jpg" id="27_mdneh"]
-[ext_resource type="Texture2D" uid="uid://dk08dj5hwdqo1" path="res://Assets/Textures/Map_06/fotos amigos/Planisphæri_cœleste.jpg" id="28_w378g"]
 [ext_resource type="Texture2D" uid="uid://bscme1q1aiv7q" path="res://Assets/Textures/Map_06/fotos amigos/voz imaginaria.PNG" id="29_g6ahu"]
 [ext_resource type="Texture2D" uid="uid://cli4pr23d4l2c" path="res://Assets/Textures/Map_06/fotos amigos/La-Monte-Young-Composition-1960-10-1024x443.png" id="30_5nnpx"]
 [ext_resource type="Texture2D" uid="uid://br8buvaors44m" path="res://Assets/Textures/Map_06/fotos amigos/tatu do bem.png" id="30_mgajs"]
@@ -81,10 +80,10 @@
 [ext_resource type="Texture2D" uid="uid://cwyiocfe50ctr" path="res://Assets/Textures/Map_04/top.png" id="49_7vyfu"]
 [ext_resource type="Texture2D" uid="uid://p67cg68c6uh1" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroom3.png" id="49_j3uww"]
 [ext_resource type="Texture2D" uid="uid://bn5iwbvcmm4r5" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroomchao.png" id="50_2ajyk"]
+[ext_resource type="Texture2D" uid="uid://cpt22y33q3o4n" path="res://Assets/Textures/Map_06/fotos amigos/Planisphæri_.jpg" id="50_ikynf"]
 [ext_resource type="Texture2D" uid="uid://cyn8yignpnidx" path="res://Assets/Textures/Map_06/fotos amigos/carvaomioope.png" id="51_m1c2p"]
 [ext_resource type="Texture2D" uid="uid://q04lj7i7maee" path="res://Assets/Textures/Map_06/fotos amigos/fcc7866ed5e38b7e98218cccaee8090b.jpg" id="52_5lsg5"]
 [ext_resource type="AudioStream" uid="uid://dg3jiycdm844h" path="res://Assets/Textures/Map_06/musga/algumapedra.mp3" id="54_twu8l"]
-[ext_resource type="AudioStream" uid="uid://cbkvdtekwgtmd" path="res://Assets/Textures/Map_06/musga/odieimasgraveiporquetivesaudade.mp3" id="55_6rxxa"]
 [ext_resource type="AudioStream" uid="uid://dpjxjlop1140p" path="res://Assets/Textures/Map_06/musga/material.mp3" id="56_v5p1u"]
 [ext_resource type="AudioStream" uid="uid://74usoulco16j" path="res://Assets/Textures/Map_06/musga/counting.mp3" id="57_suspe"]
 [ext_resource type="AudioStream" uid="uid://4472pbff24rw" path="res://Assets/Textures/Map_06/musga/cafe.mp3" id="58_emih0"]
@@ -469,8 +468,8 @@ albedo_texture = ExtResource("27_mdneh")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3rmka"]
 size = Vector3(50, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwofu"]
-albedo_texture = ExtResource("28_w378g")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lw11"]
+albedo_texture = ExtResource("50_ikynf")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q7xwf"]
 size = Vector2(50, 70)
@@ -1230,16 +1229,6 @@ size = Vector3(15, 6, 0.05)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tvcdu"]
 size = Vector2(15, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ykxia"]
-
-[sub_resource type="MeshLibrary" id="MeshLibrary_55plh"]
-item/0/name = "caxa"
-item/0/mesh = SubResource("BoxMesh_ykxia")
-item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-item/0/shapes = []
-item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-item/0/navigation_layers = 1
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rrt57"]
 panorama = ExtResource("61_u3ke4")
@@ -2108,16 +2097,16 @@ shape = SubResource("BoxShape3D_3rmka")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_rwofu")
+material_override = SubResource("StandardMaterial3D_0lw11")
 mesh = SubResource("PlaneMesh_q7xwf")
 
 [node name="Room08" type="Node3D" parent="House"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 69.8967, 0, -39.2785)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room08"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.349)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.07562)
 stream = ExtResource("38_77iod")
-unit_size = 2.0
+unit_size = 5.0
 autoplay = true
 max_distance = 70.0
 parameters/looping = true
@@ -2235,14 +2224,6 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20,
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room08/StaticBody3D"]
 material_override = SubResource("StandardMaterial3D_l1kep")
 mesh = SubResource("PlaneMesh_lfoq4")
-
-[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="House/Room08"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62939e-06, 0, 20)
-stream = ExtResource("55_6rxxa")
-unit_size = 2.0
-autoplay = true
-max_distance = 70.0
-parameters/looping = true
 
 [node name="Room09" type="Node3D" parent="House"]
 transform = Transform3D(-8.2396e-08, 0, 1.67, 0, 1, 0, -1.885, 0, -7.2998e-08, 288.122, 0, 51.1097)
@@ -3544,13 +3525,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.99742, 0)
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
 material_override = ExtResource("23_0d17r")
 mesh = SubResource("PlaneMesh_tvcdu")
-
-[node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(-8.2396e-08, 0, 1.67, 0, 1, 0, -1.885, 0, -7.2998e-08, 286.808, -1, 51.1097)
-mesh_library = SubResource("MeshLibrary_55plh")
-data = {
-"cells": PackedInt32Array(37, 25, 589824, 36, 25, 589824, 35, 25, 589824, 34, 25, 589824, 33, 25, 589824, 32, 25, 589824, 32, 24, 589824, 31, 24, 589824, 34, 24, 589824, 34, 23, 589824, 34, 22, 589824, 33, 21, 589824, 33, 20, 589824, 33, 19, 589824, 33, 18, 589824, 33, 17, 589824, 34, 17, 589824, 35, 17, 589824, 35, 18, 589824, 28, 24, 589824, 29, 24, 589824, 29, 23, 589824, 30, 22, 589824, 30, 21, 589824, 30, 20, 589824, 31, 20, 589824, 31, 19, 589824, 31, 18, 589824, 30, 17, 589824, 30, 16, 589824, 29, 16, 589824, 28, 16, 589824, 27, 16, 589824, 27, 17, 589824, 26, 17, 589824, 26, 18, 589824, 26, 19, 589824, 26, 20, 589824, 26, 21, 589824, 26, 22, 589824, 26, 23, 589824, 27, 23, 589824, 27, 24, 589824, 26, 16, 589824, 25, 16, 589824, 25, 17, 589824, 24, 17, 589824, 24, 18, 589824, 23, 19, 589824, 23, 20, 589824, 22, 21, 589824, 21, 22, 589824, 21, 23, 589824, 20, 24, 589824, 21, 21, 589824, 22, 20, 589824, 22, 19, 589824, 22, 18, 589824, 23, 17, 589824, 23, 16, 589824, 23, 15, 589824, 23, 18, 589824, 18, 20, 589824, 18, 19, 589824, 19, 19, 589824, 19, 18, 589824, 20, 17, 589824, 20, 16, 589824, 21, 16, 589824, 21, 15, 589824, 21, 14, 589824, 20, 14, 589824, 19, 14, 589824, 19, 15, 589824, 18, 15, 589824, 18, 16, 589824, 17, 16, 589824, 16, 17, 589824, 15, 18, 589824, 14, 19, 589824, 14, 20, 589824, 13, 20, 589824, 13, 21, 589824, 13, 22, 589824, 14, 22, 589824, 15, 22, 589824, 16, 22, 589824, 16, 21, 589824, 17, 21, 589824)
-}
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pwlyk")
