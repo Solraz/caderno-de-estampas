@@ -73,15 +73,11 @@ background_energy_multiplier = 4.73
 sky = SubResource("Sky_ami82")
 sky_rotation = Vector3(-2.35619, 0, 0)
 ambient_light_color = Color(1, 1, 1, 1)
-<<<<<<< HEAD
 tonemap_mode = 3
 fog_enabled = true
 fog_density = 0.005
 fog_aerial_perspective = 0.78
 fog_sky_affect = 0.372
-=======
-ambient_light_sky_contribution = 0.45
->>>>>>> 49bca84018d2cc44e41eb333954ec669a156bdd2
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_6xqd3"]
 clip_count = 4

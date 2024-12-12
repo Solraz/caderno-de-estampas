@@ -1246,15 +1246,10 @@ sky_material = SubResource("PanoramaSkyMaterial_rrt57")
 [sub_resource type="Environment" id="Environment_pwlyk"]
 background_mode = 2
 sky = SubResource("Sky_c8l72")
-<<<<<<< HEAD
 ambient_light_source = 3
 tonemap_mode = 3
 tonemap_white = 2.05
 glow_enabled = true
-=======
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
->>>>>>> 49bca84018d2cc44e41eb333954ec669a156bdd2
 
 [node name="stamp06" type="Node3D"]
 
