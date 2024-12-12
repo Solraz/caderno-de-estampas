@@ -616,12 +616,8 @@ size = Vector3(50, 20, 0.05)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ex3u"]
 albedo_texture = ExtResource("66_ss1c1")
-<<<<<<< HEAD
-metallic_specular = 0.67
-=======
 metallic_specular = 1.0
 roughness = 0.3
->>>>>>> 283b8475fbc29758f651fc56c9e3eb5c92075589
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ht7wq"]
 size = Vector2(70, 20)
