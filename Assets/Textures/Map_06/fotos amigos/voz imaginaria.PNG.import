@@ -3,16 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bscme1q1aiv7q"
-path.s3tc="res://.godot/imported/voz imaginaria.PNG-fd81e5dc390640e140385394b8c75030.s3tc.ctex"
-metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
+valid=false
 
 [deps]
 
 source_file="res://Assets/Textures/Map_06/fotos amigos/voz imaginaria.PNG"
-dest_files=["res://.godot/imported/voz imaginaria.PNG-fd81e5dc390640e140385394b8c75030.s3tc.ctex"]
 
 [params]
 
