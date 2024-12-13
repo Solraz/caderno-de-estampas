@@ -1,10 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://wdwbkdgc133m"]
+[gd_scene load_steps=46 format=3 uid="uid://wdwbkdgc133m"]
 
 [ext_resource type="Texture2D" uid="uid://3thniut4qpp4" path="res://Assets/Textures/Map_04/right.png" id="1_h00q2"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_n1mok"]
 [ext_resource type="Script" path="res://Scripts/Map04/sound_stethoscope.gd" id="2_gkrr6"]
-[ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="2_lxjs2"]
 [ext_resource type="Script" path="res://Scripts/Map04/rotate_sounds.gd" id="3_au0qk"]
+[ext_resource type="Texture2D" uid="uid://bkuy8mxlmnavc" path="res://Assets/Textures/Map_04/bottom.jpg" id="3_g3w3o"]
 [ext_resource type="AudioStream" uid="uid://dnto7xxbya7fn" path="res://Assets/Textures/Map_04/ionian.mp3" id="5_jfptr"]
 [ext_resource type="AudioStream" uid="uid://dmrc7j1bo6qdr" path="res://Assets/Textures/Map_04/dorian.mp3" id="6_qr5t2"]
 [ext_resource type="AudioStream" uid="uid://de8aw8tofcmov" path="res://Assets/Textures/Map_04/lydian.mp3" id="7_4gg3k"]
@@ -30,8 +30,13 @@ glow_enabled = true
 glow_bloom = 0.42
 glow_blend_mode = 1
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7o58"]
+albedo_texture = ExtResource("3_g3w3o")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dqt0p"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rglun"]
-albedo_texture = ExtResource("2_lxjs2")
+albedo_texture = SubResource("CompressedTexture2D_dqt0p")
 
 [sub_resource type="SphereMesh" id="SphereMesh_avg8c"]
 lightmap_size_hint = Vector2i(6285, 3143)
@@ -158,6 +163,7 @@ environment = SubResource("Environment_pbb7b")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Structure/Dome"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.072237, 0.0737152, -0.0178452)
+material_override = SubResource("StandardMaterial3D_h7o58")
 mesh = SubResource("SphereMesh_avg8c")
 skeleton = NodePath("../..")
 

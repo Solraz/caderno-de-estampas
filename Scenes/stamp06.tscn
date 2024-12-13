@@ -1,4 +1,4 @@
-[gd_scene load_steps=468 format=3 uid="uid://dyq33ebk1lryo"]
+[gd_scene load_steps=471 format=3 uid="uid://dyq33ebk1lryo"]
 
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="1_8bfif"]
 [ext_resource type="Texture2D" uid="uid://bre0wyqxc5hih" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20190730-WA0050.jpg" id="1_inbph"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hef71hcr1aiy" path="res://Assets/Textures/Map_06/fotos amigos/FB_IMG_1575678773625.jpg" id="3_s8gp6"]
 [ext_resource type="Texture2D" uid="uid://clpquf8b000x6" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 16.29.57.jpeg" id="4_jxde6"]
 [ext_resource type="Texture2D" uid="uid://cys4dgjp6mca8" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20191004-WA0016.jpg" id="5_6lq6x"]
-[ext_resource type="AudioStream" uid="uid://dyldxiq66wh1k" path="res://Assets/Textures/Map_06/musga/bomba patch.mp3" id="5_jltfu"]
+[ext_resource type="AudioStream" uid="uid://bl4ks8wq3yjxm" path="res://Assets/Textures/Map_06/musga/bomba-patchredux.mp3" id="6_8dgnf"]
 [ext_resource type="Texture2D" uid="uid://cj766rxdna7q0" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 16.25.07.jpeg" id="6_d7ac7"]
 [ext_resource type="Texture2D" uid="uid://d2bnffeefxexw" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 16.26.27.jpeg" id="7_vvlp6"]
 [ext_resource type="Texture2D" uid="uid://bqaw7iew8vvke" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20191115-WA0007.jpg" id="8_apunk"]
@@ -20,11 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://drft0ufm0wl1t" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 17.03.23.jpeg" id="14_l1kmx"]
 [ext_resource type="Texture2D" uid="uid://0chj5l00nayk" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 17.07.29.jpeg" id="15_mxphw"]
 [ext_resource type="Texture2D" uid="uid://ckc3fncr7clva" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-05 at 17.23.00.jpeg" id="17_roqcy"]
-[ext_resource type="AudioStream" uid="uid://ckt1qxi0jpq6f" path="res://Assets/Textures/Map_06/musga/aoarquipelago.mp3" id="19_q1cko"]
 [ext_resource type="Texture2D" uid="uid://bswktf4rfv0e0" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20191212-WA0019.jpg" id="19_x5bkg"]
-[ext_resource type="Texture2D" uid="uid://bftyy1h4oeu7i" path="res://Assets/Textures/Map_06/fotos amigos/federico-beccari-L8126OwlroY-unsplash.jpg" id="20_21at3"]
 [ext_resource type="Material" uid="uid://fkhkir6t1hml" path="res://demo/assets/materials/M_crystal_blue.tres" id="20_y2h6y"]
 [ext_resource type="Texture2D" uid="uid://gdaweo018tv1" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2019-12-01 at 2.47.46 AM.jpeg" id="21_d7nth"]
+[ext_resource type="AudioStream" uid="uid://bfbdljchcw72g" path="res://Assets/Textures/Map_06/musga/aoarquipelagoredux.mp3" id="21_fqjjt"]
 [ext_resource type="Texture2D" uid="uid://e107qa4dbu58" path="res://Assets/Textures/Map_06/fotos amigos/77149092_541331593358832_4487747444246839296_n.jpg" id="21_m6ulf"]
 [ext_resource type="Texture2D" uid="uid://d127s2a0a8dl5" path="res://Assets/Textures/Map_06/fotos amigos/240463858_567359358047346_3558763666270969586_n.jpg" id="21_n7pfi"]
 [ext_resource type="Material" uid="uid://cso4f2iyuxpmc" path="res://demo/assets/materials/M_crystal_purple.tres" id="21_oc6sd"]
@@ -33,96 +32,99 @@
 [ext_resource type="Material" uid="uid://dlmtxs0c66hj3" path="res://demo/assets/materials/M_rock30.tres" id="22_3r7ri"]
 [ext_resource type="Texture2D" uid="uid://c84w7weyc5pfa" path="res://Assets/Textures/Map_06/fotos amigos/Pupp.jpg" id="22_ggpi6"]
 [ext_resource type="AudioStream" uid="uid://bq13v37kw0shn" path="res://Assets/Textures/Map_06/musga/nao quero consertar esse relogio.mp3" id="22_jbs77"]
-[ext_resource type="AudioStream" uid="uid://csf6cq6wen7rq" path="res://Assets/Textures/Map_06/musga/liminaridade.mp3" id="22_v6ham"]
 [ext_resource type="Texture2D" uid="uid://uml2wg1dbm2y" path="res://Assets/Textures/Map_06/fotos amigos/20190814_171709.jpg" id="22_w3edu"]
 [ext_resource type="Material" uid="uid://dkvsksxpkl1vj" path="res://demo/assets/materials/M_rock30_tp.tres" id="23_0d17r"]
 [ext_resource type="AudioStream" uid="uid://cqdx1upegj2ts" path="res://Assets/Textures/Map_06/musga/mini1.mp3" id="23_k52te"]
 [ext_resource type="Texture2D" uid="uid://daykhm2730grp" path="res://Assets/Textures/Map_06/fotos amigos/serpentario.webp" id="23_nc0x3"]
 [ext_resource type="Texture2D" uid="uid://uuyio03a5q7q" path="res://Assets/Textures/Map_06/fotos amigos/aeb400af-ba2f-45b7-acd6-279a514d292d_1920x1698.jpg" id="24_0kaxo"]
-[ext_resource type="AudioStream" uid="uid://iqle0raj3uuc" path="res://Assets/Textures/Map_06/musga/hipnagogia.mp3" id="24_eblth"]
 [ext_resource type="Texture2D" uid="uid://c6xpipy42hhqk" path="res://Assets/Textures/Map_06/fotos amigos/IMG-20150623-WA0007.jpg" id="24_lt86u"]
 [ext_resource type="Texture2D" uid="uid://b40m33no3fumq" path="res://Assets/Textures/Map_06/fotos amigos/400px-Ptolemy_guided_by_muse.jpg" id="25_5hqn4"]
 [ext_resource type="Texture2D" uid="uid://w68sqe2yvnom" path="res://Assets/Textures/Map_06/fotos amigos/300px-Ioanniskepplerih00kepl_0081.jpg" id="26_3bpox"]
 [ext_resource type="Texture2D" uid="uid://c1s2jhjqkdt0q" path="res://Assets/Textures/Map_06/fotos amigos/Ancientlibraryalex.jpg" id="26_aggnw"]
+[ext_resource type="AudioStream" uid="uid://c1lyj6m3ta80" path="res://Assets/Textures/Map_06/musga/hipnagogia-redux.mp3" id="27_l8ane"]
 [ext_resource type="Texture2D" uid="uid://75het46y3182" path="res://Assets/Textures/Map_06/fotos amigos/Pegasup.jpg" id="27_mdneh"]
 [ext_resource type="Texture2D" uid="uid://bscme1q1aiv7q" path="res://Assets/Textures/Map_06/fotos amigos/voz imaginaria.PNG" id="29_g6ahu"]
 [ext_resource type="Texture2D" uid="uid://cli4pr23d4l2c" path="res://Assets/Textures/Map_06/fotos amigos/La-Monte-Young-Composition-1960-10-1024x443.png" id="30_5nnpx"]
 [ext_resource type="Texture2D" uid="uid://br8buvaors44m" path="res://Assets/Textures/Map_06/fotos amigos/tatu do bem.png" id="30_mgajs"]
 [ext_resource type="Texture2D" uid="uid://dk55jiwog3acd" path="res://Assets/Textures/Map_06/fotos amigos/silence.PNG" id="31_33mgy"]
 [ext_resource type="Texture2D" uid="uid://dgfuet4sm0dwj" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2019-12-01 at 2.49.00 AM.jpeg" id="31_hskut"]
-[ext_resource type="Texture2D" uid="uid://cm8byiv2bp5el" path="res://Assets/Textures/Map_06/fotos amigos/dado6.png" id="32_v170t"]
 [ext_resource type="AudioStream" uid="uid://cu25y6t0he6tc" path="res://Assets/Textures/Map_06/musga/liminaridade heterocromia (online-audio-converter.com).mp3" id="33_5xv2h"]
-[ext_resource type="Texture2D" uid="uid://l637nkdeygmq" path="res://Assets/Textures/Map_06/fotos amigos/dado5.png" id="33_mr3cx"]
-[ext_resource type="Texture2D" uid="uid://cbjnfik2sn3ti" path="res://Assets/Textures/Map_06/fotos amigos/dado2.png" id="34_wh07j"]
-[ext_resource type="Texture2D" uid="uid://0br2q3kghci2" path="res://Assets/Textures/Map_06/fotos amigos/dado4.png" id="35_w62sf"]
-[ext_resource type="Texture2D" uid="uid://bru6sbahho8i7" path="res://Assets/Textures/Map_06/fotos amigos/dado3.png" id="36_csk1h"]
-[ext_resource type="Texture2D" uid="uid://bsh42psxp4414" path="res://Assets/Textures/Map_06/fotos amigos/dado1.png" id="37_cbjys"]
+[ext_resource type="AudioStream" uid="uid://bbqahag7s3jjg" path="res://Assets/Textures/Map_06/musga/liminaridaderedux.mp3" id="33_c1amb"]
 [ext_resource type="Texture2D" uid="uid://bu254hqd61d2u" path="res://Assets/Textures/Map_06/fotos amigos/geomanciachao.png" id="38_0vk4l"]
 [ext_resource type="AudioStream" uid="uid://ckoo8hkw0bvdl" path="res://Assets/Textures/Map_06/musga/vozimaginaria.mp3" id="38_77iod"]
+[ext_resource type="Texture2D" uid="uid://drn80qf76svqv" path="res://Assets/Textures/Map_06/fotos amigos/federico-beccari-L8126OwlroY-unsplash (1).jpg" id="39_3wit7"]
 [ext_resource type="Texture2D" uid="uid://bd44gaw6hpqfa" path="res://Assets/Textures/Map_06/fotos amigos/Harmonices-Mundi-Ioanniskepplerih00kepl_0081-excerto.jpg" id="39_4cmha"]
-[ext_resource type="Texture2D" uid="uid://kmbf26wj7yru" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede4.png" id="39_ljsql"]
 [ext_resource type="AudioStream" uid="uid://dc0v1vyeoo3s3" path="res://Assets/Textures/Map_01/torre-do-mago.mp3" id="39_nurig"]
 [ext_resource type="Texture2D" uid="uid://dlcngcpyonypi" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede1.png" id="40_hqef7"]
 [ext_resource type="Texture2D" uid="uid://dicy2nwbrkg01" path="res://Assets/Textures/Map_06/fotos amigos/quantu-nois.png" id="41_67pi0"]
-[ext_resource type="Texture2D" uid="uid://cj8mn4nuaiq61" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede3.png" id="41_bqsw7"]
-[ext_resource type="Texture2D" uid="uid://bg0yh5h4rd7b5" path="res://Assets/Textures/Map_06/fotos amigos/geomanciateto.png" id="42_7ehly"]
-[ext_resource type="Texture2D" uid="uid://bvnb3t42y047y" path="res://Assets/Textures/Map_06/fotos amigos/asbtrat.png" id="42_pjvod"]
 [ext_resource type="Texture2D" uid="uid://liorh2nr6lm6" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede2.png" id="43_cup6t"]
-[ext_resource type="Texture2D" uid="uid://brjclgi0k72v2" path="res://Assets/Textures/Map_04/bottom.png" id="44_fc7h5"]
 [ext_resource type="Texture2D" uid="uid://4gc61chyyvp7" path="res://Assets/Textures/Map_06/fotos amigos/iminenciadesaturno.PNG" id="44_gg78q"]
 [ext_resource type="Texture2D" uid="uid://bb2jbcp6mkmlk" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroomteto.png" id="44_x44ea"]
 [ext_resource type="Texture2D" uid="uid://cajgcdmgy4gb8" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroom2.png" id="45_5bi4l"]
-[ext_resource type="Texture2D" uid="uid://ci0i5mvo8stj8" path="res://Assets/Textures/Map_04/back.png" id="45_8j3g3"]
-[ext_resource type="Texture2D" uid="uid://wnsedal8tje8" path="res://Assets/Textures/Map_04/left.png" id="46_3lv6a"]
 [ext_resource type="Texture2D" uid="uid://kbek8q8uh5pm" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroom4.png" id="46_21occ"]
 [ext_resource type="Texture2D" uid="uid://bqq56k0p7pu1y" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroom.png" id="48_2r06m"]
-[ext_resource type="Texture2D" uid="uid://3thniut4qpp4" path="res://Assets/Textures/Map_04/right.png" id="48_fg7u3"]
-[ext_resource type="Texture2D" uid="uid://cwyiocfe50ctr" path="res://Assets/Textures/Map_04/top.png" id="49_7vyfu"]
 [ext_resource type="Texture2D" uid="uid://p67cg68c6uh1" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroom3.png" id="49_j3uww"]
 [ext_resource type="Texture2D" uid="uid://bn5iwbvcmm4r5" path="res://Assets/Textures/Map_06/fotos amigos/sextaestampa-brushroomchao.png" id="50_2ajyk"]
 [ext_resource type="Texture2D" uid="uid://cpt22y33q3o4n" path="res://Assets/Textures/Map_06/fotos amigos/Planisphæri_.jpg" id="50_ikynf"]
 [ext_resource type="Texture2D" uid="uid://cyn8yignpnidx" path="res://Assets/Textures/Map_06/fotos amigos/carvaomioope.png" id="51_m1c2p"]
 [ext_resource type="Texture2D" uid="uid://q04lj7i7maee" path="res://Assets/Textures/Map_06/fotos amigos/fcc7866ed5e38b7e98218cccaee8090b.jpg" id="52_5lsg5"]
-[ext_resource type="AudioStream" uid="uid://dg3jiycdm844h" path="res://Assets/Textures/Map_06/musga/algumapedra.mp3" id="54_twu8l"]
 [ext_resource type="AudioStream" uid="uid://dpjxjlop1140p" path="res://Assets/Textures/Map_06/musga/material.mp3" id="56_v5p1u"]
+[ext_resource type="Texture2D" uid="uid://bkuy8mxlmnavc" path="res://Assets/Textures/Map_04/bottom.jpg" id="57_qqhrl"]
 [ext_resource type="AudioStream" uid="uid://74usoulco16j" path="res://Assets/Textures/Map_06/musga/counting.mp3" id="57_suspe"]
 [ext_resource type="AudioStream" uid="uid://4472pbff24rw" path="res://Assets/Textures/Map_06/musga/cafe.mp3" id="58_emih0"]
-[ext_resource type="Texture2D" uid="uid://bbvljrsyp28ju" path="res://Assets/Textures/Map_06/fotos amigos/20210508_004835-01.jpeg" id="60_408o4"]
+[ext_resource type="Texture2D" uid="uid://fe4pglkpbj4p" path="res://Assets/Textures/Map_04/back.jpg" id="58_t6wk3"]
+[ext_resource type="Texture2D" uid="uid://03tlmhu1h4ep" path="res://Assets/Textures/Map_04/left.jpg" id="59_7adur"]
+[ext_resource type="Texture2D" uid="uid://few8olj2u5uo" path="res://Assets/Textures/Map_04/front.jpg" id="60_fb4e0"]
 [ext_resource type="AudioStream" uid="uid://p42746tfxvup" path="res://Assets/Textures/Map_06/musga/recital-instalaçãojanela.mp3" id="60_r5uah"]
 [ext_resource type="Texture2D" uid="uid://bjfx4gdx5afg4" path="res://Assets/Textures/Map_06/fotos amigos/7f3674f0-2621-4822-929a-47aee742b074.jpg" id="61_6rroq"]
-[ext_resource type="Texture2D" uid="uid://biow6vc6mi533" path="res://Assets/Textures/Map_04/front.png" id="61_u3ke4"]
+[ext_resource type="Texture2D" uid="uid://cwminqk0owr5f" path="res://Assets/Textures/Map_04/right.jpg" id="61_kal60"]
+[ext_resource type="Texture2D" uid="uid://cwsuujsv4smek" path="res://Assets/Textures/Map_04/top.jpg" id="62_idpja"]
 [ext_resource type="Texture2D" uid="uid://d1bpecs136hsl" path="res://Assets/Textures/Map_06/fotos amigos/chao-unreleased.png" id="63_3rydv"]
-[ext_resource type="Texture2D" uid="uid://cp8herqm30vrk" path="res://Assets/Textures/Map_06/fotos amigos/larn-unreleased.png" id="64_laqo2"]
+[ext_resource type="Texture2D" uid="uid://bfouv37s82r2w" path="res://Assets/Textures/Map_06/fotos amigos/larn-unreleased.jpg" id="64_gtx6b"]
 [ext_resource type="AudioStream" uid="uid://dojhn846xh8ii" path="res://Assets/Textures/Map_06/musga/Unreleased/intro-portasruídos.wav.mp3" id="64_qh4ks"]
 [ext_resource type="AudioStream" uid="uid://tv0d4k232ya5" path="res://Assets/Textures/Map_06/musga/Unreleased/andando-a-lugar-nenhum.wav.mp3" id="65_7116m"]
 [ext_resource type="AudioStream" uid="uid://cbqa4quq8pviv" path="res://Assets/Textures/Map_06/musga/mapa-001.mp3" id="65_hy8pj"]
-[ext_resource type="Texture2D" uid="uid://d20tpotgwobik" path="res://Assets/Textures/Map_06/fotos amigos/vermel-unreleased.png" id="65_kskmo"]
+[ext_resource type="Texture2D" uid="uid://cwqnk0m5iymqw" path="res://Assets/Textures/Map_06/fotos amigos/vermel-unreleased.jpg" id="65_w7pje"]
 [ext_resource type="AudioStream" uid="uid://dhm4yxykfmf8j" path="res://Assets/Textures/Map_06/musga/Unreleased/arraspa.wav.mp3" id="66_lrwhr"]
+[ext_resource type="Texture2D" uid="uid://oyuvtyqsnv5" path="res://Assets/Textures/Map_06/fotos amigos/rx-unreleased.jpg" id="66_nuk1t"]
 [ext_resource type="AudioStream" uid="uid://7rmwlnbpu2lx" path="res://Assets/Textures/Map_06/musga/mapa-002.mp3" id="66_oxqkj"]
-[ext_resource type="Texture2D" uid="uid://dc14d7go5eyum" path="res://Assets/Textures/Map_06/fotos amigos/rx-unreleased.png" id="66_ss1c1"]
-[ext_resource type="Texture2D" uid="uid://c3bp62eim2ts6" path="res://Assets/Textures/Map_06/fotos amigos/last-unreleased.png" id="67_bvt8y"]
 [ext_resource type="AudioStream" uid="uid://12hguilaer6n" path="res://Assets/Textures/Map_06/musga/mapa3.mp3" id="67_dim80"]
+[ext_resource type="Texture2D" uid="uid://dttnt4thuonqx" path="res://Assets/Textures/Map_06/last-unreleased.jpg" id="67_wk4wa"]
 [ext_resource type="AudioStream" uid="uid://b4c0po8qsqisd" path="res://Assets/Textures/Map_06/musga/Unreleased/ponte.wav.mp3" id="67_x5f1p"]
 [ext_resource type="AudioStream" uid="uid://duowjn5lnks37" path="res://Assets/Textures/Map_06/musga/Unreleased/kalimba-respira.wav.mp3" id="68_biolp"]
-[ext_resource type="Texture2D" uid="uid://cewq1k0gwgdqn" path="res://Assets/Textures/Map_06/fotos amigos/porta.png" id="68_mkm6f"]
+[ext_resource type="Texture2D" uid="uid://delat4d08lbj4" path="res://Assets/Textures/Map_06/fotos amigos/porta.jpg" id="68_llauv"]
 [ext_resource type="AudioStream" uid="uid://bmn28jnjdskdj" path="res://Assets/Textures/Map_06/musga/Unreleased/loop-nevoa-heartwantsout.wav.mp3" id="69_wo27c"]
 [ext_resource type="Texture2D" uid="uid://chm6els51pnw0" path="res://Assets/Textures/Map_06/fotos amigos/primeirosketch.png" id="70_36wv8"]
 [ext_resource type="AudioStream" uid="uid://byfj4sdpj2n6q" path="res://Assets/Textures/Map_06/musga/Unreleased/glassdropc.transluc.wav.mp3" id="70_b6yby"]
-[ext_resource type="Texture2D" uid="uid://bxlbgnjyn7fmg" path="res://Assets/Textures/Map_06/fotos amigos/ponte.png" id="71_ke5p3"]
-[ext_resource type="Texture2D" uid="uid://cmp7iivab6uwi" path="res://Assets/Textures/Map_06/fotos amigos/outerplain.png" id="73_j8tlm"]
-[ext_resource type="Texture2D" uid="uid://pd4rrjgykqpt" path="res://Assets/Textures/Map_06/fotos amigos/mapa1teste.png" id="74_x25hg"]
-[ext_resource type="Texture2D" uid="uid://k4gv4q3x7gry" path="res://Assets/Textures/Map_06/fotos amigos/Região1.png" id="75_d6vl1"]
-[ext_resource type="Texture2D" uid="uid://dnq5fyfiobete" path="res://Assets/Textures/Map_06/fotos amigos/PEIXExcf.png" id="76_0p08g"]
+[ext_resource type="Texture2D" uid="uid://ihju2cn7pb52" path="res://Assets/Textures/Map_06/fotos amigos/ponte.jpg" id="74_4ohat"]
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="76_meffh"]
+[ext_resource type="Texture2D" uid="uid://de5wrcsqcmfho" path="res://Assets/Textures/Map_06/fotos amigos/dado6.jpg" id="81_np5ps"]
+[ext_resource type="Texture2D" uid="uid://b2nhtp45t6hoo" path="res://Assets/Textures/Map_06/fotos amigos/dado5.jpg" id="82_mjcsl"]
+[ext_resource type="Texture2D" uid="uid://7oo8hgj2vyi7" path="res://Assets/Textures/Map_06/fotos amigos/dado2.jpg" id="83_1aj5l"]
+[ext_resource type="Texture2D" uid="uid://f4ikf6e6xw4u" path="res://Assets/Textures/Map_06/fotos amigos/dado4.jpg" id="84_h4gh2"]
+[ext_resource type="Texture2D" uid="uid://b8g07m7y2ibms" path="res://Assets/Textures/Map_06/fotos amigos/dado3.jpg" id="85_45c2r"]
 [ext_resource type="AudioStream" uid="uid://my1mbo6nifv8" path="res://Assets/Textures/Map_06/musga/geomancia-salasextaestampa-001.mp3" id="86_h107c"]
+[ext_resource type="Texture2D" uid="uid://fbpauauwcyyd" path="res://Assets/Textures/Map_06/fotos amigos/dado1.jpg" id="86_jmgee"]
 [ext_resource type="AudioStream" uid="uid://c861clxa6gtrt" path="res://Assets/Textures/Map_06/musga/geomancia-salasextaestampa-002.mp3" id="87_erqne"]
+[ext_resource type="Texture2D" uid="uid://bp0k688p110vt" path="res://Assets/Textures/Map_06/fotos amigos/20210508_004835-01.jpg" id="88_0ojmy"]
 [ext_resource type="AudioStream" uid="uid://3xg7kpqb2ofa" path="res://Assets/Textures/Map_06/musga/geomancia-salasextaestampa-003.mp3" id="88_grix0"]
 [ext_resource type="AudioStream" uid="uid://c0dhwdr87gok4" path="res://Assets/Textures/Map_06/musga/geomancia-salasextaestampa-004.mp3" id="89_o85vk"]
+[ext_resource type="Texture2D" uid="uid://dybyhsfmwftvh" path="res://Assets/Textures/Map_06/fotos amigos/outerplain.jpg" id="89_w3dvi"]
+[ext_resource type="Texture2D" uid="uid://dmv3mruefffy4" path="res://Assets/Textures/Map_06/fotos amigos/mapa1teste.jpg" id="90_h4fis"]
+[ext_resource type="Texture2D" uid="uid://klhmdali3nwe" path="res://Assets/Textures/Map_06/fotos amigos/Região1.jpg" id="91_50phs"]
+[ext_resource type="Texture2D" uid="uid://cpa043g3gybhm" path="res://Assets/Textures/Map_06/fotos amigos/PEIXExcf.jpg" id="92_vkoyk"]
+[ext_resource type="Texture2D" uid="uid://clixnl21y81ya" path="res://Assets/Textures/Map_06/fotos amigos/asbtrat.jpg" id="93_v6kcr"]
+[ext_resource type="Texture2D" uid="uid://bhiogmiekr6ew" path="res://Assets/Textures/Map_03/texturas/pexels-emiliano-arano-1312488.jpg" id="94_18r4o"]
+[ext_resource type="AudioStream" uid="uid://be5qj74h8lw6y" path="res://Assets/Textures/Map_06/musga/algumapedraredux.mp3" id="95_r1bet"]
 [ext_resource type="AudioStream" uid="uid://xmrnyw826g2b" path="res://Assets/Textures/Map_06/musga/miniaturachuva.mp3" id="95_rbpwi"]
+[ext_resource type="Texture2D" uid="uid://mjns2ox0j74o" path="res://Assets/Textures/Map_03/texturas/pexels-adrien-olichon-2387819.jpg" id="100_qkppn"]
 [ext_resource type="Texture2D" uid="uid://c47cybhyui5u6" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.43.jpeg" id="101_jwijv"]
+[ext_resource type="Texture2D" uid="uid://cvy887u8eabiy" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede4.jpg" id="102_pqeko"]
 [ext_resource type="Texture2D" uid="uid://ch0s032ocuwlx" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.44.jpeg" id="103_74stt"]
 [ext_resource type="Texture2D" uid="uid://git3l600gvb0" path="res://Assets/Textures/Map_06/fotos amigos/IMG_20141003_172630.jpg" id="104_4xdl3"]
 [ext_resource type="AudioStream" uid="uid://cn6jj4klc4mt0" path="res://Assets/Textures/Map_06/pequenos reparos.mp3" id="104_iw4ww"]
+[ext_resource type="Texture2D" uid="uid://bqfshaalb1pio" path="res://Assets/Textures/Map_06/fotos amigos/geomanciaparede3.jpg" id="104_lxoj7"]
+[ext_resource type="Texture2D" uid="uid://bithoby6676on" path="res://Assets/Textures/Map_06/fotos amigos/geomanciateto.jpg" id="105_5b1sv"]
 [ext_resource type="Texture2D" uid="uid://cvnmqgpw8midg" path="res://Assets/Textures/Map_06/fotos amigos/WhatsApp Image 2024-12-06 at 09.06.44 (1).jpeg" id="105_in634"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y85p2"]
@@ -324,7 +326,7 @@ albedo_texture = ExtResource("19_x5bkg")
 [sub_resource type="BoxShape3D" id="BoxShape3D_bpvpl"]
 size = Vector3(50.1872, 20.2789, 0.549561)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3a54"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqrhg"]
 albedo_texture = ExtResource("22_w3edu")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b2fyg"]
@@ -387,8 +389,8 @@ size = Vector3(34.9089, 6, 0.05)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovar3"]
 size = Vector3(34.9725, 6.063, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrij1"]
-albedo_texture = ExtResource("20_21at3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxoir"]
+albedo_texture = ExtResource("39_3wit7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1esk2"]
 albedo_texture = ExtResource("21_omgxi")
@@ -531,17 +533,17 @@ albedo_texture = ExtResource("51_m1c2p")
 [sub_resource type="PlaneMesh" id="PlaneMesh_lfoq4"]
 size = Vector2(50, 70)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4ymp"]
-albedo_texture = ExtResource("44_fc7h5")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wmee"]
+albedo_texture = ExtResource("57_qqhrl")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pu4h"]
-albedo_texture = ExtResource("45_8j3g3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxnma"]
+albedo_texture = ExtResource("58_t6wk3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ekqmu"]
 size = Vector3(50, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqcd6"]
-albedo_texture = ExtResource("46_3lv6a")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x52fu"]
+albedo_texture = ExtResource("59_7adur")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_41blt"]
 size = Vector2(70, 20)
@@ -550,8 +552,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_xvf73"]
 size = Vector3(0.05, 20, 70)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tql0"]
-albedo_texture = ExtResource("61_u3ke4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_osoej"]
+albedo_texture = ExtResource("60_fb4e0")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2r8fw"]
 size = Vector2(25, 20)
@@ -560,8 +562,8 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_au8u8"]
 size = Vector3(25, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr8x3"]
-albedo_texture = ExtResource("61_u3ke4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s0ug"]
+albedo_texture = ExtResource("60_fb4e0")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1yhee"]
 size = Vector2(25, 20)
@@ -570,8 +572,8 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_cuetm"]
 size = Vector3(25, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d7056"]
-albedo_texture = ExtResource("61_u3ke4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7cwp"]
+albedo_texture = ExtResource("60_fb4e0")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_t6qt2"]
 size = Vector2(6, 14)
@@ -580,8 +582,8 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5hyh"]
 size = Vector3(6, 14, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0uh0"]
-albedo_texture = ExtResource("48_fg7u3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8a2e"]
+albedo_texture = ExtResource("61_kal60")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bw756"]
 size = Vector2(20, 70)
@@ -589,8 +591,8 @@ size = Vector2(20, 70)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nkyyw"]
 size = Vector3(0.05, 20, 70)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqa70"]
-albedo_texture = ExtResource("49_7vyfu")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1bc5t"]
+albedo_texture = ExtResource("62_idpja")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2rl0l"]
 size = Vector2(50, 70)
@@ -600,23 +602,20 @@ albedo_texture = ExtResource("63_3rydv")
 metallic_specular = 1.0
 roughness = 0.5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xwfh"]
-albedo_texture = ExtResource("64_laqo2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4ok0"]
+albedo_texture = ExtResource("64_gtx6b")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5mrem"]
 size = Vector3(50, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipd04"]
-albedo_texture = ExtResource("65_kskmo")
-roughness = 0.5
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whh3w"]
+albedo_texture = ExtResource("65_w7pje")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0tvso"]
 size = Vector3(50, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ex3u"]
-albedo_texture = ExtResource("66_ss1c1")
-metallic_specular = 1.0
-roughness = 0.3
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3n3n"]
+albedo_texture = ExtResource("66_nuk1t")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ht7wq"]
 size = Vector2(70, 20)
@@ -626,8 +625,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_f0ury"]
 size = Vector3(0.05, 20, 70)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3as6x"]
-albedo_texture = ExtResource("67_bvt8y")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pydc"]
+albedo_texture = ExtResource("67_wk4wa")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rsplx"]
 size = Vector2(55, 20)
@@ -636,8 +635,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_sxmc1"]
 size = Vector3(55, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rprvg"]
-albedo_texture = ExtResource("64_laqo2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xaio"]
+albedo_texture = ExtResource("64_gtx6b")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_00kod"]
 size = Vector2(6, 14)
@@ -646,8 +645,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gxoa"]
 size = Vector3(0.05, 14, 6)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dt47"]
-albedo_texture = ExtResource("67_bvt8y")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_571e2"]
+albedo_texture = ExtResource("67_wk4wa")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fnhn6"]
 size = Vector2(10, 20)
@@ -656,8 +655,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_5dawy"]
 size = Vector3(0.05, 20, 10)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7k48"]
-albedo_texture = ExtResource("68_mkm6f")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bynfh"]
+albedo_texture = ExtResource("68_llauv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_r4adu"]
 size = Vector2(2, 5)
@@ -679,8 +678,8 @@ albedo_texture = ExtResource("61_6rroq")
 [sub_resource type="PrismMesh" id="PrismMesh_hncda"]
 size = Vector3(1, 1, 12)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4bkj"]
-albedo_texture = ExtResource("71_ke5p3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oli1m"]
+albedo_texture = ExtResource("74_4ohat")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wm65e"]
 
@@ -731,14 +730,14 @@ size = Vector3(0.05, 6, 36)
 [sub_resource type="PlaneMesh" id="PlaneMesh_2xx1b"]
 size = Vector2(15, 36)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qnfu"]
-albedo_texture = ExtResource("32_v170t")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46eh8"]
+albedo_texture = ExtResource("81_np5ps")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ll7rn"]
 size = Vector2(60, 60)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xigbk"]
-albedo_texture = ExtResource("33_mr3cx")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twkh1"]
+albedo_texture = ExtResource("82_mjcsl")
 
 [sub_resource type="QuadMesh" id="QuadMesh_b3p0q"]
 size = Vector2(46, 20)
@@ -765,8 +764,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_rwjxa"]
 size = Vector3(0.05, 20, 4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_txocd"]
-albedo_texture = ExtResource("34_wh07j")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wcn1o"]
+albedo_texture = ExtResource("83_1aj5l")
 
 [sub_resource type="QuadMesh" id="QuadMesh_gumbk"]
 size = Vector2(60, 20)
@@ -774,8 +773,8 @@ size = Vector2(60, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wdw33"]
 size = Vector3(0.05, 20, 70)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wo08"]
-albedo_texture = ExtResource("35_w62sf")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msqu2"]
+albedo_texture = ExtResource("84_h4gh2")
 
 [sub_resource type="QuadMesh" id="QuadMesh_q0w75"]
 size = Vector2(60, 20)
@@ -783,8 +782,8 @@ size = Vector2(60, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_tou4b"]
 size = Vector3(70, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai17r"]
-albedo_texture = ExtResource("36_csk1h")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rl4i"]
+albedo_texture = ExtResource("85_45c2r")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_33j1x"]
 size = Vector3(55, 20, 0.05)
@@ -799,8 +798,8 @@ size = Vector3(0.05, 14, 10)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlfus"]
 size = Vector3(0.05, 20, 6)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuk63"]
-albedo_texture = ExtResource("37_cbjys")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75h4q"]
+albedo_texture = ExtResource("86_jmgee")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7vv3k"]
 size = Vector2(60, 60)
@@ -811,8 +810,8 @@ albedo_texture = ExtResource("41_67pi0")
 [sub_resource type="QuadMesh" id="QuadMesh_5aase"]
 size = Vector2(90, 30)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sth2m"]
-albedo_texture = ExtResource("60_408o4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fm3fd"]
+albedo_texture = ExtResource("88_0ojmy")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_8f2kr"]
 size = Vector2(30, 20)
@@ -831,8 +830,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_h6mjv"]
 size = Vector3(0.05, 20, 30)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xeyei"]
-albedo_texture = ExtResource("73_j8tlm")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcemb"]
+albedo_texture = ExtResource("89_w3dvi")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_s47hr"]
 size = Vector2(70, 20)
@@ -854,8 +853,8 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ixij"]
 size = Vector3(4, 14, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v2d2"]
-albedo_texture = ExtResource("74_x25hg")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b42or"]
+albedo_texture = ExtResource("90_h4fis")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_q615j"]
 size = Vector2(30, 20)
@@ -878,8 +877,8 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_juv7a"]
 size = Vector3(58.6238, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afwl0"]
-albedo_texture = ExtResource("75_d6vl1")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvbgo"]
+albedo_texture = ExtResource("91_50phs")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2c20t"]
 size = Vector2(8.05, 20)
@@ -887,8 +886,8 @@ size = Vector2(8.05, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kusmw"]
 size = Vector3(8.05, 20, 0.005)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vsjdi"]
-albedo_texture = ExtResource("76_0p08g")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84fcv"]
+albedo_texture = ExtResource("92_vkoyk")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bp77t"]
 size = Vector2(3.8, 14)
@@ -904,14 +903,14 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_1q0g6"]
 size = Vector3(2, 20, 0.05)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k66sk"]
-albedo_texture = ExtResource("42_pjvod")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqcu1"]
+albedo_texture = ExtResource("93_v6kcr")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o5xnu"]
 size = Vector2(90, 30)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdd6o"]
-albedo_texture = ExtResource("42_7ehly")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmf4s"]
+albedo_texture = ExtResource("94_18r4o")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ne41o"]
 height = 20.0
@@ -925,11 +924,13 @@ albedo_texture = ExtResource("9_b7um3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krb1v"]
 albedo_texture = ExtResource("26_aggnw")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5e2y"]
-albedo_texture = ExtResource("39_ljsql")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_quear"]
+albedo_texture = ExtResource("100_qkppn")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gg7py"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vibpr"]
-albedo_texture = ExtResource("61_u3ke4")
+albedo_texture = SubResource("CompressedTexture2D_gg7py")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jd3n8"]
 albedo_texture = ExtResource("38_0vk4l")
@@ -937,8 +938,8 @@ albedo_texture = ExtResource("38_0vk4l")
 [sub_resource type="QuadMesh" id="QuadMesh_8gsxn"]
 size = Vector2(40, 80)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_faofx"]
-albedo_texture = ExtResource("39_ljsql")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ul2lw"]
+albedo_texture = ExtResource("102_pqeko")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_s8hst"]
 size = Vector2(40, 20)
@@ -984,8 +985,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_7e145"]
 size = Vector3(0.05, 20, 39)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m48bo"]
-albedo_texture = ExtResource("41_bqsw7")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5fjy"]
+albedo_texture = ExtResource("104_lxoj7")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_36kis"]
 size = Vector2(32, 20)
@@ -994,8 +995,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_q1ok5"]
 size = Vector3(0.05, 20, 32)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i1h0s"]
-albedo_texture = ExtResource("42_7ehly")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tfld"]
+albedo_texture = ExtResource("105_5b1sv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vntmc"]
 size = Vector2(10, 14)
@@ -1014,8 +1015,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_ng8ft"]
 size = Vector3(0.05, 20, 30.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdfxn"]
-albedo_texture = ExtResource("41_bqsw7")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1p4wf"]
+albedo_texture = ExtResource("104_lxoj7")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_u8byn"]
 size = Vector2(35, 20)
@@ -1024,8 +1025,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_f8xgo"]
 size = Vector3(0.05, 20, 35)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5ek6"]
-albedo_texture = ExtResource("42_7ehly")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gpvxc"]
+albedo_texture = ExtResource("105_5b1sv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bic4m"]
 size = Vector2(15.1, 14)
@@ -1034,8 +1035,8 @@ orientation = 0
 [sub_resource type="BoxShape3D" id="BoxShape3D_hejw7"]
 size = Vector3(0.05, 14, 15.1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmdoa"]
-albedo_texture = ExtResource("42_7ehly")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6okvw"]
+albedo_texture = ExtResource("105_5b1sv")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_slyu8"]
 size = Vector2(40, 80)
@@ -1231,7 +1232,7 @@ size = Vector3(15, 6, 0.05)
 size = Vector2(15, 10)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rrt57"]
-panorama = ExtResource("61_u3ke4")
+panorama = ExtResource("57_qqhrl")
 energy_multiplier = 8.8
 
 [sub_resource type="Sky" id="Sky_c8l72"]
@@ -1400,7 +1401,7 @@ mesh = SubResource("PlaneMesh_4y6fo")
 skeleton = NodePath("../..")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room01/Quadros/MeshInstance3D5"]
-stream = ExtResource("5_jltfu")
+stream = ExtResource("6_8dgnf")
 unit_size = 0.5
 autoplay = true
 max_distance = 30.0
@@ -1484,7 +1485,7 @@ material_override = SubResource("StandardMaterial3D_dt77e")
 mesh = SubResource("PlaneMesh_7s65i")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room01"]
-stream = ExtResource("19_q1cko")
+stream = ExtResource("21_fqjjt")
 unit_size = 2.0
 autoplay = true
 max_distance = 50.0
@@ -1567,7 +1568,7 @@ mesh = SubResource("QuadMesh_6s5ky")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room07/East_Wall/Section01/MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
-stream = ExtResource("24_eblth")
+stream = ExtResource("27_l8ane")
 unit_size = 2.0
 autoplay = true
 max_distance = 50.0
@@ -1629,7 +1630,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -25.00
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -8.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room07/East_Wall2/Section01"]
-material_override = SubResource("StandardMaterial3D_v3a54")
+material_override = SubResource("StandardMaterial3D_oqrhg")
 mesh = SubResource("QuadMesh_6s5ky")
 
 [node name="Label3D" type="Label3D" parent="House/Room07/East_Wall2/Section01/MeshInstance3D"]
@@ -1680,7 +1681,7 @@ mesh = SubResource("PlaneMesh_nq40n")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room07"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344501, 0.112009, 31.7718)
-stream = ExtResource("22_v6ham")
+stream = ExtResource("33_c1amb")
 unit_size = 2.0
 autoplay = true
 max_distance = 40.0
@@ -1955,7 +1956,7 @@ omni_range = 4096.0
 [node name="Floor" type="StaticBody3D" parent="House/Room02"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room02/Floor"]
-material_override = SubResource("StandardMaterial3D_mrij1")
+material_override = SubResource("StandardMaterial3D_dxoir")
 mesh = SubResource("PlaneMesh_avyv0")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room02/Floor/MeshInstance3D"]
@@ -2236,7 +2237,7 @@ omni_range = 4096.0
 [node name="Floor" type="StaticBody3D" parent="House/Room09"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/Floor"]
-material_override = SubResource("StandardMaterial3D_u4ymp")
+material_override = SubResource("StandardMaterial3D_1wmee")
 mesh = SubResource("PlaneMesh_avyv0")
 
 [node name="South_Wall" type="StaticBody3D" parent="House/Room09"]
@@ -2244,7 +2245,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 35)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/South_Wall"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_5pu4h")
+material_override = SubResource("StandardMaterial3D_rxnma")
 mesh = SubResource("QuadMesh_mwfo1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/South_Wall"]
@@ -2255,7 +2256,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 10, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -1.77636e-14, 0, 1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_dqcd6")
+material_override = SubResource("StandardMaterial3D_x52fu")
 mesh = SubResource("PlaneMesh_41blt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/StaticBody3D"]
@@ -2268,7 +2269,7 @@ shape = SubResource("BoxShape3D_xvf73")
 transform = Transform3D(1, 0, 0, 0, 1, 0, -2.13163e-14, 0, 1, 13.1721, 10, -34.4092)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/Node3D/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_6tql0")
+material_override = SubResource("StandardMaterial3D_osoej")
 mesh = SubResource("PlaneMesh_2r8fw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/Node3D/StaticBody3D"]
@@ -2279,7 +2280,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, -2.13163e-14, 0, 1, -15.219, 10, -34.4
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/Node3D/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, -1.87655, 0, 0)
-material_override = SubResource("StandardMaterial3D_tr8x3")
+material_override = SubResource("StandardMaterial3D_8s0ug")
 mesh = SubResource("PlaneMesh_1yhee")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/Node3D/StaticBody3D2"]
@@ -2291,7 +2292,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, -3.90799e-14, 0, 1, -1.77958, 20, -34.
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/Node3D/StaticBody3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -3.55271e-15, 0, 1, 0, -7.00261, 0)
-material_override = SubResource("StandardMaterial3D_d7056")
+material_override = SubResource("StandardMaterial3D_n7cwp")
 mesh = SubResource("PlaneMesh_t6qt2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/Node3D/StaticBody3D3"]
@@ -2303,7 +2304,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/StaticBody3D2"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 10, 0)
-material_override = SubResource("StandardMaterial3D_g0uh0")
+material_override = SubResource("StandardMaterial3D_g8a2e")
 mesh = SubResource("PlaneMesh_bw756")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room09/StaticBody3D2"]
@@ -2314,7 +2315,7 @@ shape = SubResource("BoxShape3D_nkyyw")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room09/StaticBody3D3"]
-material_override = SubResource("StandardMaterial3D_lqa70")
+material_override = SubResource("StandardMaterial3D_1bc5t")
 mesh = SubResource("PlaneMesh_2rl0l")
 
 [node name="Room10" type="Node3D" parent="House"]
@@ -2331,7 +2332,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 35)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/South_Wall"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_5xwfh")
+material_override = SubResource("StandardMaterial3D_s4ok0")
 mesh = SubResource("QuadMesh_mwfo1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/South_Wall"]
@@ -2342,7 +2343,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 10,
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/South_Wall2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_ipd04")
+material_override = SubResource("StandardMaterial3D_whh3w")
 mesh = SubResource("QuadMesh_mwfo1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/South_Wall2"]
@@ -2352,7 +2353,7 @@ shape = SubResource("BoxShape3D_0tvso")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_7ex3u")
+material_override = SubResource("StandardMaterial3D_n3n3n")
 mesh = SubResource("PlaneMesh_ht7wq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/StaticBody3D"]
@@ -2365,7 +2366,7 @@ shape = SubResource("BoxShape3D_f0ury")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25, 10, -7.48)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/Node3D/StaticBody3D2"]
-material_override = SubResource("StandardMaterial3D_3as6x")
+material_override = SubResource("StandardMaterial3D_3pydc")
 mesh = SubResource("PlaneMesh_rsplx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/Node3D/StaticBody3D2"]
@@ -2376,7 +2377,7 @@ shape = SubResource("BoxShape3D_sxmc1")
 transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 25, 13, 23)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/Node3D/StaticBody3D3"]
-material_override = SubResource("StandardMaterial3D_rprvg")
+material_override = SubResource("StandardMaterial3D_4xaio")
 mesh = SubResource("PlaneMesh_00kod")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/Node3D/StaticBody3D3"]
@@ -2387,7 +2388,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 10, 30.978)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room10/Node3D/StaticBody3D"]
 transform = Transform3D(-1, 8.74227e-08, 0, -8.74227e-08, -1, 0, 0, 0, 1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_2dt47")
+material_override = SubResource("StandardMaterial3D_571e2")
 mesh = SubResource("PlaneMesh_fnhn6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room10/Node3D/StaticBody3D"]
@@ -2399,7 +2400,7 @@ shape = SubResource("BoxShape3D_5dawy")
 
 [node name="area_intro" type="MeshInstance3D" parent="House/Room10/tracksunreleased/Intro_portas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2454, 2.35794, 23.7057)
-material_override = SubResource("StandardMaterial3D_k7k48")
+material_override = SubResource("StandardMaterial3D_bynfh")
 mesh = SubResource("PlaneMesh_r4adu")
 skeleton = NodePath("../../..")
 
@@ -2469,7 +2470,7 @@ parameters/looping = true
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="House/Room10/tracksunreleased"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44679, 0.467816, -29.8625)
-material_override = SubResource("StandardMaterial3D_v4bkj")
+material_override = SubResource("StandardMaterial3D_oli1m")
 mesh = SubResource("PlaneMesh_wm65e")
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="House/Room10/tracksunreleased/MeshInstance3D5"]
@@ -2607,7 +2608,7 @@ omni_range = 4096.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/Floor"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_8qnfu")
+material_override = SubResource("StandardMaterial3D_46eh8")
 mesh = SubResource("QuadMesh_ll7rn")
 
 [node name="East_Wall" type="Node3D" parent="House/Room03"]
@@ -2618,7 +2619,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.044, 0.009, 10, 4.001)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/East_Wall/Section02"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_xigbk")
+material_override = SubResource("StandardMaterial3D_twkh1")
 mesh = SubResource("QuadMesh_b3p0q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room03/East_Wall/Section02"]
@@ -2650,7 +2651,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 10, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/West_Wall"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_txocd")
+material_override = SubResource("StandardMaterial3D_wcn1o")
 mesh = SubResource("QuadMesh_gumbk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room03/West_Wall"]
@@ -2661,7 +2662,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 30)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/South_Wall"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_1wo08")
+material_override = SubResource("StandardMaterial3D_msqu2")
 mesh = SubResource("QuadMesh_q0w75")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room03/South_Wall"]
@@ -2674,7 +2675,7 @@ transform = Transform3D(-4.37114e-08, 0, 0.91, 0, 1, 0, -1, 0, -3.97774e-08, -0.
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, -8.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/East_Wall2/Section01"]
-material_override = SubResource("StandardMaterial3D_ai17r")
+material_override = SubResource("StandardMaterial3D_1rl4i")
 mesh = SubResource("QuadMesh_6s5ky")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room03/East_Wall2/Section01"]
@@ -2717,7 +2718,7 @@ shape = SubResource("BoxShape3D_xlfus")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room03/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_vuk63")
+material_override = SubResource("StandardMaterial3D_75h4q")
 mesh = SubResource("PlaneMesh_7vv3k")
 
 [node name="Room04" type="Node3D" parent="House"]
@@ -2734,7 +2735,7 @@ mesh = SubResource("QuadMesh_5aase")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 45, 10, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_sth2m")
+material_override = SubResource("StandardMaterial3D_fm3fd")
 mesh = SubResource("PlaneMesh_8f2kr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room04/StaticBody3D"]
@@ -2754,7 +2755,7 @@ shape = SubResource("BoxShape3D_h6mjv")
 transform = Transform3D(-1, 1.50996e-07, -6.60024e-15, 0, -4.37114e-08, -1, -1.50996e-07, -1, 4.37114e-08, 3.42, 10, 15)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D3"]
-material_override = SubResource("StandardMaterial3D_xeyei")
+material_override = SubResource("StandardMaterial3D_mcemb")
 mesh = SubResource("PlaneMesh_s47hr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room04/StaticBody3D3"]
@@ -2787,7 +2788,7 @@ shape = SubResource("BoxShape3D_4ixij")
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -32.25, 10, -15)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D6"]
-material_override = SubResource("StandardMaterial3D_3v2d2")
+material_override = SubResource("StandardMaterial3D_b42or")
 mesh = SubResource("PlaneMesh_q615j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room04/StaticBody3D6"]
@@ -2820,7 +2821,7 @@ transform = Transform3D(1, -1.77636e-14, -3.17637e-22, 0, -4.37114e-08, 1, -1.77
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D9"]
 transform = Transform3D(1, 0, -7.10543e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_afwl0")
+material_override = SubResource("StandardMaterial3D_vvbgo")
 mesh = SubResource("PlaneMesh_2c20t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room04/StaticBody3D9"]
@@ -2832,7 +2833,7 @@ transform = Transform3D(1, 0, 2.4869e-14, 0, 1, 0, -2.4869e-14, 0, 1, -41.516, 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D10"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_vsjdi")
+material_override = SubResource("StandardMaterial3D_84fcv")
 mesh = SubResource("PlaneMesh_bp77t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room04/StaticBody3D10"]
@@ -2852,20 +2853,20 @@ shape = SubResource("BoxShape3D_1q0g6")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/StaticBody3D12"]
-material_override = SubResource("StandardMaterial3D_k66sk")
+material_override = SubResource("StandardMaterial3D_dqcu1")
 mesh = SubResource("PlaneMesh_o5xnu")
 
 [node name="tracks" type="Node3D" parent="House/Room04"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 40.195, 10, -6.485)
-material_override = SubResource("StandardMaterial3D_hdd6o")
+material_override = SubResource("StandardMaterial3D_kmf4s")
 transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room04/tracks/MeshInstance3D"]
 transform = Transform3D(0.369686, 0, -3.73035e-14, 0, 1, 0, -3.55271e-15, 0, 0.492611, 0, -9.40809, 0)
-stream = ExtResource("54_twu8l")
+stream = ExtResource("95_r1bet")
 unit_size = 3.0
 autoplay = true
 max_distance = 35.0
@@ -2953,7 +2954,7 @@ melodias em lugares estranhos.
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="House/Room04/tracks"]
 transform = Transform3D(1, 0, 6.03961e-14, 0, 1, 0, -6.03961e-14, 0, 1, -24.9993, 10, 9.47628)
-material_override = SubResource("StandardMaterial3D_v5e2y")
+material_override = SubResource("StandardMaterial3D_quear")
 transparency = 0.35
 mesh = SubResource("CylinderMesh_ne41o")
 
@@ -3017,7 +3018,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 40)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_faofx")
+material_override = SubResource("StandardMaterial3D_ul2lw")
 mesh = SubResource("PlaneMesh_s8hst")
 
 [node name="Label3D" type="Label3D" parent="House/Room05/StaticBody3D/MeshInstance3D"]
@@ -3079,7 +3080,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 24.37)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D6"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_m48bo")
+material_override = SubResource("StandardMaterial3D_v5fjy")
 mesh = SubResource("PlaneMesh_36kis")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room05/StaticBody3D6"]
@@ -3090,7 +3091,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 13, 3.37)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D7"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_i1h0s")
+material_override = SubResource("StandardMaterial3D_1tfld")
 mesh = SubResource("PlaneMesh_vntmc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room05/StaticBody3D7"]
@@ -3110,7 +3111,7 @@ shape = SubResource("BoxShape3D_ng8ft")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 10, -22.575)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D9"]
-material_override = SubResource("StandardMaterial3D_gdfxn")
+material_override = SubResource("StandardMaterial3D_1p4wf")
 mesh = SubResource("PlaneMesh_u8byn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room05/StaticBody3D9"]
@@ -3120,7 +3121,7 @@ shape = SubResource("BoxShape3D_f8xgo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 13, 2.43)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D10"]
-material_override = SubResource("StandardMaterial3D_e5ek6")
+material_override = SubResource("StandardMaterial3D_gpvxc")
 mesh = SubResource("PlaneMesh_bic4m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="House/Room05/StaticBody3D10"]
@@ -3130,7 +3131,7 @@ shape = SubResource("BoxShape3D_hejw7")
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 20, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="House/Room05/StaticBody3D11"]
-material_override = SubResource("StandardMaterial3D_nmdoa")
+material_override = SubResource("StandardMaterial3D_6okvw")
 mesh = SubResource("PlaneMesh_slyu8")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="House/Room05"]

@@ -1,13 +1,13 @@
-[gd_scene load_steps=25 format=3 uid="uid://bq7sm6oajgk2q"]
+[gd_scene load_steps=30 format=3 uid="uid://bq7sm6oajgk2q"]
 
 [ext_resource type="Texture2D" uid="uid://mjmcbukko712" path="res://Assets/Textures/Map_02/floor.jpg" id="1_ayrd7"]
 [ext_resource type="Sky" uid="uid://gulub3axg84i" path="res://Scenes/skyeye.tres" id="1_sqwne"]
 [ext_resource type="PackedScene" uid="uid://dg8feoj8hykra" path="res://Scenes/player.tscn" id="2_8a0vp"]
-[ext_resource type="Texture2D" uid="uid://cc6lttigmoqq4" path="res://Assets/Textures/Map_02/stamp02_pillar.jpg" id="3_g6eus"]
 [ext_resource type="PackedScene" uid="uid://lmigyfvjejll" path="res://Assets/Objects/polyballtrue.tscn" id="3_ihgqk"]
 [ext_resource type="Shader" path="res://Assets/Shaders/fountain_ball.gdshader" id="4_dl4kr"]
 [ext_resource type="AudioStream" uid="uid://bt4cyt61d7mn2" path="res://Assets/Textures/Map_02/beatconvohouse.mp3" id="5_k48im"]
 [ext_resource type="Texture2D" uid="uid://cobdu0nnoiqqi" path="res://Assets/Textures/Map_02/stamp_02_frosted_balls.jpg" id="5_xcgsx"]
+[ext_resource type="Texture2D" uid="uid://thdbardle1nt" path="res://Assets/Textures/Map_03/texturas/pexels-kristina-paukshtite-1998922.jpg" id="6_dk8xt"]
 [ext_resource type="PackedScene" uid="uid://bb3jw3hy5gr7m" path="res://Assets/Objects/lilbromoves2.glb" id="6_jcm6j"]
 [ext_resource type="AudioStream" uid="uid://bqt4uqopc1kif" path="res://Assets/Textures/Map_02/dreamscapejam-breakcoreDRUM.mp3" id="7_vmr48"]
 [ext_resource type="AudioStream" uid="uid://c0te3ey45yi4x" path="res://Assets/Textures/Map_02/temaprincipal-bonus.mp3" id="9_el5lg"]
@@ -61,8 +61,10 @@ is_hemisphere = true
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_euusf"]
 points = PackedVector3Array(-97.6542, 3.55271e-15, -59.2963, 116.292, 6.39362, 21.7878, 109.604, 13.8598, 24.7428, -36.2898, 6.40714, 112.578, -25.5546, 36.9106, -38.3318, 59.2745, 0, -97.6761, -41.87, 33.8178, 48.3302, 45.3301, -3.55271e-15, 104.648, 39.3246, 30.7627, 65.5479, 73.1118, 27.5762, -46.5333, -24.7208, 13.8639, -109.604, -109.599, 13.8643, 24.7417, -97.6542, 0, 59.2963, -88.6488, 24.3381, -34.1006, 44.5962, 36.8591, 12.7361, 108.145, 7.10543e-15, -34.8828, 23.8309, 24.3331, -91.9314, 53.1086, 13.8535, 99.1405, -41.4394, 20.9289, 93.244, -20.8947, 0, -111.642, 95.0476, 13.8937, -59.8432, -55.0028, 20.9289, -85.9621, -84.5143, 13.891, 73.9666, -72.6431, 30.8369, 23.1109, 90.682, 0, 69.7655, 36.2898, 6.40714, -112.578, 25.5546, 36.9106, -38.3318, -112.57, 6.40815, -36.31, 88.6488, 24.3381, 34.1006, -3.15429, 39.9292, 3.15429, -72.034, 6.52083, -93.6826, 24.4853, 17.4352, 104.956)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0gd2b"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6s1ka"]
-albedo_texture = ExtResource("3_g6eus")
+albedo_texture = SubResource("CompressedTexture2D_0gd2b")
 emission_enabled = true
 emission = Color(0, 0, 0.713726, 1)
 emission_energy_multiplier = 6.63
@@ -74,8 +76,11 @@ top_radius = 2.0
 bottom_radius = 2.5
 height = 23.782
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f4qmx"]
+albedo_texture = ExtResource("6_dk8xt")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nwslk"]
-albedo_texture = ExtResource("3_g6eus")
+albedo_texture = SubResource("CompressedTexture2D_0gd2b")
 uv1_triplanar_sharpness = 10.5561
 texture_repeat = false
 
@@ -84,6 +89,15 @@ material = SubResource("StandardMaterial3D_nwslk")
 top_radius = 2.5
 bottom_radius = 2.0
 height = 23.782
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2f2c"]
+albedo_texture = ExtResource("6_dk8xt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l28kr"]
+albedo_texture = ExtResource("6_dk8xt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3n35"]
+albedo_texture = ExtResource("6_dk8xt")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o48jb"]
 render_priority = 0
@@ -101,7 +115,7 @@ shader_parameter/FoamSize = 0.5
 shader_parameter/WaterOpacity = 1.0
 shader_parameter/FoamGlowIntensity = 0.5
 shader_parameter/water_texture1 = ExtResource("5_xcgsx")
-shader_parameter/water_texture2 = ExtResource("3_g6eus")
+shader_parameter/water_texture2 = SubResource("CompressedTexture2D_0gd2b")
 
 [sub_resource type="SphereMesh" id="SphereMesh_6d8t5"]
 lightmap_size_hint = Vector2i(630, 316)
@@ -152,6 +166,7 @@ parameters/looping = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar_Quadrant"]
 transform = Transform3D(-4.37114e-08, -0.258819, -0.965926, 0, 0.965926, -0.258819, 1, -1.13133e-08, -4.2222e-08, -61, 3, 78)
+material_override = SubResource("StandardMaterial3D_f4qmx")
 mesh = SubResource("CylinderMesh_kf4b2")
 skeleton = NodePath("../..")
 
@@ -162,6 +177,7 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Pillar_Quadrant"]
 transform = Transform3D(2.98023e-08, 0.258819, 0.965926, 7.45058e-09, 0.965926, -0.258819, -1, 5.96046e-08, 1.19209e-07, -34.9205, 3, 87)
+material_override = SubResource("StandardMaterial3D_g2f2c")
 mesh = SubResource("CylinderMesh_kf4b2")
 skeleton = NodePath("../..")
 
@@ -172,6 +188,7 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="Pillar_Quadrant"]
 transform = Transform3D(0.965926, 0.0669872, 0.25, 1.3903e-08, 0.965926, -0.258819, -0.258819, 0.25, 0.933013, -74.2751, 8, 57.4622)
+material_override = SubResource("StandardMaterial3D_l28kr")
 mesh = SubResource("CylinderMesh_kf4b2")
 skeleton = NodePath("../..")
 
@@ -182,6 +199,7 @@ skeleton = NodePath("../MeshInstance3D")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="Pillar_Quadrant"]
 transform = Transform3D(-4.37114e-08, -0.258819, -0.965926, 0, 0.965926, -0.258819, 1, -1.13133e-08, -4.2222e-08, -91, 3, 30)
+material_override = SubResource("StandardMaterial3D_s3n35")
 mesh = SubResource("CylinderMesh_kf4b2")
 skeleton = NodePath("../..")
 
